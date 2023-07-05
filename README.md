@@ -5,7 +5,9 @@
 **Productos y servicios**
 
 🎥 Digital Movies se centrará en la oferta de entradas, streming y comestibles.
+
 👪 Publico objetivo: Apto para todo publico.
+
 💵 El servicio de la página web estará adaptado para todo el publico, siendo facil de entender. Ademas, la misma contará con secciones estandarizadas y traduccion al ingles.
 
 💻 Equipo: #ElTim
