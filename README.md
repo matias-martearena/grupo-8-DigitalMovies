@@ -1,6 +1,6 @@
 # Digital Movies
 
-## grupo-2-pagina-cine
+## Grupo 1 - Pagina web e-commerce cine
 
 **Productos y servicios**
 
@@ -12,14 +12,7 @@
 
 💻 Equipo: #ElTim
 
-  - Amadeo Abud: Sera lo que sea o sera abogado.
-  - Elisa Soruco: No se che (discurso profundo).
   - Pablo Bejarano: El chico de los 4 shifts.
-  - Leandro Montero: Ahi me cagaste (discurso profundo 2).
   - Ignacio Beguier: De dia duerme y de noche rompe codigos.
-  - Carolina Cortez: Bajo techo o bajo un puente.
   - Matias Martearena: El amante del front.
-  - Maité Aramayo: Nose.
   - Matias Macchi: Sushi 🍣.
-  - Raul Mamani: Ahi vamos remandola.
-  - 
