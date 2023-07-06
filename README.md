@@ -35,3 +35,12 @@ El ingreso a las funciónes estarán sujetas a la clasificación por edades de l
   - Ignacio Beguier: Si pudiera dormir todo el día lo haría 🐼💤
   - Elias Reile: El basquetbolista del equipo 🏀 
   - Matias Martearena: El abuelo del grupo "A esta hora ya estaria durmiendo" 👴
+
+**Páginas de referencia**
+
+1. cinemarkhoyts
+2. Netflix
+3. Cuevanna
+4. Disney+
+5. Amazon Prime Videos
+6. paramountplus
