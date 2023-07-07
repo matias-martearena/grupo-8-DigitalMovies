@@ -38,9 +38,22 @@ El ingreso a las funciónes estarán sujetas a la clasificación por edades de l
 
 **Páginas de referencia**
 
+🎥🎬🍿
+
 1. cinemarkhoyts
+En el apartado principal se encuentra una imagen corrediza donde se ven los estrenos de la página. Su footer es del tamaño adecueado.
+
 2. Netflix
+La imagen de bievenida puede a veces ser un pequeño adelanto a una pelicula, es facil de enteder y navegar. Su nav es el mas simple y prolijo.
+
 3. Cuevanna
+Su color de fondo contrasta con las imagenes de las peliculas. En el aside hay contenido extra como criticas y secciones.
+
 4. Disney+
-5. Amazon Prime Videos
-6. paramountplus
+La bienvenida de la pagina es sumamente prolija, usa una imagen como fondo y un color oscuro. Las letras son medianas. Es facil de leer, entender y recorrer. Nos vamos a inspirar en su diseño simple.
+
+5. Amazon Prime Videos:
+Sus componentes se basan en los estandares de las paginas web generales. Su nav y header tienen armonia en colores y estructura.L a distribucion que se usa para mostrar las peliculas disponibles a modo de imagenes es muy correcta y contrasta bien con el fondo, ademas de que cuando se hace hover en las peliculas disponibles estan te muestran informacion adicional.
+
+6. paramountplus:
+Sus imagenes que ocupan el 100% del vh y vw, la armonia en sus colores y fuente, una pagina facil de nevagar y de entender. Es muy intuitiva y minimalista.
