@@ -10,8 +10,6 @@
 
 - Alimentos y bebidas: Se brinda a los usuarios la opción de comprar alimentos y bebidas para disfrutar durante la película
 
-- Merchandising: Selección de productos de merchandising relacionados con las películas populares
-
 - Servicios de membresía: Programas de membresía que brinden beneficios exclusivos a tus clientes. Esto incluye descuentos en boletos, ofertas especiales de alimentos y bebidas, acceso anticipado a las funciones, entre otros
 
 - Películas en formato digital: Opción de comprar o alquilar películas en formato digital para que los usuarios las disfruten desde la comodidad de sus hogares
