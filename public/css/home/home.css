@@ -1,0 +1,18 @@
+body {
+    background-color: lightcoral;
+}
+
+h1 {
+    text-align: center;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 90vw;
+    height: 80vh;
+}
