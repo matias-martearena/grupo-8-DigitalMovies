@@ -29,7 +29,7 @@
 
 body {
    height: 100vh;
-   background-color: var(--palete-1-1);
+   background-color: var(--background-variant-color);
 }
 
 h1 {
