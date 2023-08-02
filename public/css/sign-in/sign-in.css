@@ -1,0 +1,118 @@
+:root{
+    --font-variant-color: #eae5d9;
+ 
+    --background-variant-color: #282121;
+
+    --color1-1: #332a1a;
+    --color1-2: #7c5b41;
+    --color1-3: #efdcd3;
+    --color1-4: #aa574b;
+    --color1-5: #541c13;
+
+    --color2-1: #ebd5b8;
+    --color2-2: #efbc9c;
+    --color2-3: #0b3f30;
+    --color2-4: #aa574b;
+    --color2-5: #e39828;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+.body_formulario{
+    background-color: var(--color1-1);
+}
+
+/* Fondo del formulario */
+.main_formulario{
+    text-align: center;
+    justify-content: center;
+    padding-top: 55px;
+}
+
+/*Cuerpo del formulario*/
+.formulario{
+    width: 430px;
+    height: 735px;
+    background-color: var(--color1-3);
+    margin: auto;
+    border-radius: 10px;
+}
+
+/* Logo */
+.formulario_logo{
+    width: 60px;
+    padding: 20px 0 10px 0;
+}
+
+/* Titulo */
+.formulario_titulo{
+    color: var(--color1-1);
+    font-size: 40px;
+    padding: 10px 0 10px 0;
+}
+
+/* Nombre | Apellido | Email | Contraseña */
+.formulario_input{
+    width: 100%;
+    padding: 10px 0 10px 0;
+}
+.input{
+    color: var(--color1-1);
+    width: 280px;
+    height: 30px;
+    border: 0;
+    border-bottom: 2px solid var(--color1-4);
+    text-align: start;
+    padding-left: 5px;
+}
+
+.input_subtitulo{
+    text-align: start;
+    margin: auto;
+    width: 65%;
+    font-size: 1rem;
+    padding-bottom: 5px;
+    display: block;
+}
+
+/* Enviar */
+.formulario_boton{
+    padding: 10px 0 10px 0;
+}
+.boton_enviar{
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: var(--color1-4);
+    color: var(--color1-3);
+    border: 0;
+}
+
+/* ¿Ya eres miembro? | Inicia tu sesion */
+.formulario_foot{
+    color: var(--color1-1);
+    text-align: center;
+    align-items: center;
+}
+
+.foot_titulo{
+    padding: 10px 0 10px 0;
+    font-size: 1.1rem;
+}
+
+.foot_cuenta{
+    text-decoration: none;
+    color: var(--color1-4);
+    padding: 10px 0 20px 0;
+    font-size: 0.9rem;
+}
+
+/* Movil - 425px */
+/* Table - 768px */
+/* Desktop - 1024*/
