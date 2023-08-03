@@ -197,9 +197,9 @@ header {
 
 /* RESPONSIVE DESIGN */
 
-@media (max-width: 425px) {
+@media (min-width: 320px) and (max-width: 375px) {
    .logo p {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
    }
 
    .main_header_search_bar {
@@ -214,6 +214,7 @@ header {
 
    .home_btn {
       display: flex;
+      width: 40%;
       gap: 2px;
    }
 
@@ -224,6 +225,36 @@ header {
       font-size: 0.7rem;
       border: 0.2rem solid transparent;
       border-radius: 1rem;
+   }
+}
+
+@media (min-width: 425px) and (max-width: 767px) {
+   .logo p {
+      font-size: 1.8rem;
+   }
+
+   .main_header_search_bar {
+      height: 2rem;
+      width: 30%;
+      margin-left: 1rem;
+   }
+
+   .home_btn {
+      margin: 0 auto;
+   }
+
+   .log_btn,
+   .log_out_btn,
+   .sign_up_btn {
+      padding: 0.2rem 0.7rem;
+   }
+
+   .home_btn a {
+      font-size: 80%;
+   }
+
+   .main_header_search_bar input[type='search']::placeholder {
+      color: var(--palete-1-3);
    }
 }
 
@@ -251,12 +282,6 @@ header {
       margin: 0 10px;
    }
 
-   .home_btn {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-   }
-
    .navbar .toggle_btn {
       display: none;
    }
@@ -269,5 +294,24 @@ header {
 
    .home_btn a {
       font-size: 0.9rem;
+   }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+   .logo p {
+      font-size: 2.7rem;
+   }
+
+   .links a {
+      font-size: 1.3rem;
+   }
+
+   .main_header_search_bar {
+      height: 3rem;
+      width: 30%;
+   }
+
+   .home_btn a {
+      font-size: 1.2rem;
    }
 }
