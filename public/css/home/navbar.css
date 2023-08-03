@@ -31,7 +31,7 @@ a {
 }
 
 a:hover {
-   color: var(--palete-2-3);
+   color: var(--palete-2-5);
 }
 
 /* HEADER */
@@ -195,6 +195,10 @@ header {
    justify-content: center;
 }
 
+.store {
+   display: none;
+}
+
 /* RESPONSIVE DESIGN */
 
 @media (min-width: 320px) and (max-width: 375px) {
@@ -290,28 +294,67 @@ header {
 @media (min-width: 992px) and (max-width: 1024px) {
    .links {
       margin: 0 1rem;
+      display: flex;
+      align-items: center;
+   }
+
+   .links a {
+      font-size: 0.9rem;
+   }
+
+   .main_header_search_bar {
+      width: 20%;
+   }
+
+   .home_btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
    }
 
    .home_btn a {
       font-size: 0.9rem;
    }
+
+   .log_btn,
+   .log_out_btn,
+   .sign_up_btn {
+      padding: 0.2rem 0.5rem;
+   }
 }
 
-@media (min-width: 1025px) and (max-width: 1440px) {
+@media (min-width: 1025px) {
    .logo p {
       font-size: 2.7rem;
    }
 
+   .links {
+      margin: 0 1rem;
+      display: flex;
+      align-items: center;
+   }
+
    .links a {
-      font-size: 1.3rem;
+      font-size: 1rem;
    }
 
    .main_header_search_bar {
-      height: 3rem;
-      width: 30%;
+      width: 25%;
+   }
+
+   .home_btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
    }
 
    .home_btn a {
-      font-size: 1.2rem;
+      font-size: 1rem;
+   }
+
+   .log_btn,
+   .log_out_btn,
+   .sign_up_btn {
+      padding: 0.3rem 0.6rem;
    }
 }
