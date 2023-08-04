@@ -27,11 +27,11 @@ li {
 a {
    text-decoration: none;
    font-size: 1rem;
-   color: var(--palete-1-3);
+   color: var(--font-variant-color);
 }
 
 a:hover {
-   color: var(--palete-2-5);
+   color: var(--palete-2-3);
 }
 
 /* NAVEGATION BAR */
@@ -44,6 +44,7 @@ a:hover {
    display: flex;
    align-items: center;
    justify-content: space-between;
+   background-color: #0b3f308f;
 }
 
 /* LOGO */
@@ -56,7 +57,7 @@ a:hover {
 
 .logo p {
    font-family: var(--logo-font);
-   color: var(--palete-1-3);
+   color: var(--font-variant-color);
    font-size: 2rem;
 }
 
@@ -75,7 +76,7 @@ a:hover {
    align-items: center;
    width: 30%;
    max-width: 500px;
-   background-color: var(--palete-1-3);
+   background-color: var(--font-variant-color);
    border-radius: 12px;
    padding: 5px;
 }
@@ -96,7 +97,7 @@ a:hover {
 
 .main_header_button i {
    font-size: 18px;
-   color: var(--palete-1-5);
+   color: var(--palete-2-4);
 }
 
 /* HOME BUTTONS */
@@ -110,7 +111,7 @@ a:hover {
    padding: 0.4rem 1rem;
    font-size: 1rem;
    text-align: center;
-   color: var(--palete-1-3);
+   color: var(--font-variant-color);
    backface-visibility: hidden;
    border: 0.3rem solid transparent;
    border-radius: 2rem;
@@ -121,8 +122,8 @@ a:hover {
 .log_btn:hover,
 .log_out_btn:hover,
 .sign_up_btn:hover {
-   background-color: var(--palete-1-3);
-   color: var(--palete-1-5);
+   background-color: var(--font-variant-color);
+   color: var(--palete-2-4);
 }
 
 .log_btn:active,
@@ -144,7 +145,7 @@ a:hover {
 }
 
 .login_btn a {
-   color: var(--palete-1-3);
+   color: var(--font-variant-color);
    font-size: 1.5rem;
 }
 
@@ -159,7 +160,7 @@ a:hover {
 /* HAMBURGUER BUTTON */
 
 .toggle_btn {
-   color: var(--palete-1-3);
+   color: var(--font-variant-color);
    cursor: pointer;
    font-size: 1.3rem;
    display: block;
@@ -170,7 +171,7 @@ a:hover {
 .dropdown_menu {
    position: absolute;
    right: 2rem;
-   top: 60px;
+   top: 80px;
    height: 0;
    width: 300px;
    background: rgba(255, 255, 255, 0.1);
@@ -217,7 +218,7 @@ a:hover {
    }
 
    .user_btn {
-      padding-top: 1rem;
+      padding: 0.5rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -294,6 +295,54 @@ a:hover {
 
    .home_btn a {
       font-size: 1.2rem;
+   }
+
+   .log_btn,
+   .log_out_btn,
+   .sign_up_btn {
+      padding: 0rem 1rem;
+      border-radius: 1rem;
+   }
+
+   .toggle_btn {
+      display: none;
+   }
+}
+
+@media (min-width: 1441px) and (max-width: 1920px) {
+   .navbar {
+      margin: 0;
+      padding: 2.5rem 1rem;
+   }
+   .logo p {
+      font-size: 3.5rem;
+   }
+
+   .navbar .links {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 0 1rem;
+   }
+
+   .navbar .links a {
+      font-size: 1.5rem;
+   }
+
+   .main_header_search_bar {
+      height: 3.2rem;
+      margin-left: 0.5rem;
+   }
+
+   .home_btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem;
+   }
+
+   .home_btn a {
+      font-size: 1.5rem;
    }
 
    .log_btn,
