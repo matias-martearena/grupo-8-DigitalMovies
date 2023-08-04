@@ -10,3 +10,6 @@ app.listen(PORT, () => console.log(`Servidor en PORT:${PORT} corriendo`))
 app.get('/', (req, res) => {
    res.sendFile(path.resolve(__dirname, './views/home-page/home.html'))
 })
+app.get('/login', (req, res) => {
+   res.sendFile(path.resolve(__dirname, './views/login/login.html'))
+})
