@@ -170,6 +170,7 @@ a:hover {
 
 .dropdown_menu {
    position: absolute;
+   z-index: 100;
    right: 2rem;
    top: 80px;
    height: 0;
