@@ -1,0 +1,123 @@
+body {
+    background-color: whitesmoke;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-align: center;
+    float: center;
+
+}
+div {
+    justify-content: center;
+    align-items: center;
+
+}
+img {
+    width: 90vw;
+    height: 80vh;
+}
+.barra-navegacion {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        font-size: xx-large;
+        font-family: 'Montserrat Alternates', sans-serif;
+        background-color: grey;
+      }
+
+      .barra-navegacion ul {
+        list-style: none;
+        margin: 0;
+        display: flex;
+    }
+
+    .barra-navegacion li {
+        margin-right: 20px;
+    }
+
+    .barra-navegacion a {
+        text-decoration: none;
+        color: #000000;
+        font-weight: bold;
+        padding: 5px 10px;
+        border-radius: 5px;
+
+    }
+    .caja-contenedor{
+        display:flex;
+        flex: wrap;
+        justify-content: space-between;
+    }
+    .articulos {
+        border-radius: 1rem;
+        border: 3px solid grey;
+        background-color: white;
+        font-family: 'Montserrat Alternates', sans-serif;
+        font-weight: bold;
+        color: black;
+        flex: 5;
+        height: 900px;
+        line-height: 200px;
+        margin: 5px;
+
+
+
+    }
+    .producto {
+        border: 3px solid grey;
+        background-color: white;
+        font-family: 'Montserrat Alternates', sans-serif;
+        font-weight: bold;
+        color: black;
+        flex: 1;
+        height: 435px;
+        margin: 6px;
+        text-align: center;
+        border-radius: 1rem;
+
+    }
+    .monto {
+        border: 3px solid grey;
+        background-color: white;
+        font-family: 'Montserrat Alternates', sans-serif;
+        font-weight: bold;
+        color: black;
+        width: 400px;
+        height: 460px;
+        line-height: 200px;
+        text-align: center;
+        margin: 5px;
+        float:center;
+        border-radius: 1rem;
+    }    
+    .botoncito{
+        align-items: bottom;
+        padding: 5rem;
+        font-family: 'Montserrat Alternates', sans-serif;
+
+
+    }
+    .buttonGrande{
+        font-weight: bold;
+        font-family: 'Montserrat Alternates', sans-serif;
+        font-size: large;
+        width: 200px;
+        height: auto;
+    }
+    .foto{
+        border: 3px solid grey;
+        width: 300px;
+        height: 385px;
+        border-radius: 1rem;
+        margin: 20px;
+    }
+    .buttonEliminar{
+        font-weight: bold;
+        font-family: 'Montserrat Alternates', sans-serif;
+        font-size: large;
+        width: 150px;
+        height: auto;
+
+    }
