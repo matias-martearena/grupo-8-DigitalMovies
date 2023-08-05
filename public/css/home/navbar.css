@@ -229,14 +229,42 @@ a:hover {
 @media (min-width: 426px) and (max-width: 768px) {
    .main_header_search_bar {
       width: 50%;
+      margin-left: 0.75rem;
    }
 
    .user_btn {
       display: none;
    }
+
+   .home_btn {
+      display: flex;
+      gap: 0.2rem;
+   }
+
+   .home_btn a {
+      font-size: 0.9rem;
+   }
+}
+
+@media (min-width: 769px) and (max-width: 900px) {
+   .main_header_search_bar {
+      width: 65%;
+      margin-left: 1rem;
+   }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
+   .home_btn {
+      display: flex;
+      gap: 0.2rem;
+   }
+
+   .home_btn a {
+      font-size: 0.9rem;
+   }
+}
+
+@media (min-width: 900px) and (max-width: 1024px) {
    .navbar .links {
       display: flex;
       justify-content: space-evenly;
@@ -250,15 +278,6 @@ a:hover {
 
    .navbar .toggle_btn {
       display: none;
-   }
-
-   .home_btn {
-      display: flex;
-      gap: 0.2rem;
-   }
-
-   .home_btn a {
-      font-size: 0.9rem;
    }
 }
 
