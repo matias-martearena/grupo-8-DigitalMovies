@@ -141,23 +141,27 @@ main .hero h1 {
 
 .card:hover .title {
    height: 100%;
+   font-size: 0.5rem;
+   font-weight: 300;
    padding: auto;
    text-align: center;
+   color: transparent;
 }
 
 .card .rating,
 .card .genres {
    display: none;
    position: absolute;
-   font-weight: 500;
-   padding: 0 0 0.5rem;
+   font-weight: 400;
    color: var(--font-variant-color);
    font-size: clamp(12px, 2vw, 24px);
 }
 
 .card .genres {
-   inset: 35% 0 0 0;
-   padding: 0 3px;
+   inset: 10% 0 0 0;
+   margin-top: 10px;
+   padding: 0 2px;
+   font-size: 0.7rem;
    text-align: center;
 }
 
@@ -266,9 +270,6 @@ main .hero h1 {
 }
 
 /* RESPONSIVE DESIGN */
-
-@media (min-width: 320px) and (max-width: 425px) {
-}
 
 @media (min-width: 426px) and (max-width: 768px) {
 }
