@@ -40,10 +40,10 @@ body {
    width: 100%;
    height: 45vh;
    max-height: 45vh;
-   overflow: auto;
+   /* overflow: auto; */
    padding: 0 5%;
    position: absolute;
-   z-index: -1;
+   z-index: -100;
    left: 0;
    top: 0;
    display: flex;
@@ -63,6 +63,7 @@ body {
 
 .hero h1 {
    position: relative;
+   cursor: default;
    z-index: 100;
    font-size: 1.5rem;
    font-weight: 600;
@@ -80,19 +81,19 @@ body {
 
 /* MOVIES AND SERIES LINKS */
 
-.links-conteiner {
+.filter-container {
    padding: 0.5rem;
    margin-top: 33vh;
    background-color: #0b3f308f;
 }
 
-.links {
+.filter {
    display: flex;
    align-items: center;
    justify-content: space-evenly;
 }
 
-.links a {
+.filter a {
    font-size: 0.85rem;
 }
 
@@ -177,7 +178,7 @@ body {
    display: block;
 }
 
-/* FOOTER CONTEINER */
+/* FOOTER CONTAINER */
 
 .footer-conteiner {
    background-color: #afa5a1;
@@ -232,7 +233,7 @@ body {
 
 .footer-social-conteiner p:hover {
    color: var(--palete-2-3);
-   scale: 1.2;
+   scale: 1.1;
 }
 
 .social-conteiner {
@@ -304,11 +305,11 @@ body {
       font-size: 2.2rem;
    }
 
-   .links-conteiner {
+   .filter-container {
       margin-top: 58vh;
    }
 
-   .links a {
+   .filter a {
       font-size: 1.1rem;
    }
 
@@ -356,68 +357,191 @@ body {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-   /* .hero {
-      height: 70vh;
-      max-height: 70vh;
+   .hero {
+      height: 85vh;
+      max-height: 85vh;
    }
 
    .hero h1 {
-      font-size: 2.2rem;
+      font-size: 2.75rem;
    }
 
-   .links-conteiner {
-      margin-top: 58vh;
+   .filter-container {
+      margin-top: 73vh;
+      padding: 1rem 0;
+      background-color: #0b3f308f;
    }
 
-   .links a {
+   .filter a {
       font-size: 1.1rem;
+      font-weight: 500;
    }
 
    .cards-conteiner {
-      grid-template-columns: repeat(auto-fit, 120px);
+      grid-template-columns: repeat(auto-fit, 160px);
    }
 
    .card {
-      width: 120px;
-      height: 160px;
+      width: 160px;
+      height: 200px;
    }
 
    .card .title {
-      font-size: clamp(1rem, 2vw, 2rem);
+      font-size: clamp(1rem, 1.5vw, 2rem);
    }
 
    .card .genres {
-      font-size: clamp(1rem, 2vw, 2rem);
+      font-size: clamp(1.1rem, 2vw, 2.1rem);
       font-weight: 500;
    }
 
    .footer-conteiner {
-      margin-top: 5rem;
-   }
-
-   .footer-social-conteiner {
-      justify-content: space-between;
+      margin-top: 7rem;
    }
 
    .footer-social-conteiner p {
-      font-size: 2.5rem;
+      font-size: 3rem;
       text-align: left;
-      width: 70%;
-      padding-left: 1rem;
+      width: 60%;
+      padding-left: 2rem;
    }
 
    .social-conteiner a {
-      font-size: 1.8;
-      width: 30%;
+      font-size: 2.2rem;
+      width: 40%;
    }
 
    .footer-contact a {
-      font-size: 1.2rem;
-   } */
+      font-size: 1.3rem;
+   }
 }
 
 @media (min-width: 1025px) and (max-width: 1440px) {
+   .hero {
+      height: 100vh;
+      max-height: 100vh;
+   }
+
+   .hero h1 {
+      font-size: 3em;
+   }
+
+   .filter-container {
+      margin-top: 90vh;
+      padding: 1.2rem 0;
+      background-color: #0b3f308f;
+   }
+
+   .filter a {
+      font-size: 1.3rem;
+      font-weight: 500;
+   }
+
+   .cards-conteiner {
+      margin-top: 1rem;
+      grid-template-columns: repeat(auto-fit, 180px);
+   }
+
+   .card {
+      width: 180px;
+      height: 220px;
+   }
+
+   .card .title {
+      font-size: clamp(1rem, 1vw, 2rem);
+   }
+
+   .card .genres {
+      font-size: clamp(1rem, 1.5vw, 2rem);
+      font-weight: 500;
+   }
+
+   .footer-conteiner {
+      margin-top: 12rem;
+   }
+
+   .footer-social-conteiner p {
+      font-size: 4rem;
+      text-align: left;
+      width: 50%;
+      padding-left: 3rem;
+   }
+
+   .social-conteiner a {
+      font-size: 2.5rem;
+      width: 50%;
+   }
+
+   .footer-contact a {
+      font-size: 1.7rem;
+   }
+
+   .copy {
+      font-size: 1rem;
+   }
 }
 
 @media (min-width: 1441px) and (max-width: 1920px) {
+   .hero {
+      height: 100vh;
+      max-height: 100vh;
+   }
+
+   .hero h1 {
+      font-size: 4em;
+   }
+
+   .filter-container {
+      margin-top: 92vh;
+      padding: 1.5rem 0;
+      background-color: #0b3f308f;
+   }
+
+   .filter a {
+      font-size: 1.5rem;
+      font-weight: 500;
+   }
+
+   .cards-conteiner {
+      margin-top: 1.35rem;
+      grid-template-columns: repeat(auto-fit, 220px);
+   }
+
+   .card {
+      width: 220px;
+      height: 280px;
+   }
+
+   .card .title {
+      font-size: clamp(1rem, 1.2vw, 2rem);
+   }
+
+   .card .genres {
+      font-size: clamp(1rem, 1.3vw, 2rem);
+      font-weight: 500;
+   }
+
+   .footer-conteiner {
+      margin-top: 12rem;
+   }
+
+   .footer-social-conteiner p {
+      font-size: 4rem;
+      text-align: left;
+      width: 50%;
+      padding-left: 2rem;
+   }
+
+   .social-conteiner a {
+      font-size: 2.5rem;
+      width: 50%;
+   }
+
+   .footer-contact a {
+      font-size: 1.7rem;
+   }
+
+   .copy {
+      font-size: 1rem;
+   }
 }
