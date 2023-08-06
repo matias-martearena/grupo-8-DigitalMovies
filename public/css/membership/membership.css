@@ -35,3 +35,147 @@ body {
 }
 
 /* MAIN CONTAINER */
+
+.main-container {
+   width: 100%;
+   margin: 0 0 2rem;
+}
+
+.membership-container {
+   width: 100%;
+   margin: 1.5rem 0 0;
+   padding: 0 0.5rem;
+   text-align: center;
+}
+
+.membership_tier-title {
+   color: var(--palete-1-4);
+   text-shadow: 2px 0 10px var(--palete-1-2);
+   text-align: left;
+}
+
+.membership_tier-description {
+   color: var(--palete-1-3);
+   margin-top: 1.5rem;
+   padding: 0 0.5rem;
+}
+
+.membership_discounts-container {
+   display: flex;
+   align-items: flex-start;
+   justify-content: space-evenly;
+   gap: 0.2rem;
+   width: 100%;
+   margin: 1.5rem 0;
+}
+
+.discounts {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   gap: 0.5rem;
+   width: 30%;
+   height: 9rem;
+   background-color: #130f0f49;
+   padding: 0.5rem 0.2rem;
+   box-shadow: 0 0 10px var(--palete-2-5);
+}
+
+.discounts i {
+   display: block;
+   font-size: 2rem;
+   color: var(--palete-1-3);
+   text-shadow: 0 0 5px var(--palete-2-5);
+}
+
+.discounts p {
+   color: var(--palete-1-3);
+   font-weight: 500;
+   font-size: 0.8rem;
+}
+
+.membership_price {
+   color: var(--palete-1-4);
+   text-shadow: 2px 0 10px var(--palete-1-2);
+   font-size: 1.2rem;
+   text-align: left;
+}
+
+.membership_btn {
+   padding: 0.5rem;
+   margin: 1.5rem 0;
+   width: 100%;
+   max-width: 320px;
+   background-color: var(--font-variant-color);
+   color: var(--background-variant-color);
+   border: none;
+   border-radius: 5px;
+   font-weight: 500;
+}
+
+.membership_btn:hover {
+   color: var(--font-variant-color);
+   background-color: var(--palete-1-1);
+   box-shadow: 0 0 2px var(--font-variant-color);
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+   .membership_tier-title {
+      font-size: 2rem;
+   }
+
+   .membership_tier-description {
+      font-size: 1.5rem;
+   }
+
+   .discounts i {
+      font-size: 3rem;
+   }
+
+   .discounts p {
+      font-size: 1.3rem;
+   }
+
+   .membership_price {
+      font-size: 1.5rem;
+   }
+
+   .membership_btn {
+      font-size: 1.3rem;
+   }
+}
+
+@media (min-width: 1441px) and (max-width: 1920px) {
+   .membership_tier-title {
+      font-size: 3rem;
+   }
+
+   .membership_tier-description {
+      font-size: 2rem;
+      margin: 5rem 0;
+   }
+
+   .discounts {
+      height: 12rem;
+   }
+
+   .discounts i {
+      font-size: 4rem;
+   }
+
+   .discounts p {
+      font-size: 1.75rem;
+   }
+
+   .membership_price {
+      font-size: 2rem;
+      margin: 3rem 0 0;
+   }
+
+   .membership_btn {
+      font-size: 1.75rem;
+      max-width: 50%;
+   }
+}
