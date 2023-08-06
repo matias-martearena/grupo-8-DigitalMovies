@@ -3,110 +3,192 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Document</title>
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/cart/cart.css" />
+      <!-- FONTS -->
+      <!-- logo font -->
+      <link
+         href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
+         rel="stylesheet"
+      />
+      <!-- body font -->
+      <link
+         href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;300;400;500;700&display=swap"
+         rel="stylesheet"
+      />
+      <!-- LOGOS -->
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+         crossorigin="anonymous"
+         referrerpolicy="no-referrer"
+      />
+      <!-- STYLES -->
+      <link rel="stylesheet" href="/css/components/normalize.css" />
+      <link rel="stylesheet" href="/css/components/navbar.css" />
+      <link rel="stylesheet" href="/css/components/footer.css" />
+      <link rel="stylesheet" href="/css/cart/cart.css" />
+      <title>Digital Movies</title>
    </head>
    <body>
-      <header></header>
-      <nav class="barra-navegacion">
-      <ul>
-         <li><a href="/home">home</a></li>
-         <li><a href="#">Movies</a></li>
-         <li><a href="#">Series</a></li>
-         <li><a href="#">Showtimes</a></li>
-         <li><a href="#">Store</a></li>
-         <li><a href="#"><input type="text" placeholder="Buscar...">
-            <button>Buscar</button></a></li>
-            <li><a href="#">log out</a></li>
-     </ul>
- </nav>
-</header>
-<main>
-   <!-- Contenedor que tiene a las 2 Cajas principales -->
-   <section class="carrito-contenedor">
-       <!-- Caja Izquierda -->
-       <div class="articulo-contenedor">
-           <!-- Inicio de Articulo -->
-           <div class="articulo">
-             <div class="p1">
-               <img src="/img/barbie.jpg" alt="Imagen de producto">
-             </div>
-             <div class="p2">
-               <div class="p2-top">
-                   <h2>Barbie</h2>
-                   <p>Descripcion</p>
+      <header>
+         <nav class="navbar">
+            <div class="logo">
+               <p>DM</p>
+            </div>
+            <ul class="links">
+               <li><a href="/">Home</a></li>
+               <li><a href="/showtimes">Showtimes</a></li>
+               <li><a href="/membership">Membership</a></li>
+               <li><a href="/tickets">Tickets</a></li>
+               <li><a href="/snacks">Snacks</a></li>
+               <li><a href="/digital-movies">Digital Movies</a></li>
+            </ul>
+            <form class="main_header_search_bar">
+               <input
+                  type="search"
+                  name="search-bar"
+                  placeholder="Search movies, series and more"
+               />
+               <button class="main_header_button" type="submit">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+               </button>
+            </form>
+            <div class="home_btn">
+               <a href="/login" class="log_btn">Log In</a>
+               <a href="/logout" class="log_out_btn">Log Out</a>
+               <a href="/register" class="sign_up_btn">Sign Up</a>
+            </div>
+            <div class="login_btn">
+               <a href="/cart" class="fa-solid fa-cart-shopping"></a>
+               <a href="/profile" class="fa-solid fa-user"></a>
+            </div>
+            <div class="toggle_btn">
+               <i class="fa-solid fa-bars"></i>
+            </div>
+         </nav>
+         <div class="dropdown_menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/showtimes">Showtimes</a></li>
+            <li><a href="/membership">Membership</a></li>
+            <li><a href="/tickets">Tickets</a></li>
+            <li><a href="/snacks">Snacks</a></li>
+            <li><a href="/digital-movies">Digital Movies</a></li>
+            <div class="user_btn">
+               <a href="/login" class="log_btn">Log In</a>
+               <a href="/logout" class="log_out_btn">Log Out</a>
+               <a href="/signup" class="sign_up_btn">Sign Up</a>
+            </div>
+         </div>
+      </header>
+      <main>
+         <!-- Contenedor que tiene a las 2 Cajas principales -->
+         <section class="carrito-contenedor">
+            <!-- Caja Izquierda -->
+            <div class="articulo-contenedor">
+               <!-- Inicio de Articulo -->
+               <div class="articulo">
+                  <div class="p1">
+                     <img src="/img/barbie.jpg" alt="Imagen de producto" />
+                  </div>
+                  <div class="p2">
+                     <div class="p2-top">
+                        <h2>Barbie</h2>
+                        <p>Descripcion</p>
+                     </div>
+                     <div class="p2-bot">
+                        <button class="buttonMedio">Eliminar</button>
+                        <button class="buttonMedio">Comprar Ahora</button>
+                     </div>
+                  </div>
+                  <div class="p3">
+                     <div class="p3-top">
+                        <button class="buttonMedio">+</button>
+                        <button class="buttonMedio">-</button>
+                     </div>
+                     <div class="p3-bot">
+                        <h2>*Nro.* unidades disponibles</h2>
+                     </div>
+                  </div>
+                  <div class="p4">
+                     <h1>$15.99</h1>
+                  </div>
                </div>
-               <div class="p2-bot">
-                   <button class="buttonMedio">Eliminar</button>
-                   <button class="buttonMedio">Comprar Ahora</button>
+               <!-- Fin de Articulo -->
+               <div class="articulo">
+                  <div class="p1">
+                     <img src="/img/oppenheimer.png" alt="Imagen de producto" />
+                  </div>
+                  <div class="p2">
+                     <div class="p2-top">
+                        <h2>Oppenheimer</h2>
+                        <p>Descripcion</p>
+                     </div>
+                     <div class="p2-bot">
+                        <button class="buttonMedio">Eliminar</button>
+                        <button class="buttonMedio">Comprar Ahora</button>
+                     </div>
+                  </div>
+                  <div class="p3">
+                     <div class="p3-top">
+                        <button class="buttonMedio">+</button>
+                        <button class="buttonMedio">-</button>
+                     </div>
+                     <div class="p3-bot">
+                        <h2>*Nro.* unidades disponibles</h2>
+                     </div>
+                  </div>
+                  <div class="p4">
+                     <h1>$15.99</h1>
+                  </div>
                </div>
-             </div>
-             <div class="p3">
-               <div class="p3-top">
-                   <button class="buttonMedio">+</button>
-                   <button class="buttonMedio">-</button>
+            </div>
+            <!-- Caja derecha -->
+            <div class="monto-contenedor">
+               <div class="m1">
+                  <h2>Resumen</h2>
                </div>
-               <div class="p3-bot">
-                   <h2>*Nro.* unidades disponibles</h2>
+               <div class="m2">cantidad de productos</div>
+               <div class="m3">
+                  <button class="buttonGrande">Pagar</button>
                </div>
-             </div>
-             <div class="p4">
-               <h1>
-                   $15.99
-               </h1>
-             </div>
-           </div>
-           <!-- Fin de Articulo -->
-           <div class="articulo">
-               <div class="p1">
-                 <img src="/img/oppenheimer.png" alt="Imagen de producto">
-               </div>
-               <div class="p2">
-                 <div class="p2-top">
-                     <h2>Oppenheimer</h2>
-                     <p>Descripcion</p>
-                 </div>
-                 <div class="p2-bot">
-                     <button class="buttonMedio">Eliminar</button>
-                     <button class="buttonMedio">Comprar Ahora</button>
-                 </div>
-               </div>
-               <div class="p3">
-                 <div class="p3-top">
-                     <button class="buttonMedio">+</button>
-                     <button class="buttonMedio">-</button>
-                 </div>
-                 <div class="p3-bot">
-                     <h2>*Nro.* unidades disponibles</h2>
-                 </div>
-               </div>
-               <div class="p4">
-                 <h1>
-                     $15.99
-                 </h1>
-               </div>
-             </div>
-       </div>
-       <!-- Caja derecha -->
-       <div class="monto-contenedor">
-           <div class="m1">
-               <h2>Resumen</h2>
-           </div>
-           <div class="m2">
-               cantidad de productos
-
-           </div>
-           <div class="m3">
-               <button class="buttonGrande">Pagar</button>
-           </div>
-       </div>
-   </section>
-</main>
-<footer>
-   <p1></p1>
-</footer>
-</body>
+            </div>
+         </section>
+      </main>
+      <footer class="footer-conteiner">
+         <div class="wave-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+               <path
+                  fill-opacity="1"
+                  d="M0,96L48,122.7C96,149,192,203,288,213.3C384,224,480,192,576,176C672,160,768,160,864,186.7C960,213,1056,267,1152,261.3C1248,256,1344,192,1392,160L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+               ></path>
+            </svg>
+         </div>
+         <div class="wave-container-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+               <path
+                  fill-opacity="1"
+                  d="M0,160L48,133.3C96,107,192,53,288,26.7C384,0,480,0,576,0C672,0,768,0,864,32C960,64,1056,128,1152,144C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+               ></path>
+            </svg>
+         </div>
+         <div class="footer-social-conteiner">
+            <p class="footer-logo">DM</p>
+            <div class="social-conteiner">
+               <a href="#"><i class="fa-brands fa-twitter"></i></a>
+               <a href="#"><i class="fa-brands fa-facebook"></i></a>
+               <a href="#"><i class="fa-brands fa-instagram"></i></a>
+               <a href="#"><i class="fa-brands fa-youtube"></i></a>
+               <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+         </div>
+         <div class="footer-contact">
+            <a class="contact" href="#">About Page</a>
+            <a class="contact" href="#">About Us</a>
+            <span class="copy"
+               >&copy; Copyrights 2021, All rights reserved.</span
+            >
+         </div>
+      </footer>
+      <script src="/js/navbar.js"></script>
+   </body>
 </html>

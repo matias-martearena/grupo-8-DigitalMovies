@@ -1,129 +1,118 @@
+:root {
+   /* Thin 100; Light 300; Regular 400; Medium 500; Bold 700 */
+   --body-font: 'Montserrat Alternates', sans-serif;
+   --logo-font: 'Monoton', cursive;
+
+   --font-variant-color: #eae5d9;
+
+   --background-variant-color: #282121;
+
+   --palete-1-1: #332a1a;
+   --palete-1-2: #7c5b41;
+   --palete-1-3: #efdcd3;
+   --palete-1-4: #aa574b;
+   --palete-1-5: #541c13;
+
+   --palete-2-1: #ebd5b8;
+   --palete-2-2: #efbc9c;
+   --palete-2-3: #ea572a;
+   --palete-2-4: #0b4030;
+   --palete-2-5: #e39828;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: var(--body-font);
+}
+
 body {
-    margin: 0;
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-weight: bold;
-    background-color: whitesmoke;
+   height: 100vh;
+   background-color: var(--background-variant-color);
+   position: relative;
+   z-index: 1;
 }
 
-header{
-    background-color: brown;
+.carrito-contenedor {
+   display: flex;
+   justify-content: space-between;
 }
 
-main{
-    background-color: whitesmoke;
+.articulo-contenedor {
+   display: flex;
+   flex-direction: column;
+   flex: 5;
+   box-shadow: 0 0 10px var(--font-variant-color);
+   border-radius: 5px;
+   padding: 15px;
+   margin: 10px;
 }
 
-.carrito-contenedor{
-    display:flex;
-    justify-content: space-between;
+.articulo {
+   display: flex;
+   justify-content: space-between;
+   background-color: var(--font-variant-color);
+   border-radius: 5px;
+   padding: 15px;
+   margin: 10px;
+   width: 98%;
 }
 
-.articulo-contenedor{
-    display:flex;
-    flex-direction: column;
-    flex: 5;
-    background-color: #fff;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    padding: 15px;
-    margin: 10px; 
+.monto-contenedor {
+   flex: 1;
+   background-color: var(--font-variant-color);
+   border: 1px solid #000000;
+   border-radius: 5px;
+   padding: 15px;
+   margin: 10px;
+   height: 20rem;
+}
+.articulo-contenedor {
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
 }
 
-.articulo{
-    display: flex;
-    justify-content: space-between;
-    background-color: #fff;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    padding: 15px;
-    margin: 10px;
-    width: 98%;
- 
+.p1 img {
+   max-width: 150px;
+   height: auto;
+   border: #000000;
+   border-radius: 1rem;
 }
 
-.monto-contenedor{
-    flex: 1;
-    background-color: #fff;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    padding: 15px;
-    margin: 10px; 
-    height: 20rem;
-}
-.articulo-contenedor{
-    display:flex;
-    justify-content: space-evenly;
-    align-items: center;
+.p2 {
+   display: flex;
+   flex-direction: column;
+   margin-left: 1rem;
 }
 
-.p1 img{
-    max-width: 150px;
-    height: auto;
-    border: #000000;
-    border-radius: 1rem;
+.p2-top h2 {
+   text-align: center;
 }
 
-.p2{
-    display:flex;
-    flex-direction: column;
-    margin-left: 1rem;
+.p2-bot {
+   display: flex;
+   justify-content: center;
 }
 
-.p2-top h2{
-    text-align: center;
+.p3 {
+   display: flex;
+   flex-direction: column;
 }
 
-.p2-bot{
-    display: flex;
-    justify-content: center;
+.p3-top {
+   display: flex;
+   justify-content: center;
 }
 
-.p3{
-    display:flex;
-    flex-direction: column;
+.p3-bot,
+.m1,
+.m2 {
+   text-align: center;
 }
 
-.p3-top{
-    display: flex;
-    justify-content: center;
+.m3 {
+   display: flex;
+   justify-content: center;
 }
-
-.p3-bot, .m1, .m2{
-    text-align: center;
-}
-
-.m3{
-    display: flex;
-    justify-content: center;
-}
-
-
-footer{
-}
-.barra-navegacion {
-        display: flex;
-        justify-content: center;
-        padding: 10px;
-        font-size: xx-large;
-        font-family: 'Montserrat Alternates', sans-serif;
-        background-color: grey;
-      }
-
-      .barra-navegacion ul {
-        list-style: none;
-        margin: 0;
-        display: flex;
-    }
-
-    .barra-navegacion li {
-        margin-right: 20px;
-    }
-
-    .barra-navegacion a {
-        text-decoration: none;
-        color: #000000;
-        font-weight: bold;
-        padding: 5px 10px;
-        border-radius: 5px;
-
-    }

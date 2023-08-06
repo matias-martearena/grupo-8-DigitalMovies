@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
    res.sendFile(path.resolve(__dirname, './views/home/home.html'))
 })
 
-app.get('/car', (req, res) => {
+app.get('/cart', (req, res) => {
    res.sendFile(path.resolve(__dirname, './views/cart/cart.html'))
 })
 
@@ -23,4 +23,3 @@ app.get('/membership', (req, res) => {
 
 const PORT = process.env.PORT || 3001
 app.listen(PORT, () => console.log(`Servidor en PORT:${PORT} corriendo`))
-
