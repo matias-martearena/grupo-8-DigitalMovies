@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
    res.sendFile(path.resolve(__dirname, './views/home/home.html'))
 })
 
-app.get('/signin', (req, res) => {
+app.get('/register', (req, res) => {
    res.sendFile(path.resolve(__dirname, './views/sign-in/sign-in.html'))
 })
 
