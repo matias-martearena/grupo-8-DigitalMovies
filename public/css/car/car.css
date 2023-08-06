@@ -1,22 +1,104 @@
 body {
-    background-color: whitesmoke;
     margin: 0;
-}
-
-h1 {
     font-family: 'Montserrat Alternates', sans-serif;
-    text-align: center;
-    float: center;
-
+    font-weight: bold;
+    background-color: whitesmoke;
 }
-div {
-    justify-content: center;
+
+header{
+    background-color: brown;
+}
+
+main{
+    background-color: whitesmoke;
+}
+
+.carrito-contenedor{
+    display:flex;
+    justify-content: space-between;
+}
+
+.articulo-contenedor{
+    display:flex;
+    flex-direction: column;
+    flex: 5;
+    background-color: #fff;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px; 
+}
+
+.articulo{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    width: 98%;
+ 
+}
+
+.monto-contenedor{
+    flex: 1;
+    background-color: #fff;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px; 
+    height: 20rem;
+}
+.articulo-contenedor{
+    display:flex;
+    justify-content: space-evenly;
     align-items: center;
-
 }
-img {
-    width: 90vw;
-    height: 80vh;
+
+.p1 img{
+    max-width: 150px;
+    height: auto;
+    border: #000000;
+    border-radius: 1rem;
+}
+
+.p2{
+    display:flex;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+
+.p2-top h2{
+    text-align: center;
+}
+
+.p2-bot{
+    display: flex;
+    justify-content: center;
+}
+
+.p3{
+    display:flex;
+    flex-direction: column;
+}
+
+.p3-top{
+    display: flex;
+    justify-content: center;
+}
+
+.p3-bot, .m1, .m2{
+    text-align: center;
+}
+
+.m3{
+    display: flex;
+    justify-content: center;
+}
+
+
+footer{
 }
 .barra-navegacion {
         display: flex;
@@ -43,81 +125,5 @@ img {
         font-weight: bold;
         padding: 5px 10px;
         border-radius: 5px;
-
-    }
-    .caja-contenedor{
-        display:flex;
-        flex: wrap;
-        justify-content: space-between;
-    }
-    .articulos {
-        border-radius: 1rem;
-        border: 3px solid grey;
-        background-color: white;
-        font-family: 'Montserrat Alternates', sans-serif;
-        font-weight: bold;
-        color: black;
-        flex: 5;
-        height: 900px;
-        line-height: 200px;
-        margin: 5px;
-
-
-
-    }
-    .producto {
-        border: 3px solid grey;
-        background-color: white;
-        font-family: 'Montserrat Alternates', sans-serif;
-        font-weight: bold;
-        color: black;
-        flex: 1;
-        height: 435px;
-        margin: 6px;
-        text-align: center;
-        border-radius: 1rem;
-
-    }
-    .monto {
-        border: 3px solid grey;
-        background-color: white;
-        font-family: 'Montserrat Alternates', sans-serif;
-        font-weight: bold;
-        color: black;
-        width: 400px;
-        height: 460px;
-        line-height: 200px;
-        text-align: center;
-        margin: 5px;
-        float:center;
-        border-radius: 1rem;
-    }    
-    .botoncito{
-        align-items: bottom;
-        padding: 5rem;
-        font-family: 'Montserrat Alternates', sans-serif;
-
-
-    }
-    .buttonGrande{
-        font-weight: bold;
-        font-family: 'Montserrat Alternates', sans-serif;
-        font-size: large;
-        width: 200px;
-        height: auto;
-    }
-    .foto{
-        border: 3px solid grey;
-        width: 300px;
-        height: 385px;
-        border-radius: 1rem;
-        margin: 20px;
-    }
-    .buttonEliminar{
-        font-weight: bold;
-        font-family: 'Montserrat Alternates', sans-serif;
-        font-size: large;
-        width: 150px;
-        height: auto;
 
     }

@@ -10,9 +10,10 @@
 <link rel="stylesheet" href="css/car/car.css" />
    </head>
    <body>
+      <header></header>
       <nav class="barra-navegacion">
       <ul>
-         <li><a href="/home">Home</a></li>
+         <li><a href="/home">home</a></li>
          <li><a href="#">Movies</a></li>
          <li><a href="#">Series</a></li>
          <li><a href="#">Showtimes</a></li>
@@ -22,21 +23,90 @@
             <li><a href="#">log out</a></li>
      </ul>
  </nav>
- <section class="caja-contenedor">
-   <div class="articulos">
-      <div class ="producto">
-         <div class="foto"></div>
-         <h1>Nombre del producto:</h1>
-         <div class="botoncito"><button class="buttonEliminar">eliminar</button></div>
-      </div>
-      <div class="producto">
-         <div class="foto"></div>
-      </div>
-   </div>
-   <div class="monto">
-      Resumen De Compra:
-      <div class="botoncito"><button class="buttonGrande">Continuar Compra</button></div>
-   </div>
-</section>  
-   </body>
-</html>  
+</header>
+<main>
+   <!-- Contenedor que tiene a las 2 Cajas principales -->
+   <section class="carrito-contenedor">
+       <!-- Caja Izquierda -->
+       <div class="articulo-contenedor">
+           <!-- Inicio de Articulo -->
+           <div class="articulo">
+             <div class="p1">
+               <img src="css/car/barbie.png" alt="Imagen de producto">
+             </div>
+             <div class="p2">
+               <div class="p2-top">
+                   <h2>Barbie</h2>
+                   <p>Descripcion</p>
+               </div>
+               <div class="p2-bot">
+                   <button class="buttonMedio">Eliminar</button>
+                   <button class="buttonMedio">Comprar Ahora</button>
+               </div>
+             </div>
+             <div class="p3">
+               <div class="p3-top">
+                   <button class="buttonMedio">+</button>
+                   <button class="buttonMedio">-</button>
+               </div>
+               <div class="p3-bot">
+                   <h2>*Nro.* unidades disponibles</h2>
+               </div>
+             </div>
+             <div class="p4">
+               <h1>
+                   $15.99
+               </h1>
+             </div>
+           </div>
+           <!-- Fin de Articulo -->
+           <div class="articulo">
+               <div class="p1">
+                 <img src="css/car/oppenheimer.png" alt="Imagen de producto">
+               </div>
+               <div class="p2">
+                 <div class="p2-top">
+                     <h2>Oppenheimer</h2>
+                     <p>Descripcion</p>
+                 </div>
+                 <div class="p2-bot">
+                     <button class="buttonMedio">Eliminar</button>
+                     <button class="buttonMedio">Comprar Ahora</button>
+                 </div>
+               </div>
+               <div class="p3">
+                 <div class="p3-top">
+                     <button class="buttonMedio">+</button>
+                     <button class="buttonMedio">-</button>
+                 </div>
+                 <div class="p3-bot">
+                     <h2>*Nro.* unidades disponibles</h2>
+                 </div>
+               </div>
+               <div class="p4">
+                 <h1>
+                     $15.99
+                 </h1>
+               </div>
+             </div>
+       </div>
+       <!-- Caja derecha -->
+       <div class="monto-contenedor">
+           <div class="m1">
+               <h2>Resumen</h2>
+           </div>
+           <div class="m2">
+               cantidad de productos
+
+           </div>
+           <div class="m3">
+               <button class="buttonGrande">Pagar</button>
+           </div>
+       </div>
+   </section>
+</main>
+<footer>
+   <p1></p1>
+</footer>
+</body>
+</html>
