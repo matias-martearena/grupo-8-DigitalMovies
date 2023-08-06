@@ -6,7 +6,11 @@ const publicPath = path.resolve(__dirname, './public')
 app.use(express.static(publicPath))
 
 app.get('/', (req, res) => {
-   res.sendFile(path.resolve(__dirname, './views/home/home.html'))
+   res.sendFile(path.resolve(__dirname, './views/sign-in/sign-in.html'))
+})
+
+app.get('/signin', (req, res) => {
+   res.sendFile(path.resolve(__dirname, './views/sign-in/sign-in.html'))
 })
 
 app.get('/cart', (req, res) => {
