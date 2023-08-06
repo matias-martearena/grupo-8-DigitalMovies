@@ -1,15 +1,21 @@
 const express = require('express')
-const path = require('path')
-
 const app = express()
-const PORT = 3000
+const path = require('path')
 const publicPath = path.resolve(__dirname, './public')
 
 app.use(express.static(publicPath))
-app.listen(PORT, () => console.log(`Servidor en PORT:${PORT} corriendo`))
+
 app.get('/', (req, res) => {
-   res.sendFile(path.resolve(__dirname, './views/home-page/home.html'))
+   res.sendFile(path.resolve(__dirname, './views/home/home.html'))
 })
+
 app.get('/login', (req, res) => {
    res.sendFile(path.resolve(__dirname, './views/login/login.html'))
 })
+
+app.get('/membership', (req, res) => {
+   res.sendFile(path.resolve(__dirname, './views/membership/membership.html'))
+})
+
+const PORT = process.env.PORT || 3001
+app.listen(PORT, () => console.log(`Servidor en PORT:${PORT} corriendo`))
