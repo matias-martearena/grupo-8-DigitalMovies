@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+#myVideo{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+.login-page{
+    display: flex;
+    height: 100vh;   
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
+
+.page-card{
+    width: 60vw;
+    min-width: 300px;
+    padding: 2%;
+    border-radius: 25px;
+    margin: 2rem;
+    background-color: transparent;
+    color: rgba(239, 220, 211, 0.9);;
+}
+
+.page-card p{
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+}
+.page-card section{
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.page-card label{
+    display: none;
+}
+.page-card .welcome-logo{
+    margin-top: 15px;
+    margin-bottom: 20%;
+    font-size: 30px;
+}
+.page-card input{
+    display: block;
+    width: 90%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    font-size: 15px;
+    color: rgba(239, 220, 211, 0.9);
+    border-bottom: solid 1px #efdcd3;
+    background-color: transparent;
+}
+.bn3637 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 2rem;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: rgba(84, 28, 19, 0.9);
+    background-color: rgba(239, 220, 211, 0.6);
+    backface-visibility: hidden;
+    border: 0.3rem solid transparent;
+    border-radius: 3rem;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+  .bn38 {
+    border-color: transparent;
+    transition: background-color 0.1s ease-in-out;
+  }
+    
+  .bn38:hover {
+    background-color: rgba(170, 87, 75, 0.7);
+    color: rgba(239, 220, 211, 0.9);
+    
+  }
+.register-link{
+    text-decoration: none;
+    color: rgba(239, 220, 211, 0.9);
+}
+
+
+
+/* 769px tablet 1024 Desktop */
+@media (min-width: 769px){
+    .page-card{
+        max-width: 500px;
+        margin: 4rem;
+    }
+    .login-page{
+        max-width: 500px;
+    }
+    body{
+        display: flex;
+        justify-content: flex-start;
+    }
+}

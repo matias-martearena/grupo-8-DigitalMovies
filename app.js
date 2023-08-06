@@ -9,6 +9,10 @@ app.get('/', (req, res) => {
    res.sendFile(path.resolve(__dirname, './views/home/home.html'))
 })
 
+app.get('/login', (req, res) => {
+   res.sendFile(path.resolve(__dirname, './views/login/login.html'))
+})
+
 app.get('/membership', (req, res) => {
    res.sendFile(path.resolve(__dirname, './views/membership/membership.html'))
 })
