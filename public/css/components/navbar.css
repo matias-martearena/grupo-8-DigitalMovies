@@ -20,6 +20,13 @@
    --palete-2-5: #e39828;
 }
 
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: var(--body-font);
+}
+
 li {
    list-style: none;
 }
