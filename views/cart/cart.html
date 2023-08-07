@@ -80,78 +80,71 @@
             </div>
          </div>
       </header>
-      <main>
-         <!-- Contenedor que tiene a las 2 Cajas principales -->
-         <section class="carrito-contenedor">
-            <!-- Caja Izquierda -->
-            <div class="articulo-contenedor">
-               <!-- Inicio de Articulo -->
-               <div class="articulo">
-                  <div class="p1">
-                     <img src="/img/barbie.jpg" alt="Imagen de producto" />
-                  </div>
-                  <div class="p2">
-                     <div class="p2-top">
-                        <h2>Barbie</h2>
-                        <p>Descripcion</p>
-                     </div>
-                     <div class="p2-bot">
-                        <button class="buttonMedio">Eliminar</button>
-                        <button class="buttonMedio">Comprar Ahora</button>
-                     </div>
-                  </div>
-                  <div class="p3">
-                     <div class="p3-top">
-                        <button class="buttonMedio">+</button>
-                        <button class="buttonMedio">-</button>
-                     </div>
-                     <div class="p3-bot">
-                        <h2>*Nro.* unidades disponibles</h2>
-                     </div>
-                  </div>
-                  <div class="p4">
-                     <h1>$15.99</h1>
+      <main class="main-container">
+         <!-- LEFT BOX -->
+         <section class="left-box-container">
+            <!-- PRODUCT 1 -->
+            <article class="cart_product">
+               <img
+                  class="cart_product-img"
+                  src="/img/barbie.jpg"
+                  alt="Imagen de producto"
+               />
+               <div class="cart_product_description-container">
+                  <p class="cart_product-title">Barbie</p>
+                  <div class="btn-container">
+                     <button type="submit">Eliminate</button>
+                     <button type="submit">Buy Now</button>
                   </div>
                </div>
-               <!-- Fin de Articulo -->
-               <div class="articulo">
-                  <div class="p1">
-                     <img src="/img/oppenheimer.png" alt="Imagen de producto" />
+               <div class="cart_product_quantity-container">
+                  <div class="more_less-btn">
+                     <button type="submit">+</button>
+                     <p>1</p>
+                     <button type="submit">-</button>
                   </div>
-                  <div class="p2">
-                     <div class="p2-top">
-                        <h2>Oppenheimer</h2>
-                        <p>Descripcion</p>
-                     </div>
-                     <div class="p2-bot">
-                        <button class="buttonMedio">Eliminar</button>
-                        <button class="buttonMedio">Comprar Ahora</button>
-                     </div>
-                  </div>
-                  <div class="p3">
-                     <div class="p3-top">
-                        <button class="buttonMedio">+</button>
-                        <button class="buttonMedio">-</button>
-                     </div>
-                     <div class="p3-bot">
-                        <h2>*Nro.* unidades disponibles</h2>
-                     </div>
-                  </div>
-                  <div class="p4">
-                     <h1>$15.99</h1>
+                  <p class="cart_product_total-quantity">
+                     Quantity Available: N°
+                  </p>
+               </div>
+               <p class="cart_product-price">Price: $0.99</p>
+            </article>
+            <!-- PRODUCT 2 -->
+            <article class="cart_product">
+               <img
+                  class="cart_product-img"
+                  src="/img/avatar-2.jpg"
+                  alt="Imagen de producto"
+               />
+               <div class="cart_product_description-container">
+                  <p class="cart_product-title">Avatar 2</p>
+                  <div class="btn-container">
+                     <button type="submit">Eliminate</button>
+                     <button type="submit">Buy Now</button>
                   </div>
                </div>
-            </div>
-            <!-- Caja derecha -->
-            <div class="monto-contenedor">
-               <div class="m1">
-                  <h2>Resumen</h2>
+               <div class="cart_product_quantity-container">
+                  <div class="more_less-btn">
+                     <button type="submit">+</button>
+                     <p>1</p>
+                     <button type="submit">-</button>
+                  </div>
+                  <p class="cart_product_total-quantity">
+                     Quantity Available: N°
+                  </p>
                </div>
-               <div class="m2">cantidad de productos</div>
-               <div class="m3">
-                  <button class="buttonGrande">Pagar</button>
-               </div>
-            </div>
+               <p class="cart_product-price">Price: $0.99</p>
+            </article>
+         </section>
+         <!-- RIGHT BOX -->
+         <section class="purchase_summary-container">
+            <p class="purchase-summary">Productos:</p>
+            <ul class="list-products">
+               <li>Barbie: <span>$0.99</span></li>
+               <li>Avatar 2: <span>$0.99</span></li>
+            </ul>
+            <p class="total-to-pay">Total to pay: $1.98</p>
+            <button type="submit">Go pay</button>
          </section>
       </main>
       <footer class="footer-conteiner">

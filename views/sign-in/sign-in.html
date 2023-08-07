@@ -3,60 +3,164 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Regístrate</title>
+      <title>Sign up</title>
       <link rel="stylesheet" href="/css/sign-in/sign-in.css" />
+      <link rel="stylesheet" href="/css/components/navbar.css" />
+      <link rel="stylesheet" href="/css/components/footer.css" />
+      <link rel="stylesheet" href="/css/components/normalize.css" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
          href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap"
          rel="stylesheet"
       />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+         crossorigin="anonymous"
+         referrerpolicy="no-referrer"
+      />
+      <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"
+            rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+      
    </head>
    <body class="body_formulario">
+      <header>
+         <nav class="navbar">
+            <div class="logo">
+               <p>DM</p>
+            </div>
+            <ul class="links">
+               <li><a href="/">Home</a></li>
+               <li><a href="/showtimes">Showtimes</a></li>
+               <li><a href="/membership">Membership</a></li>
+               <li><a href="/tickets">Tickets</a></li>
+               <li><a href="/snacks">Snacks</a></li>
+               <li><a href="/digital-movies">Digital Movies</a></li>
+            </ul>
+            <form class="main_header_search_bar">
+               <input
+                  type="search"
+                  name="search-bar"
+                  placeholder="Search movies, series and more"
+               />
+               <button class="main_header_button" type="submit">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+               </button>
+            </form>
+            <div class="home_btn">
+               <a href="/login" class="log_btn">Log In</a>
+               <a href="/logout" class="log_out_btn">Log Out</a>
+               <a href="/register" class="sign_up_btn">Sign Up</a>
+            </div>
+            <div class="login_btn">
+               <a href="/cart" class="fa-solid fa-cart-shopping"></a>
+               <a href="/profile" class="fa-solid fa-user"></a>
+            </div>
+            <div class="toggle_btn">
+               <i class="fa-solid fa-bars"></i>
+            </div>
+         </nav>
+         <div class="dropdown_menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/showtimes">Showtimes</a></li>
+            <li><a href="/membership">Membership</a></li>
+            <li><a href="/tickets">Tickets</a></li>
+            <li><a href="/snacks">Snacks</a></li>
+            <li><a href="/digital-movies">Digital Movies</a></li>
+            <div class="user_btn">
+               <a href="/login" class="log_btn">Log In</a>
+               <a href="/logout" class="log_out_btn">Log Out</a>
+               <a href="/signup" class="sign_up_btn">Sign Up</a>
+            </div>
+         </div>
+      </header>
       <main class="main_formulario">
-         <form action="" method="post" class="formulario">
+         <section class="hero">
+            <video autoplay muted loop  plays-inline id="myVideo">
+                <source src="/video/interstellar-trailer.mp4"  type="video/mp4">
+            </video>
+        </section>
+         <form action="/" method="post" class="formulario">
             <img
                src="/img/logo-camera-1.png"
                alt="movies"
                class="formulario_logo"
             />
-            <h1 class="formulario_titulo">Regístrate</h1>
+            <h1 class="formulario_titulo">Create your account</h1>
             <div class="formulario_input">
-               <label for="" class="input_subtitulo">Nombre</label>
-               <input type="text" name="name" class="input" />
+               <label for="name" class="input_subtitulo">Name</label>
+               <input type="text" id="name" name="name" class="input" placeholder="Name" required/>
             </div>
             <div class="formulario_input">
-               <label for="" class="input_subtitulo">Apellido</label>
-               <input type="text" name="last_name" class="input" />
+               <label for="last_name" class="input_subtitulo">Surname</label>
+               <input type="text" id="last_name" name="last_name" class="input" placeholder="Surname" required/>
             </div>
             <div class="formulario_input">
-               <label for="" class="input_subtitulo">Fecha de nacimiento</label>
-               <input type="date" name="fecha" class="input" />
+               <label for="date" class="input_subtitulo">Date of birth</label>
+               <input type="date" id="date" name="date" class="input" placeholder="Date of birth" required/>
             </div>
             <div class="formulario_input">
-               <label for="" class="input_subtitulo">Email</label>
-               <input type="email" name="email" class="input" />
+               <label for="email" class="input_subtitulo">Email</label>
+               <input type="email" id="email" name="email" class="input" placeholder="Email" required/>
             </div>
             <div class="formulario_input">
-               <label for="" class="input_subtitulo">Contraseña</label>
-               <input type="password" name="password" class="input" />
+               <label for="" class="input_subtitulo">Password</label>
+               <input type="password" id="password" name="password" class="input" placeholder="Password" required/>
             </div>
             <div class="formulario_input">
-               <label for="" class="input_subtitulo"
-                  >Confirmar contraseña</label
+               <label for="password" class="input_subtitulo"
+                  >Confirm password</label
                >
-               <input type="password" name="password" class="input" />
+               <input type="password" id="password" name="password" class="input" placeholder="Confirm password" required/>
             </div>
             <div class="formulario_boton">
                <button class="boton_enviar">
-                  <a href="">Enviar</a>
+                  <a href="/">Sign up</a>
                </button>
             </div>
             <div class="formulario_foot">
-               <h2 class="foot_titulo">¿Ya tienes un cuenta?</h2>
-               <a href="/login" class="foot_cuenta">Inicia sesión</a>
+               <h2 class="foot_titulo">Do you have an account?</h2>
+               <a href="/login" class="foot_cuenta">Log in</a>
             </div>
          </form>
       </main>
+      <footer class="footer-conteiner">
+         <div class="wave-container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+               <path
+                  fill-opacity="1"
+                  d="M0,96L48,122.7C96,149,192,203,288,213.3C384,224,480,192,576,176C672,160,768,160,864,186.7C960,213,1056,267,1152,261.3C1248,256,1344,192,1392,160L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+               ></path>
+            </svg>
+         </div>
+         <div class="wave-container-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+               <path
+                  fill-opacity="1"
+                  d="M0,160L48,133.3C96,107,192,53,288,26.7C384,0,480,0,576,0C672,0,768,0,864,32C960,64,1056,128,1152,144C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+               ></path>
+            </svg>
+         </div>
+         <div class="footer-social-conteiner">
+            <p class="footer-logo">DM</p>
+            <div class="social-conteiner">
+               <a href="#"><i class="fa-brands fa-twitter"></i></a>
+               <a href="#"><i class="fa-brands fa-facebook"></i></a>
+               <a href="#"><i class="fa-brands fa-instagram"></i></a>
+               <a href="#"><i class="fa-brands fa-youtube"></i></a>
+               <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+         </div>
+         <div class="footer-contact">
+            <a class="contact" href="#">About Page</a>
+            <a class="contact" href="#">About Us</a>
+            <span class="copy"
+               >&copy; Copyrights 2021, All rights reserved.</span
+            >
+         </div>
+      </footer>
    </body>
 </html>
