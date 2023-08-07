@@ -25,6 +25,9 @@ app.get('/membership', (req, res) => {
    res.sendFile(path.resolve(__dirname, './views/membership/membership.html'))
 })
 
+app.get('/showtimes', (req, res) => {
+   res.sendFile(path.resolve(__dirname, './views/showtimes/showtimes.html'))
+
 app.get('/tickets', (req, res) => {
    res.sendFile(path.resolve(__dirname, './views/tickets/tickets.html'))
 })
