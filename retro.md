@@ -38,3 +38,19 @@
    Que deberia mejorar en este sprint 2?: Algunos integrantes deben ponerse al dia con los contenidos.
 
 ---
+
+# Retro del Sprint 2
+
+### Conclusiones
+
+**Que se hizo bien? Que se hizo mal? Que deberiamos mejorar en este sprint 3**
+
+Que se hizo bien?: Solucionar inconvenientes inesperados.
+Que se hizo mal?: Falta de participacion, falta de cumplimiento de plazos, falta de comunicacion, falta de entendimiento.
+Que deberia mejorar en este sprint 3?: Comunicacion, reuniones y organizar horarios.
+
+El equipo se maneja bien individualmente, pero, grupalmente surgen muchos inconvenientes, muchos miembros estan atrasados, parte culpa de otras tareas. Hay que mejorar la comunicacion grupal, tambien hay que mejorar el uso de metodologias agiles, el consultar el wireframe, la organizacion de las paginas y su contenido.
+
+Para el siguiente sprint, deberiamos calcular mejor los tiempos y tareas, el equipo debe ponerse al dia en cuanto al contenido, y por ultimo, comunicar mejor los inconvenientes para no volver a cometer los mismos erroes.
+
+---
