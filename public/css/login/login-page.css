@@ -15,7 +15,7 @@ main{
     align-items: center;
     justify-content: center;
     position: relative;
-    z-index: -1;
+    z-index: 0;
 }
 .hero {
     width: 100%;
@@ -119,7 +119,6 @@ main{
         max-width: 500px;
     }
     main{
-        
         display: flex;
         justify-content: flex-start;
     } 
