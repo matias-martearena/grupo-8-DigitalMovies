@@ -71,6 +71,7 @@ main{
 .tarjeta-back {
   transform: rotateY(180deg);
   position: absolute;
+  padding: 7px;
   top: 0;
   left: 0;
   width: 100%;
