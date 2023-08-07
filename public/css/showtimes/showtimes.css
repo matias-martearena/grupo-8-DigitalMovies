@@ -88,6 +88,7 @@ main{
 }
 
 .container-descripcion {
+  display: block;
   text-align: center;
   align-items: center;
 }
@@ -101,6 +102,9 @@ main{
 .descripcion {
   display: none;
   color: var(--palete-2-3);
+}
+.precio{
+  font-size: 15px;
 }
 
 .tarjeta:hover .tarjeta-inner {
@@ -137,8 +141,16 @@ main{
 @media (min-width: 1024px){
     .productos{
         display: grid;
-        grid-template-columns: repeat(5, minmax(100px, 1fr));
+        grid-template-columns: repeat(4, minmax(100px, 1fr));
         gap: 20px;
         margin-right: 15px;
         }
+}
+@media (min-width: 1440px){
+  .productos{
+    display: grid;
+    grid-template-columns: repeat(5, minmax(100px, 1fr));
+    gap: 20px;
+    margin-right: 15px;
+    }
 }
