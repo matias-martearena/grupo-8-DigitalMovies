@@ -27,6 +27,9 @@ app.get('/membership', (req, res) => {
 
 app.get('/showtimes', (req, res) => {
    res.sendFile(path.resolve(__dirname, './views/showtimes/showtimes.html'))
+
+app.get('/tickets', (req, res) => {
+   res.sendFile(path.resolve(__dirname, './views/tickets/tickets.html'))
 })
 
 const PORT = process.env.PORT || 3001
