@@ -2,40 +2,12 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const publicPath = path.resolve(__dirname, './public')
+const mainRouter = require('./src/routes/main')
 
 app.use(express.static(publicPath))
 
-app.get('/', (req, res) => {
-   res.sendFile(path.resolve(__dirname, './views/home/home.html'))
-})
-
-app.get('/register', (req, res) => {
-   res.sendFile(path.resolve(__dirname, './views/sign-in/sign-in.html'))
-})
-
-app.get('/cart', (req, res) => {
-   res.sendFile(path.resolve(__dirname, './views/cart/cart.html'))
-})
-
-app.get('/login', (req, res) => {
-   res.sendFile(path.resolve(__dirname, './views/login/login.html'))
-})
-
-app.get('/membership', (req, res) => {
-   res.sendFile(path.resolve(__dirname, './views/membership/membership.html'))
-})
-
-app.get('/snacks', (req, res) => {
-   res.sendFile(path.resolve(__dirname, './views/snacks/snacks.html'))
-})
-
-app.get('/showtimes', (req, res) => {
-   res.sendFile(path.resolve(__dirname, './views/showtimes/showtimes.html'))
-})
-
-app.get('/tickets', (req, res) => {
-   res.sendFile(path.resolve(__dirname, './views/tickets/tickets.html'))
-})
+app.use('/', mainRouter)
+app.set('view engine', 'ejs')
 
 const PORT = process.env.PORT || 3001
 app.listen(PORT, () => console.log(`Servidor en PORT:${PORT} corriendo`))
