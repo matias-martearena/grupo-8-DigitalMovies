@@ -1,0 +1,27 @@
+<% cartProducts.forEach((product) => { %>
+<article class="cart_product">
+   <img
+      class="cart_product-img"
+      src="<%= product.image %>"
+      alt="<%= product.alt %>"
+   />
+   <div class="cart_product_description-container">
+      <p class="cart_product-title"><%= product.name %></p>
+      <div class="btn-container">
+         <button type="submit">Eliminate</button>
+         <button type="submit">Buy Now</button>
+      </div>
+   </div>
+   <div class="cart_product_quantity-container">
+      <div class="more_less-btn">
+         <button type="submit">+</button>
+         <p><%= product.quantity %></p>
+         <button type="submit">-</button>
+      </div>
+      <p class="cart_product_total-quantity">
+         Quantity Available: <%= product.quantityAvailable %>
+      </p>
+   </div>
+   <p class="cart_product-price">$<%= product.price * product.quantity %></p>
+</article>
+<% })%>
