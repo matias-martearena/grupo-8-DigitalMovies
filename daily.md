@@ -53,3 +53,35 @@
    -  Que vas a hacer hoy?: Modularizacion de la pagina signin(register).
 
 ---
+
+**Dia: 17/08/2023 Reunion: N°2**
+
+-  Mati Martearena:
+
+   -  Que se hizo ayer?: Terminar el enrutado y la creacion de componentes de la home page. Corregir el tipo de archivos de todas las paginas y modularizacion de la home page y la cart page.
+   -  Te encontraste con algun impedimento?: Me encontre con el impedimento de no poder agregar dinamismo a la base de datos y no poder encontrar una manera convincente y prolija de mostrar el total de productos y el total de precios de los productos con respecto a su cantidad en la caja derecha del carrito de compras. El dinamismo lo veremos en los siguientes modulos asi que esperare para poder avanzar con eso. Lo demas del trabajo se completo con problemas.
+   -  Que vas a hacer hoy?: Terminar de correjir la pagina de carrito de compas para que use los partials, tenga una base de datos prolija y modularizar los productos, ademas, voy a hacer lo mismo con la pagina de memebresia (membership page).
+
+-  Pablo:
+
+   -  Que se hizo ayer?: Ajuste y termine de acomodar mi pagina a la nueva estructura y añadi que el navegador preguntará para recordar el usuario y contraseña si haces log in.
+   -  Te encontraste con algun impedimento?: Sin impedimentos.
+   -  Que vas a hacer hoy?: Terminar de hacer el fix para "Olvido contraseña ". Creando una nueva pagina a parte en dicho caso.
+
+-  Mati Macchi:
+
+   Por problemas personales Matias Macchi decidio abandonar la cursada.
+
+-  Ignacio:
+
+   -  Que se hizo ayer?: Estudie el tema de la modulación, haciendo parte de las prácticas del playground, tambien hice el pull del trabajo y me puse a ver las nuevas estructuras de carpeta.
+   -  Te encontraste con algun impedimento?: Me costo entender algunas cosas las cuales me saque algunas dudas con chatgtp.
+   -  Que vas a hacer hoy?: Hoy voy a ver las clases para terminar de entender y empezar a aplicar al tp grupal.
+
+-  Luciano:
+
+   -  Que se hizo ayer?: Cambié el nombre de mi página a register y la empece a modular.
+   -  Te encontraste con algun impedimento?: No me encontré con ningun impedimento.
+   -  Que vas a hacer hoy?: Voy a seguir modularizando la página de register.
+
+---
