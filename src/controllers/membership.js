@@ -1,6 +1,10 @@
+const arrMembership = require('../database/membership')
+
 const membership = {
    membership: (req, res) => {
-      res.render('products/membership/membership')
+      res.render('products/membership/membership', {
+         arrMembership,
+      })
    },
 }
 
