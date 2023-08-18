@@ -18,7 +18,8 @@ main{
     z-index: 0;
 }
 .hero {
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     /* overflow: auto; */
     position: relative;
     z-index: -100;
@@ -26,8 +27,8 @@ main{
     height: 100%;
  }
 #myVideo{
-    min-width: 100vh;
-    min-height: 100vh;
+    min-width: 100%;
+    min-height: 100%;
 }
 .login-page{
     display: flex;
@@ -79,7 +80,7 @@ main{
 }
 .page-card input{
     display: block;
-    width: 90%;
+    width: 100%;
     margin-bottom: 10px;
     padding: 10px;
     border: none;
