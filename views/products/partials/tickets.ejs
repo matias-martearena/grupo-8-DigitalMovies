@@ -1,17 +1,17 @@
 <% ticket.forEach((ticket) => { %>
-<section class="tarjeta">
-    <div class="tarjeta-front">
-      <img src="<%= ticket.image %>" alt="<%= ticket.title %>" class="fotoTarjeta">
-    </div>
-    <div class="tarjeta-back">
-      <div class="container-descripcion">
-        <h3 class="descripcion"><%= ticket.title %></h3>
-        <p class="precio"><%= ticket.description %></p>
-        <p class="funciones"><%= ticket.function %></p>
-        <form class="form-class">
-          <button type="submit" class="boton-comprar"><%= ticket.price %> <i class="fa-solid fa-cart-plus" id="cart"></i></button>
-        </form>
+  <section class="tarjeta">
+      <div class="tarjeta-front">
+        <img src="<%= ticket.image %>" alt="<%= ticket.title %>" class="fotoTarjeta">
       </div>
-    </div>
-  </section>
-  <% }) %>
+      <div class="tarjeta-back">
+        <div class="container-descripcion">
+          <h3 class="descripcion"><%= ticket.title %></h3>
+          <p class="precio"><%= ticket.description %></p>
+          <p class="funciones"><%= ticket.function %></p>
+          <form class="form-class">
+            <button type="submit" class="boton-comprar"><%= ticket.price %> <i class="fa-solid fa-cart-plus" id="cart"></i></button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <% }) %>
