@@ -92,7 +92,7 @@
 
    -  Que se hizo ayer?: Se termino con la pagina del carrito de compras y de termino de modularizar la pagina de membership ademas de agregar una base de datos para la misma.
    -  Te encontraste con algun impedimento?: Quize intentar aplicar con js y logica una manera para que en la pagina del carrito de compras se muestre el total a pagar dependiendo del precio del producto y de la cantidad solicitada. No lo logre; llegue a la conclusion que si lo hacia con un array podia generar conflictos con las compras posteriores, ya que no sabria como reiniciar el array que contiene el precio total.
-   -  Que vas a hacer hoy?: Por mi parte ya termine con todo lo que debia hacer. Hoy voy a correjir los estilos del sprint 2, especificamente, los estilos del footer, las tarjetas, header, :hover de elementos, entre otros estilos que vayan surgiendo.
+   -  Que vas a hacer hoy?: Por mi parte ya termine con todo lo que debia hacer. Hoy voy a corregir los estilos del sprint 2, especificamente, los estilos del footer, las tarjetas, header, :hover de elementos, entre otros estilos que vayan surgiendo.
 
 -  Pablo:
 
@@ -111,5 +111,33 @@
    -  Que se hizo ayer?: Cree la rama register-page con los cambios listos para poder empezar a aplicar rutas parametrizadas y vistas dinámicas.
    -  Te encontraste con algun impedimento?: Se me complicó a la hora de empezar a aplicar dichas vistas dinámicas y parametrizar rutas, con errores en el archivo register.ejs al aplicarle los archivos de la carpeta partials.
    -  Que vas a hacer hoy?: Tratar de corregir dichos errores y repasar conceptos de patrones de diseño y vistas dinamicas.
+
+---
+
+**Dia: 21/08/2023 Reunion: N°4**
+
+-  Mati:
+
+   -  Que se hizo ayer?: Organice el tablero y pense en los cambios de estilos generales. Todavia no avance.
+   -  Te encontraste con algun impedimento?: Ninguno.
+   -  Que vas a hacer hoy?: Corregir los estilos del sprint 2 y ver la clase CRUD.
+
+-  Pablo:
+
+   -  Que se hizo ayer?: Termine de hacer las correcciones del sprint 2 y 3. Planear que hacer con los formularios de mas adelante.
+   -  Te encontraste con algun impedimento?: Ninguno.
+   -  Que vas a hacer hoy?: Revisar todo el codigo y ver si hay errores.
+
+-  Ignacio:
+
+   -  Que se hizo ayer?:
+   -  Te encontraste con algun impedimento?:
+   -  Que vas a hacer hoy?:
+
+-  Luciano:
+
+   -  Que se hizo ayer?: Avanzar con los controladores y rutas de la pagina de registro. Acomodar el codigo y usar mas etiquetas semanticas. Usar los partials en la pagina.
+   -  Te encontraste con algun impedimento?: El uso de las rutas. Falta pracita en la implementacion de las rutas y vistas.
+   -  Que vas a hacer hoy?: Seguir con los controladores y partials, reforzar conocimiento.
 
 ---
