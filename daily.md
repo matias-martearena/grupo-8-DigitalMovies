@@ -85,3 +85,31 @@
    -  Que vas a hacer hoy?: Voy a seguir modularizando la página de register.
 
 ---
+
+**Dia: 18/08/2023 Reunion: N°3**
+
+-  Mati:
+
+   -  Que se hizo ayer?: Se termino con la pagina del carrito de compras y de termino de modularizar la pagina de membership ademas de agregar una base de datos para la misma.
+   -  Te encontraste con algun impedimento?: Quize intentar aplicar con js y logica una manera para que en la pagina del carrito de compras se muestre el total a pagar dependiendo del precio del producto y de la cantidad solicitada. No lo logre; llegue a la conclusion que si lo hacia con un array podia generar conflictos con las compras posteriores, ya que no sabria como reiniciar el array que contiene el precio total.
+   -  Que vas a hacer hoy?: Por mi parte ya termine con todo lo que debia hacer. Hoy voy a correjir los estilos del sprint 2, especificamente, los estilos del footer, las tarjetas, header, :hover de elementos, entre otros estilos que vayan surgiendo.
+
+-  Pablo:
+
+   -  Que se hizo ayer?: No asistio
+   -  Te encontraste con algun impedimento?: No asistio
+   -  Que vas a hacer hoy?: No asistio
+
+-  Ignacio:
+
+   -  Que se hizo ayer?: Intente aplicar lo visto en clase, patrones de diseño, rutas parametrizadas y como instalar express-generator en una copia del proyecto.
+   -  Te encontraste con algun impedimento?: Me costo mucho el tema de parametrizar las rutas, hasta que le agarre la mano me daba muchos problemas tanto ahí como en el playground ya que no entiendo bien el tema del req, me costo armar la estructura hasta que leí bien detallado que hacía cada parte del código.
+   -  Que vas a hacer hoy?: Hoy a la noche después de la facultad ya voy a crear la rama y aplicar lo aprendido, también ver de juntar las páginas en 1 y por último hacer el json.
+
+-  Luciano:
+
+   -  Que se hizo ayer?: Cree la rama register-page con los cambios listos para poder empezar a aplicar rutas parametrizadas y vistas dinámicas.
+   -  Te encontraste con algun impedimento?: Se me complicó a la hora de empezar a aplicar dichas vistas dinámicas y parametrizar rutas, con errores en el archivo register.ejs al aplicarle los archivos de la carpeta partials.
+   -  Que vas a hacer hoy?: Tratar de corregir dichos errores y repasar conceptos de patrones de diseño y vistas dinamicas.
+
+---
