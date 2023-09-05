@@ -141,3 +141,31 @@
    -  Que vas a hacer hoy?: Seguir con los controladores y partials, reforzar conocimiento.
 
 ---
+
+**Dia: 05/09/2023 Reunion: N°5**
+
+-  Mati:
+
+   -  Que se hizo ayer?: Me puse al dia con las clases, todavia estoy algo atrasado. Ayer termine la parte de CRUD I.
+   -  Te encontraste con algun impedimento?: Ninguno.
+   -  Que vas a hacer hoy?: Ponerme al dia con Multer y seguir para estar al dia con mis compañeros.
+
+-  Pablo:
+
+   -  Que se hizo ayer?: Cambio en la base de datos, se unio las rutas.
+   -  Te encontraste con algun impedimento?: Ninguno.
+   -  Que vas a hacer hoy?: Voy a hacer la pagina para crear y modificar los snaks.
+
+-  Ignacio:
+
+   -  Que se hizo ayer?: Avance un poco para ponerme al dia con las clases. Termine CRUD I e hice parte de Multer.
+   -  Te encontraste con algun impedimento?: Ninguno.
+   -  Que vas a hacer hoy?: Seguir avanzando con las clases para ponerme al dia.
+
+-  Luciano:
+
+   -  Que se hizo ayer?: Me puse al dia con CRUD I y empece con Multer.
+   -  Te encontraste con algun impedimento?: Ninguno.
+   -  Que vas a hacer hoy?: Crear la ruta para la pagina de registro y ver de hacer la base de datos para usuarios.
+
+---

@@ -54,3 +54,31 @@ El equipo se maneja bien individualmente, pero, grupalmente surgen muchos inconv
 Para el siguiente sprint, deberiamos calcular mejor los tiempos y tareas, el equipo debe ponerse al dia en cuanto al contenido, y por ultimo, comunicar mejor los inconvenientes para no volver a cometer los mismos erroes.
 
 ---
+
+# Retro del Sprint 3
+
+### Conclusiones
+
+**Que se hizo bien? Que se hizo mal? Que deberiamos mejorar en este sprint 4**
+
+-  Matias Martearena.
+   Que se hizo bien?: Se dividio las tareas de mejor manera, el equipo se comunico de mejor manera. En general hubo mas disposicion y entendimiento en las actividades.
+   Que se hizo mal?: Falto comunicacion entre los miembros.
+   Que se deberia mejorar en este sprint 4?: Que los miembros esten mas disponibles para comunicarse.
+
+-  Ignacio Martin Beguier.
+   Que se hizo bien?: Se organizo mejor el equipo en general. Hubo mas comunicacion. En general el equipo fue mas productivo.
+   Que se hizo mal?: Nada que recriminar en este sprint.
+   Que se deberia mejorar en este sprint 4?: Seguir trabajando como en el sprint anterior.
+
+-  Luciano Ayrala.
+   Que se hizo bien?: Se mejoro la organizacion y comunicacion.
+   Que se hizo mal?: Se deberian mejorar las reuniones.
+   Que se deberia mejorar en este sprint 4?: Organizar un horario fijo para las reuniones.
+
+-  Pablo Bejarano.
+   Que se hizo bien?: Todo se hizo bien 😊, Y si... que se hizo mal? Nada 😈.
+   Que se hizo mal?: Nada pa'.
+   Que se deberia mejorar en este sprint 4?: Y nada.
+
+---
