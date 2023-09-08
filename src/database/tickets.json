@@ -1,7 +1,7 @@
 [
    {
       "id": "001",
-      "image": "/images/barbie.jpg",
+      "image": "/images/movies/barbie.jpg",
       "title": "Barbie",
       "price": "$2",
       "function": "From Monday to Sunday at 4:00 PM, 7:00 PM, 10:00 PM.",
@@ -9,7 +9,7 @@
    },
    {
       "id": "002",
-      "image": "/images/oppenheimer.png",
+      "image": "/images/movies/oppenheimer.png",
       "title": "Oppenheimer",
       "price": "$2",
       "function": "From Monday to Sunday at 4:00 PM, 7:00 PM, 10:00 PM.",
@@ -17,7 +17,7 @@
    },
    {
       "id": "003",
-      "image": "/images/transformers-rise-of-the-beasts.jpg",
+      "image": "/images/movies/transformers-rise-of-the-beasts.jpg",
       "title": "Transformers: Rise of the Beasts",
       "price": "$2",
       "function": "From Monday to Sunday at 4:00 PM, 7:00 PM, 10:00 PM.",
@@ -25,7 +25,7 @@
    },
    {
       "id": "004",
-      "image": "/images/spider-man-across-the-spiderverse.jpg",
+      "image": "/images/movies/spider-man-across-the-spiderverse.jpg",
       "title": "Spider-Man: Into the Spider-Verse",
       "price": "$2",
       "function": "From Monday to Sunday at 4:00 PM, 7:00 PM, 10:00 PM.",
@@ -33,7 +33,7 @@
    },
    {
       "id": "005",
-      "image": "/images/guardianes-de-la-galaxia-v3.jpg",
+      "image": "/images/movies/guardianes-de-la-galaxia-v3.jpg",
       "title": "Guardians of the Galaxy Vol. 3",
       "price": "$2",
       "function": "From Monday to Sunday at 4:00 PM, 7:00 PM, 10:00 PM.",
