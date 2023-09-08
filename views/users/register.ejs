@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <%- include('./partials/head')%>
+      <link rel="stylesheet" href="/styles/register/register.css" />
+      <title>Register</title>
+   </head>
+   <body class="body_formulario">
+      <%- include('./partials/header')%>
+      <main class="main_formulario">
+         <section class="hero">
+            <video autoplay muted loop plays-inline id="myVideo">
+               <source src="/video/interstellar-trailer.mp4" type="video/mp4" />
+            </video>
+         </section>
+         <form action="/" method="post" class="formulario">
+            <img
+               src="/img/logo-camera-1.png"
+               alt="movies"
+               class="formulario_logo"
+            />
+            <h1 class="formulario_titulo">Create your account</h1>
+            <div class="formulario_input">
+               <label for="name" class="input_subtitulo">Name</label>
+               <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="input"
+                  placeholder="Name"
+                  required
+               />
+            </div>
+            <div class="formulario_input">
+               <label for="last_name" class="input_subtitulo">Surname</label>
+               <input
+                  type="text"
+                  id="last_name"
+                  name="last_name"
+                  class="input"
+                  placeholder="Surname"
+                  required
+               />
+            </div>
+            <div class="formulario_input">
+               <label for="date" class="input_subtitulo">Date of birth</label>
+               <input
+                  type="date"
+                  id="date"
+                  name="date"
+                  class="input"
+                  placeholder="Date of birth"
+                  required
+               />
+            </div>
+            <div class="formulario_input">
+               <label for="email" class="input_subtitulo">Email</label>
+               <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="input"
+                  placeholder="Email"
+                  required
+               />
+            </div>
+            <div class="formulario_input">
+               <label for="" class="input_subtitulo">Password</label>
+               <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  class="input"
+                  placeholder="Password"
+                  required
+               />
+            </div>
+            <div class="formulario_input">
+               <label for="password" class="input_subtitulo"
+                  >Confirm password</label
+               >
+               <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  class="input"
+                  placeholder="Confirm password"
+                  required
+               />
+            </div>
+            <div class="formulario_boton">
+               <button class="boton_enviar">
+                  <a href="/">Sign up</a>
+               </button>
+            </div>
+            <div class="formulario_foot">
+               <h2 class="foot_titulo">Do you have an account?</h2>
+               <a href="/login" class="foot_cuenta">Log in</a>
+            </div>
+         </form>
+      </main>
+      <%- include('./partials/footer')%>
+   </body>
+</html>

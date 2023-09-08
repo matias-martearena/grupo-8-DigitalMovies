@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <%- include('./partials/head')%>
+      <link rel="stylesheet" href="/styles/detail/detail.css" />
+      <title><%= product.title %></title>
+   </head>
+   <body>
+      <%- include('./partials/header')%>
+      <main class="main-container">
+         <figure class="img-container">
+            <img
+               class="image"
+               src="<%= product.image %>"
+               alt="<%= product.title %>"
+            />
+         </figure>
+         <section class="detail-container">
+            <p class="title"><%= product.title %></p>
+            <p class="synopsis"><%= product.synopsis %></p>
+            <p class="genres"><%= product.genres %></p>
+            <p class="rating"><%= product.rating %></p>
+         </section>
+         <section class="btn-container">
+            <button type="submit">Buy</button>
+            <button><a href="<%= product.link %>">Trailer</a></button>
+         </section>
+      </main>
+      <%- include('./partials/footer')%>
+   </body>
+</html>

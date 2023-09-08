@@ -2,20 +2,19 @@ const express = require('express')
 const router = express.Router()
 
 // Requerimiento de controladores
-const homePage = require('../controllers/home')
-const cartPage = require('../controllers/cart')
-const membershipPage = require('../controllers/membership')
-const showtimesPage = require('../controllers/showtimes')
-const loginPage = require('../controllers/login')
-const snacksPage = require('../controllers/snacks')
+const mainController = require('../controllers/mainController')
+const productsController = require('../controllers/productsController')
+const userController = require('../controllers/userController')
 
 // Routes
-router.get('/', homePage.home)
-router.get('/cart', cartPage.cart)
-router.get('/membership', membershipPage.membership)
-router.get('/showtimes', showtimesPage.showtimes)
-router.get('/tickets', showtimesPage.showtimes)
-router.get('/login', loginPage.login)
-router.get('/snacks', snacksPage.snacks)
+router.get('/', mainController.home)
+router.get('/products/:id', mainController.detail)
+router.get('/login', userController.login)
+router.get('/cart', userController.cart)
+router.get('/register', userController.register)
+router.get('/membership', productsController.membership)
+router.get('/showtimes', productsController.showtimes)
+router.get('/tickets', productsController.showtimes)
+router.get('/snacks', productsController.snacks)
 
 module.exports = router
