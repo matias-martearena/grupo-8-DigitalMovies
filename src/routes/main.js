@@ -15,6 +15,5 @@ router.get('/register', userController.register)
 router.get('/membership', productsController.membership)
 router.get('/showtimes', productsController.showtimes)
 router.get('/tickets', productsController.showtimes)
-router.get('/snacks', productsController.snacks)
 
 module.exports = router

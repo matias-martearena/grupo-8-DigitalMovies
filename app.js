@@ -3,6 +3,7 @@ const express = require('express')
 const methodOverride = require('method-override')
 const path = require('path')
 const mainRouter = require('./src/routes/main')
+const snacksRouter = require('./src/routes/snacks')
 
 // -------------- Express() ------------------ //
 const app = express()
@@ -16,6 +17,7 @@ app.use(methodOverride('_method'))
 
 // ------------- Template Engine ------------ //
 app.use('/', mainRouter)
+app.use('/snacks', snacksRouter)
 app.set('view engine', 'ejs')
 
 // ------------- PORT ----------------------- //
