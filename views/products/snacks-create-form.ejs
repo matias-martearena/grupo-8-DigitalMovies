@@ -8,27 +8,45 @@
       <title>Document</title>
    </head>
    <body>
-    <%- include('./partials/header')%>
-    <main>
-        <form action="/snacks" method="post" enctype="multipart/form-data" class="form">
+      <%- include('./partials/header')%>
+      <main>
+         <form
+            action="/snacks"
+            method="post"
+            enctype="multipart/form-data"
+            class="form"
+         >
             <div>
-                <label for="image">Ingrese una imagen</label>
-                <input type="file" id="image" name="image" class="form-input">
+               <label for="image">Ingrese una imagen</label>
+               <input type="file" id="image" name="image" class="form-input" />
             </div>
             <div>
-                <label for="price">Ingrese precio</label>
-                <input type="number" id="price" name="price" placeholder="" class="form-input">
+               <label for="price">Ingrese precio</label>
+               <input
+                  type="number"
+                  id="price"
+                  name="price"
+                  placeholder=""
+                  class="form-input"
+               />
             </div>
             <div>
-                <label for="description">Ingrese descripcion corta</label>
-                <input type="text" id="description" name="description" placeholder="" class="form-input" accept=".jpg, .png, .jpeg">
+               <label for="description">Ingrese descripcion corta</label>
+               <input
+                  type="text"
+                  id="description"
+                  name="description"
+                  placeholder=""
+                  class="form-input"
+                  accept=".jpg, .png, .jpeg"
+               />
             </div>
             <div>
-                <button type="submit">Save item</button>
+               <button type="submit">Save item</button>
             </div>
-        </form>
-    </main>
-    <script src="/js/navbar.js"></script>
-    <%- include('./partials/footer')%>
+         </form>
+      </main>
+      <script src="/js/navbar.js"></script>
+      <%- include('./partials/footer')%>
    </body>
 </html>

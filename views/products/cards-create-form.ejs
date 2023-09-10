@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <%- include('./partials/head')%>
+      <!-- <link rel="stylesheet" href=""> -->
+      <title>Cards Create Form</title>
+   </head>
+   <body>
+      <%- include('./partials/header')%>
+      <main>
+         <form action="/cards" method="post" enctype="multipart/form-data">
+            <div>
+               <label for="genres">Genres</label>
+               <input
+                  type="text"
+                  id="genres"
+                  name="genres"
+                  pattern="[a-zA-Z,]{2,50}"
+                  placeholder="Ex: Horror, Science Fiction..."
+                  required
+               />
+            </div>
+            <div>
+               <label for="image">Image</label>
+               <input type="file" id="image" name="image" required />
+            </div>
+            <div>
+               <label for="link">Trailer link's</label>
+               <input
+                  type="text"
+                  id="link"
+                  name="link"
+                  placeholder="Ex: https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                  required
+               />
+            </div>
+            <div>
+               <label for="rating">Rating</label>
+               <input
+                  type="text"
+                  id="rating"
+                  name="rating"
+                  pattern="[0-9/]{3,7}"
+                  placeholder="Ex: 76/100"
+                  required
+               />
+            </div>
+            <div>
+               <label for="synopsis">Synopsis</label>
+               <textarea
+                  type="text"
+                  id="synopsis"
+                  name="synopsis"
+                  pattern="[A-Za-z.,()'\ ]{20,200}"
+                  required
+               ></textarea>
+            </div>
+            <div>
+               <label for="title">Title</label>
+               <input
+                  type="text"
+                  id="title"
+                  name="title"
+                  pattern="[A-Za-z:]{2,100}"
+                  placeholder="Ex: Avatar"
+                  required
+               />
+            </div>
+            <div>
+               <button type="submit">Save card</button>
+            </div>
+         </form>
+      </main>
+      <%- include('./partials/footer')%>
+      <script src="/js/navbar.js"></script>
+   </body>
+</html>

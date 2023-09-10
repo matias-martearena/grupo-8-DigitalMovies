@@ -1,37 +1,37 @@
 [
    {
       "id": "SSC000",
-      "name": "Combo 1",
       "images1": "/images/snacks/pochoclo.jpg",
       "images2": "/images/snacks/gaseosa.jpg",
+      "name": "Combo 1",
       "price": "$20"
    },
    {
       "id": "SSC001",
-      "name": "Combo 2",
       "images1": "/images/snacks/nachos.jpg",
       "images2": "/images/snacks/gaseosa.jpg",
+      "name": "Combo 2",
       "price": "$13"
    },
    {
       "id": "SSC002",
-      "name": "Combo 3",
       "images1": "/images/snacks/mym.jpg",
       "images2": "/images/snacks/gaseosa.jpg",
+      "name": "Combo 3",
       "price": "$12"
    },
    {
       "id": "SSC003",
-      "name": "Combo 4",
       "images1": "/images/snacks/papas-fritas.jpg",
       "images2": "/images/snacks/gaseosa.jpg",
+      "name": "Combo 4",
       "price": "$20"
    },
    {
       "id": "SSC004",
-      "name": "BIG",
       "images1": "/images/snacks/comboA.jpg",
       "images2": "/images/snacks/comboB.jpg",
+      "name": "BIG",
       "price": "$50"
    }
 ]
