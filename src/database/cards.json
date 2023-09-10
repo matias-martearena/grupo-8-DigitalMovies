@@ -1,8 +1,8 @@
 [
    {
       "id": "AAA111",
-      "link": "",
-      "image": "/images/aladdin.jpg",
+      "link": "#",
+      "image": "/images/movies/aladdin.jpg",
       "title": "Aladdin",
       "genres": "Animation, Adventure, Children",
       "rating": "94/100",
@@ -10,17 +10,17 @@
    },
    {
       "id": "AAA112",
-      "link": "/movie/alien-covenant",
-      "image": "/images/alien-covenant.jpg",
-      "alt": "Alien Covenant",
+      "link": "#",
+      "image": "/images/movies/alien-covenant.jpg",
       "title": "Alien: Covenant",
       "genres": "Horro, Science fiction, Thriller",
-      "rating": "55/100"
+      "rating": "55/100",
+      "synopsis": ""
    },
    {
       "id": "AAA113",
-      "link": "/movie/alien-el-octavo-pasajero",
-      "image": "/images/alien-el-octavo-pasajero.jpg",
+      "link": "#",
+      "image": "/images/movies/alien-el-octavo-pasajero.jpg",
       "title": "Alien: El Octavo Pasajero",
       "genres": "Horror, Science fuction, Fantasy",
       "rating": "94/100",
@@ -28,99 +28,98 @@
    },
    {
       "id": "AAA114",
-      "link": "/movie/avatar-2",
-      "image": "/images/avatar-2.jpg",
-      "alt": "Avatar 2",
+      "link": "#",
+      "image": "/images/movies/avatar-2.jpg",
       "title": "Avatar: The Way of Water",
       "genres": "Action, Science fiction, Adventure",
-      "rating": "92/100"
+      "rating": "92/100",
+      "synopsis": ""
    },
    {
       "id": "AAA115",
-      "link": "/movie/barbie",
-      "image": "/images/barbie.jpg",
-      "alt": "Barbie",
+      "link": "#",
+      "image": "/images/movies/barbie.jpg",
       "title": "Barbie",
       "genres": "Children, Romantic, Comedy",
-      "rating": "83/100"
+      "rating": "83/100",
+      "synopsis": ""
    },
    {
       "id": "AAA116",
       "link": "/movie/cars",
-      "image": "/images/cars.jpg",
-      "alt": "Cars",
+      "image": "/images/movies/cars.jpg",
       "title": "Cars",
       "genres": "Animation, Adventure, Children",
-      "rating": "80/100"
+      "rating": "80/100",
+      "synopsis": ""
    },
    {
       "id": "AAA117",
       "link": "/movie/el-exorcista",
-      "image": "/images/el-exorcista.jpg",
-      "alt": "El Exorcista",
+      "image": "/images/movies/el-exorcista.jpg",
       "title": "El Exorcista",
       "genres": "Horror, Suspense, Supernatural",
-      "rating": "87/100"
+      "rating": "87/100",
+      "synopsis": ""
    },
    {
       "id": "AAA118",
       "link": "/movie/el-renacido",
-      "image": "/images/el-renacido.jpg",
-      "alt": "El Renacido",
+      "image": "/images/movies/el-renacido.jpg",
       "title": "El Renacido",
       "genres": "Thriller, Drama, Survival",
-      "rating": "84/100"
+      "rating": "84/100",
+      "synopsis": ""
    },
    {
       "id": "AAA119",
       "link": "/movie/el-resplandor",
-      "image": "/images/el-resplandor.jpg",
-      "alt": "El Resplandor",
+      "image": "/images/movies/el-resplandor.jpg",
       "title": "El Resplandor",
       "genres": "Psychological, Terror, Mystery",
-      "rating": "93/100"
+      "rating": "93/100",
+      "synopsis": ""
    },
    {
       "id": "AAA120",
       "link": "/movie/forrest-gump",
-      "image": "/images/forrest-gump.jpg",
-      "alt": "Forrest Gump",
+      "image": "/images/movies/forrest-gump.jpg",
       "title": "Forrest Gump",
       "genres": "Comedy, Romantic, Cinema",
-      "rating": "95/100"
+      "rating": "95/100",
+      "synopsis": ""
    },
    {
       "id": "AAA121",
       "link": "/movie/gigantes-de-acero",
-      "image": "/images/gigantes-de-acero.jpg",
-      "alt": "Gigantes de Acero",
+      "image": "/images/movies/gigantes-de-acero.jpg",
       "title": "Gigantes de Acero",
       "genres": "Action, Sport, Science fiction",
-      "rating": "73/100"
+      "rating": "73/100",
+      "synopsis": ""
    },
    {
       "id": "AAA122",
       "link": "/movie/godzilla-vs-kong",
-      "image": "/images/godzilla-kong.jpg",
-      "alt": "Godzilla vs Kong",
+      "image": "/images/movies/godzilla-kong.jpg",
       "title": "Godzilla vs Kong",
       "genres": "Action, Monster movie, Science fiction",
-      "rating": "91/100"
+      "rating": "91/100",
+      "synopsis": ""
    },
    {
       "id": "AAA123",
       "link": "/movie/guardianos-de-la-galaxia-v3",
-      "image": "/images/guardianes-de-la-galaxia-v3.jpg",
-      "alt": "Guardianes de la galaxia v3",
+      "image": "/images/movies/guardianes-de-la-galaxia-v3.jpg",
       "title": "Guardianes de la galaxia v3",
       "genres": "Action, Adventure, Fantasy",
-      "rating": "94/100"
+      "rating": "94/100",
+      "synopsis": ""
    },
    {
       "id": "AAA124",
       "link": "/movie/helloween-2018",
-      "image": "/images/halloween-2018.jpg",
-      "alt": "Halloween",
+      "image": "/images/movies/halloween-2018.jpg",
       "title": "Halloween",
       "genres": "Horror movie, Slasher, Thriller",
       "rating": "72/100"
@@ -128,136 +127,136 @@
    {
       "id": "AAA125",
       "link": "/movie/harry-potter-8",
-      "image": "/images/harry-potter.jpg",
-      "alt": "Harry Potter 8",
+      "image": "/images/movies/harry-potter.jpg",
       "title": "Harry Potter 8",
       "genres": "Action, Fantasy, Adventure",
-      "rating": "89/100"
+      "rating": "89/100",
+      "synopsis": ""
    },
    {
       "id": "AAA126",
       "link": "/movie/interestelar",
-      "image": "/images/interestelar.jpg",
-      "alt": "Interestelar",
+      "image": "/images/movies/interestelar.jpg",
       "title": "Interestelar",
       "genres": "Science fiction, Drama, Adventure",
-      "rating": "86/100"
+      "rating": "86/100",
+      "synopsis": ""
    },
    {
       "id": "AAA127",
       "link": "/movie/john-wick-4",
-      "image": "/images/john-wick-4.jpg",
-      "alt": "John Wick 4",
+      "image": "/images/movies/john-wick-4.jpg",
       "title": "John Wick 4",
       "genres": "Neo-Noir, Action, Crime",
-      "rating": "93/100"
+      "rating": "93/100",
+      "synopsis": ""
    },
    {
       "id": "AAA128",
       "link": "/movie/los-vengadores-endgame",
-      "image": "/images/los-vengadores-endgame.jpg",
-      "alt": "Los Vengadores: End Game",
+      "image": "/images/movies/los-vengadores-endgame.jpg",
       "title": "Los Vengadores: End Game",
       "genres": "Action, Superheroes, Science fiction",
-      "rating": "90/100"
+      "rating": "90/100",
+      "synopsis": ""
    },
    {
       "id": "AAA129",
       "link": "/movie/mario-bros",
-      "image": "/images/mario-bros.jpg",
-      "alt": "Mario Bros",
+      "image": "/images/movies/mario-bros.jpg",
       "title": "Mario Bros",
       "genres": "Animation, Romance, Comedy",
-      "rating": "95/100"
+      "rating": "95/100",
+      "synopsis": ""
    },
    {
       "id": "AAA130",
       "link": "/movie/narnia",
-      "image": "/images/narnia.jpg",
-      "alt": "Narnia",
+      "image": "/images/movies/narnia.jpg",
       "title": "Narnia: El leon, la bruja y el ropero",
       "genres": "Adventure, Fantasy, Science fiction",
-      "rating": "61/100"
+      "rating": "61/100",
+      "synopsis": ""
    },
    {
       "id": "AAA131",
       "link": "/movie/pacific-rim",
-      "image": "/images/pacific-rim.jpg",
-      "alt": "Pacific Rim",
+      "image": "/images/movies/pacific-rim.jpg",
       "title": "Titanes del pacifico",
       "genres": "Action, Science fiction, Fantasy",
-      "rating": "77/100"
+      "rating": "77/100",
+      "synopsis": ""
    },
    {
       "id": "AAA132",
       "link": "/movie/predator-prey",
-      "image": "/images/predator-prey.jpg",
-      "alt": "Predator prey",
+      "image": "/images/movies/predator-prey.jpg",
       "title": "Prey",
       "genres": "Horror, Action, Science fiction",
-      "rating": "73/100"
+      "rating": "73/100",
+      "synopsis": ""
    },
    {
       "id": "AAA133",
       "link": "/movie/project-almanac",
-      "image": "/images/project-almanac.jpg",
-      "alt": "Project almanac",
+      "image": "/images/movies/project-almanac.jpg",
       "title": "Project Almanac",
       "genres": "Science fiction, Fantasy, Thriller",
-      "rating": "45/100"
+      "rating": "45/100",
+      "synopsis": ""
    },
    {
       "id": "AAA134",
       "link": "/movie/project-x",
-      "image": "/images/proyecto-x.jpg",
-      "alt": "Project X",
+      "image": "/images/movies/proyecto-x.jpg",
       "title": "Project X",
       "genres": "Comedy, Action, Party",
-      "rating": "61/100"
+      "rating": "61/100",
+      "synopsis": ""
    },
    {
       "id": "AAA135",
       "link": "/movie/spider-man-across-the-spiderverse",
-      "image": "/images/spider-man-across-the-spiderverse.jpg",
-      "alt": "Spider-man: Across the spiderverse",
+      "image": "/images/movies/spider-man-across-the-spiderverse.jpg",
       "title": "Spider-man: Across the Spiderverse",
       "genres": "Action, Comedy, Science fiction",
-      "rating": "94/100"
+      "rating": "94/100",
+      "synopsis": ""
    },
    {
       "id": "AAA136",
       "link": "/movie/the-lord-of-the-rings",
-      "image": "/images/the-lord-of-the-rings.jpg",
-      "alt": "The lord of the rings",
+      "image": "/images/movies/the-lord-of-the-rings.jpg",
       "title": "The Lord of The Rings",
       "genres": "Action, Fantasy, Science fiction",
-      "rating": "95/100"
+      "rating": "95/100",
+      "synopsis": ""
    },
    {
       "id": "AAA137",
       "link": "/movie/una-esposa-de-mentira",
-      "image": "/images/una-esposa-de-mentira.jpg",
-      "alt": "Una esposa de mentira",
+      "image": "/images/movies/una-esposa-de-mentira.jpg",
       "title": "Una Esposa de Mentira",
       "genres": "Comedy",
-      "rating": "59/100"
+      "rating": "59/100",
+      "synopsis": ""
    },
    {
       "id": "AAA138",
       "link": "/movie/x-men-apocalypse",
-      "image": "/images/x-men-apocalypse.jpg",
-      "alt": "X-men: Apocalypse",
+      "image": "/images/movies/x-men-apocalypse.jpg",
       "title": "X-men: Apocalypse",
       "genres": "Action, Science fiction, Fantasy",
-      "rating": "65/100"
+      "rating": "65/100",
+      "synopsis": ""
    },
    {
       "id": "AAA139",
       "link": "/movie/zathura",
-      "image": "/images/zathura.jpg",
-      "alt": "Zathura",
+      "image": "/images/movies/zathura.jpg",
       "title": "Zathura",
       "genres": "Science fiction, Drama, Action",
-      "rating": "51/100"
+      "rating": "51/100",
+      "synopsis": ""
    }
 ]

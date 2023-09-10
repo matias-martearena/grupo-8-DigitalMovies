@@ -1,1 +1,33 @@
-[{"id":"","image":"/images/pochoclo.jpg","price":"$10","description":"Pop corn"},{"id":"","image":"/images/gaseosa.jpg","price":"$5","description":"Soda"},{"id":"","image":"/images/nachos.jpg","price":"$7","description":"Nachos"},{"id":"","image":"/images/mym.jpg","price":"$3","description":"M&M"},{"id":"SNK1694220932857","image":"/images/papas-fritas.jpg","price":"$15","description":"Potato chips"}]
+
+[
+   {
+      "id": "SSS000",
+      "image": "/images/snacks/pochoclo.jpg",
+      "price": "$10",
+      "description": "Pop corn"
+   },
+   {
+      "id": "SSS001",
+      "image": "/images/snacks/gaseosa.jpg",
+      "price": "$5",
+      "description": "Soda"
+   },
+   {
+      "id": "SSS002",
+      "image": "/images/snacks/nachos.jpg",
+      "price": "$7",
+      "description": "Nachos"
+   },
+   {
+      "id": "SSS003",
+      "image": "/images/snacks/mym.jpg",
+      "price": "$3",
+      "description": "M&M"
+   },
+   {
+      "id": "SSS004",
+      "image": "/images/snacks/papas-fritas.jpg",
+      "price": "$15",
+      "description": "Potato chips"
+   }
+]

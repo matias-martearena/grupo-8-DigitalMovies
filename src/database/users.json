@@ -1,0 +1,92 @@
+[
+    {
+        "id": "USR000",
+        "first_name": "Matias",
+        "last_name": "Martearena",
+        "email": "JohnSmith@mail.com",
+        "password": "A1bcdefghi",
+        "category": "login-off",
+        "image": ""
+    },
+    {
+        "id": "USR001",
+        "first_name": "Pablo",
+        "last_name": "Bejarano",
+        "email": "EmilyJohnson@mail.com",
+        "password": "X2klmnopqr",
+        "category": "login-on",
+        "image": ""
+    },
+    {
+        "id": "USR002",
+        "first_name": "Ignacio",
+        "last_name": "Beguier",
+        "email": "MichaelBrown@mail.com",
+        "password": "M3stuvwxyz",
+        "category": "login-on-tier-1",
+        "image": ""
+    },
+    {
+        "id": "USR003",
+        "first_name": "Luciano",
+        "last_name": "Ayrala",
+        "email": "SarahDavis@mail.com",
+        "password": "P4qrstuvw",
+        "category": "login-on-tier-2",
+        "image": ""
+    },
+    {
+        "id": "USR004",
+        "first_name": "Reagan",
+        "last_name": "Phillimore",
+        "email": "DavidClark@mail.com",
+        "password": "Y5ijklmnop",
+        "category": "manager",
+        "image": ""
+    },
+    {
+        "id": "USR005",
+        "first_name": "Giovanna",
+        "last_name": "Cusworth",
+        "email": "OliviaMiller@mail.com",
+        "password": "N6bcdefghj",
+        "category": "manager",
+        "image": ""
+    },
+    {
+        "id": "USR006",
+        "first_name": "Pancho",
+        "last_name": "Boutellier",
+        "email": "WilliamJones@mail.com",
+        "password": "B7klmnopqr",
+        "category": "manager",
+        "image": ""
+    },
+    {
+        "id": "USR007",
+        "first_name": "Cristabel",
+        "last_name": "Nealy",
+        "email": "SophiaTaylor@mail.com",
+        "password": "C8qrstuvwxyz",
+        "category": "manager",
+        "image": ""
+    },
+    {
+        "id": "USR008",
+        "first_name": "Ursula",
+        "last_name": "Sansam",
+        "email": "JamesMoore@mail.com",
+        "password": "Z9abcdefgk",
+        "category": "manager",
+        "image": ""
+    },
+    {
+        "id": "USR009",
+        "first_name": "Lorettalorna",
+        "last_name": "Garnett",
+        "email": "AvaWilson@mail.com",
+        "password": "H0ijklmnop",
+        "category": "manager",
+        "image": ""
+    }
+]

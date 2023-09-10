@@ -62,10 +62,10 @@ a:hover {
    align-items: center;
 }
 
-.logo p {
+.logo a {
    font-family: var(--logo-font);
    color: var(--font-variant-color);
-   font-size: 2rem;
+   font-size: 3rem;
 }
 
 /* LINKS */

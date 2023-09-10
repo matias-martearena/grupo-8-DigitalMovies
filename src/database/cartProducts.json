@@ -1,7 +1,7 @@
 [
    {
-      "id": "CCC000",
-      "image": "/images/barbie.jpg",
+      "id": "CP000",
+      "image": "/images/movies/barbie.jpg",
       "alt": "Barbie movie",
       "name": "Barbie",
       "quantity": 1,
@@ -9,8 +9,8 @@
       "price": 4.99
    },
    {
-      "id": "CCC001",
-      "image": "/images/avatar-2.jpg",
+      "id": "CP001",
+      "image": "/images/movies/avatar-2.jpg",
       "alt": "Avatar 2 movie",
       "name": "Avatar: The Way of Water",
       "quantity": 1,
@@ -18,8 +18,8 @@
       "price": 4.99
    },
    {
-      "id": "CCC002",
-      "image": "/images/pochoclo.jpg",
+      "id": "CP002",
+      "image": "/images/snacks/pochoclo.jpg",
       "alt": "Popcorn",
       "name": "Popcorn",
       "quantity": 2,
