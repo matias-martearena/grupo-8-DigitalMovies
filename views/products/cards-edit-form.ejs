@@ -3,21 +3,24 @@
    <head>
       <%- include('./partials/head')%>
       <!-- <link rel="stylesheet" href=""> -->
-      <title>Cards Create Form</title>
+      <title>Cards Edit Form</title>
    </head>
    <body>
       <%- include('./partials/header')%>
       <main>
-         <form action="/cards" method="post" enctype="multipart/form-data">
+         <form
+            action="/cards/edit/<%= cardToEdit.id %>?_method=put"
+            method="post"
+            enctype="multipart/form-data"
+         >
             <div>
                <label for="genres">Genres</label>
                <input
                   type="text"
                   id="genres"
                   name="genres"
-                  pattern="[a-zA-Z, ]{2,50}"
-                  placeholder="Ex: Horror, Science Fiction..."
-                  required
+                  pattern="[a-zA-Z,]{2,50}"
+                  value="<%= cardToEdit.genres %>"
                />
             </div>
             <div>
@@ -27,7 +30,7 @@
                   id="image"
                   name="image"
                   accept=".jpg, .png, .jpeg"
-                  required
+                  value="<%= cardToEdit.image %>"
                />
             </div>
             <div>
@@ -36,7 +39,7 @@
                   type="text"
                   id="link"
                   name="link"
-                  placeholder="Ex: https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                  value="<%= cardToEdit.link %>"
                />
             </div>
             <div>
@@ -46,19 +49,18 @@
                   id="rating"
                   name="rating"
                   pattern="[0-9/]{3,7}"
-                  placeholder="Ex: 76/100"
-                  required
+                  value="<%= cardToEdit.rating %>"
                />
             </div>
             <div>
                <label for="synopsis">Synopsis</label>
-               <textarea
+               <input
                   type="text"
                   id="synopsis"
                   name="synopsis"
                   pattern="[A-Za-z.,()'\ ]{20,200}"
-                  required
-               ></textarea>
+                  value="<%= cardToEdit.synopsis %>"
+               />
             </div>
             <div>
                <label for="title">Title</label>
@@ -66,9 +68,8 @@
                   type="text"
                   id="title"
                   name="title"
-                  pattern="[A-Za-z: ]{2,100}"
-                  placeholder="Ex: Avatar"
-                  required
+                  pattern="[A-Za-z0-9: ]{2,100}"
+                  value="<%= cardToEdit.title %>"
                />
             </div>
             <div>
@@ -79,8 +80,14 @@
                </select>
             </div>
             <div>
-               <button type="submit">Save card</button>
+               <button type="submit">Confirm edit</button>
             </div>
+         </form>
+         <form
+            action="/cards/delete/<%= cardToEdit.id %>?_method=delete"
+            method="post"
+         >
+            <button type="submit">Delete card</button>
          </form>
       </main>
       <%- include('./partials/footer')%>

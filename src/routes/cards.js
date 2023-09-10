@@ -7,7 +7,14 @@ const cardsController = require('../controllers/cardsController')
 
 const storage = multer.diskStorage({
    destination: (req, file, cb) => {
-      const pathImage = path.join(__dirname, '..', '..', 'public', 'images')
+      const pathImage = path.join(
+         __dirname,
+         '..',
+         '..',
+         'public',
+         'images',
+         'movies'
+      )
       cb(null, pathImage)
    },
    filename: (req, file, cb) => {
@@ -19,12 +26,9 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage })
 
 router.get('/create', cardsController.cardsCreate)
-// Crea el producto y renderiza la lista actualizada
-// router.post('/', upload.single('image'), productsController.cardsStore)
-// router.post('/', upload.single('image'), productsController.snacksStore)
-
-// router.get('/edit/:id', productsController.snacksEdit)
-// router.put('/edit/:id', upload.single('image'), productsController.snacksUpdate)
-// router.delete('/delete/:id', productsController.snacksDestroy)
+router.post('/', upload.single('image'), cardsController.cardsStore)
+router.get('/edit/:id', cardsController.cardsEdit)
+router.put('/edit/:id', upload.single('image'), cardsController.cardsUpdate)
+router.delete('/delete/:id', cardsController.cardsDestroy)
 
 module.exports = router
