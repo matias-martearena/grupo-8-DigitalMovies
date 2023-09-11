@@ -5,6 +5,8 @@ const path = require('path')
 const mainRouter = require('./src/routes/main')
 const snacksRouter = require('./src/routes/snacks')
 const cardsRouter = require('./src/routes/cards')
+const membershipRouter = require('./src/routes/membership')
+const ticketsRouter = require('./src/routes/tickets')
 
 // -------------- Express() ------------------ //
 const app = express()
@@ -20,6 +22,8 @@ app.use(methodOverride('_method'))
 app.use('/', mainRouter)
 app.use('/snacks', snacksRouter)
 app.use('/cards', cardsRouter)
+app.use('/membership', membershipRouter)
+app.use('/tickets', ticketsRouter)
 app.set('view engine', 'ejs')
 
 // ------------- PORT ----------------------- //

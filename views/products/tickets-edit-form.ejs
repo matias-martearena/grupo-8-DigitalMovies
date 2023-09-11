@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <%- include('./partials/head')%>
+      <!-- <link rel="stylesheet" href=""> -->
+      <title>Tickets Edit Form</title>
+   </head>
+   <body>
+      <%- include('./partials/header')%>
+      <main>
+         <form
+            action="/tickets/edit/<%= ticketToEdit.id %>?_method=put"
+            method="post"
+            enctype="multipart/form-data"
+         >
+         <div>
+            <label for="description">Description</label>
+            <input
+               type="text"
+               id="description"
+               name="description"
+               value=" <%= ticketToEdit.description  %>"
+            />
+         </div>
+         <div>
+            <label for="function">Function</label>
+            <input
+               type="text"
+               id="function"
+               name="function"
+               value=" <%= ticketToEdit.function  %>"
+            />
+         </div>
+         <div>
+             <label for="image">Image</label>
+             <input
+                type="file"
+                id="image"
+                name="image"
+                value=" <%= ticketToEdit.image  %>"
+             />
+          </div>
+         <div>
+            <label for="price">Price</label>
+            <input
+               type="text"
+               id="price"
+               name="price"
+               value=" <%= ticketToEdit.price  %>"
+            />
+         </div>
+         <div>
+            <label for="title">Title</label>
+            <input
+               type="text"
+               id="title"
+               name="title"
+               pattern="[A-Za-z: ]{2,100}"
+               value=" <%= ticketToEdit.title  %>"
+            />
+         </div>
+            <div>
+               <button type="submit">Confirm edit</button>
+            </div>
+         </form>
+         <form
+            action="/tickets/delete/<%= ticketToEdit.id %>?_method=delete"
+            method="post"
+         >
+            <button type="submit">Delete Ticket</button>
+         </form>
+      </main>
+      <%- include('./partials/footer')%>
+      <script src="/js/navbar.js"></script>
+   </body>
+</html>
