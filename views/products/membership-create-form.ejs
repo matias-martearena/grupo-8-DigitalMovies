@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <%- include('./partials/head')%>
+      <!-- <link rel="stylesheet" href=""> -->
+      <title>Membership Create Form</title>
+   </head>
+   <body>
+      <%- include('./partials/header')%>
+      <main>
+         <form action="/membership" method="post" enctype="multipart/form-data">
+            <div>
+               <label for="description">Description</label>
+               <input
+                  type="text"
+                  id="description"
+                  name="description"
+                  placeholder="Ex: Subscribe to digital movies and enjoy the best benefits at an incredible price"
+                  required
+               />
+            </div>
+            <div>
+               <label for="discount0">Discount 1</label>
+               <input
+                  type="text"
+                  id="discount0"
+                  name="discount0"
+                  placeholder="Ex: Ticket discounts."
+                  required
+               />
+            </div>
+            <div>
+                <label for="discount1">Discount 2</label>
+                <input
+                   type="text"
+                   id="discount1"
+                   name="discount1"
+                   placeholder="Ex: Snack discounts."
+                   required
+                />
+             </div>
+             <div>
+                <label for="discount2">Discount 3</label>
+                <input
+                   type="text"
+                   id="discount2"
+                   name="discount2"
+                   placeholder="Ex: Access to selected digital movies."
+                   required
+                />
+             </div>
+            <div>
+               <label for="price">Price</label>
+               <input
+                  type="number"
+                  id="price"
+                  name="price"
+                  placeholder="Ex: 2.0"
+               />
+            </div>
+            <div>
+               <label for="tier">Tier</label>
+               <input
+                  type="text"
+                  id="tier"
+                  name="tier"
+                  placeholder="Ex: Plan tier 1"
+                  required
+               />
+            </div>
+            <div>
+               <button type="submit">Save ticket</button>
+            </div>
+         </form>
+      </main>
+      <%- include('./partials/footer')%>
+      <script src="/js/navbar.js"></script>
+   </body>
+</html>

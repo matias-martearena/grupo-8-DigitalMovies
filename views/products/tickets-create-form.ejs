@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <%- include('./partials/head')%>
+      <!-- <link rel="stylesheet" href=""> -->
+      <title>Ticket Create Form</title>
+   </head>
+   <body>
+      <%- include('./partials/header')%>
+      <main>
+         <form action="/tickets" method="post" enctype="multipart/form-data">
+            <div>
+               <label for="description">Description</label>
+               <input
+                  type="text"
+                  id="description"
+                  name="description"
+                  placeholder="Ex: After meeting Gwen Stacy, Spider-Man from Brooklyn is..."
+                  required
+               />
+            </div>
+            <div>
+               <label for="function">Function</label>
+               <input
+                  type="text"
+                  id="function"
+                  name="function"
+                  placeholder="Ex: From Monday to Wednesday at 6:00 PM."
+                  required
+               />
+            </div>
+            <div>
+                <label for="image">Image</label>
+                <input
+                   type="file"
+                   id="image"
+                   name="image"
+                   accept=".jpg, .png, .jpeg"
+                   required
+                />
+             </div>
+            <div>
+               <label for="price">Price</label>
+               <input
+                  type="text"
+                  id="price"
+                  name="price"
+                  placeholder="Ex: 2$"
+               />
+            </div>
+            <div>
+               <label for="title">Title</label>
+               <input
+                  type="text"
+                  id="title"
+                  name="title"
+                  pattern="[A-Za-z: ]{2,100}"
+                  placeholder="Ex: Avatar, Alien, Barbie, etc..."
+                  required
+               />
+            </div>
+            <div>
+               <button type="submit">Save ticket</button>
+            </div>
+         </form>
+      </main>
+      <%- include('./partials/footer')%>
+      <script src="/js/navbar.js"></script>
+   </body>
+</html>
