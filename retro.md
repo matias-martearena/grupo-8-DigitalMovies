@@ -82,3 +82,31 @@ Para el siguiente sprint, deberiamos calcular mejor los tiempos y tareas, el equ
    Que se deberia mejorar en este sprint 4?: Y nada.
 
 ---
+
+# Retro del Sprint 4
+
+### Conclusiones
+
+**Que se hizo bien? Que se hizo mal? Que deberiamos mejorar en este sprint 5**
+
+-  Matias Martearena.
+   Que se hizo bien?: La distribucion de tareas, la comunicacion mejoro respecto al sprint anterior. Hubo mas trabajo en equipo y en general mas disposicion del equipo para trabajar.
+   Que se hizo mal?: No todos trabajaron, si bien las tareas se distribuyeron bien, solo lo hicieron entre Pablo y yo. Falta que el resto de los miembros contribuyan y esten dispuestos a ayudar.
+   Que se deberia mejorar en este sprint 5?: Que se constenten los mensajes con mas rapidez y que los demas miembros esten dispuestos a ayudar.
+
+-  Pablo Bejarano.
+   Que se hizo bien?: Hicimos el trabajo de forma eficiente. No hubo grandes problemas ni conflictos para realizar la tarea a pesar del plazo de entrega.
+   Que se hizo mal?: Falta de participacion de los otros integrantes.
+   Que se deberia mejorar en este sprint 5?: Mayor participacion de los otros integrantes.
+
+-  Ignacio Martin Beguier.
+   Que se hizo bien?: La eficiencia.
+   Que se hizo mal?: Falta de participacion de algunos miembros.
+   Que se deberia mejorar en este sprint 5?: Mayor participacion de los miembros.
+
+-  Luciano Ayrala.
+   Que se hizo bien?: No asistio.
+   Que se hizo mal?: No asistio.
+   Que se deberia mejorar en este sprint 5?: No asistio.
+
+---
