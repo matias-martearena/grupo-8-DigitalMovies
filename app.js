@@ -7,6 +7,7 @@ const snacksRouter = require('./src/routes/snacks')
 const cardsRouter = require('./src/routes/cards')
 const membershipRouter = require('./src/routes/membership')
 const ticketsRouter = require('./src/routes/tickets')
+const usersRouter = require('./src/routes/user')
 
 // -------------- Express() ------------------ //
 const app = express()
@@ -20,6 +21,7 @@ app.use(methodOverride('_method'))
 
 // ------------- Template Engine ------------ //
 app.use('/', mainRouter)
+app.use('/user', usersRouter)
 app.use('/snacks', snacksRouter)
 app.use('/cards', cardsRouter)
 app.use('/membership', membershipRouter)

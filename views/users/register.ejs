@@ -13,7 +13,7 @@
                <source src="/video/interstellar-trailer.mp4" type="video/mp4" />
             </video>
          </section>
-         <form action="/" method="post" class="formulario">
+         <form action="/user" method="post" class="formulario" enctype="multipart/form-data">
             <img
                src="/img/logo-camera-1.png"
                alt="movies"
@@ -21,11 +21,11 @@
             />
             <h1 class="formulario_titulo">Create your account</h1>
             <div class="formulario_input">
-               <label for="name" class="input_subtitulo">Name</label>
+               <label for="first_name" class="input_subtitulo">Name</label>
                <input
                   type="text"
-                  id="name"
-                  name="name"
+                  id="first_name"
+                  name="first_name"
                   class="input"
                   placeholder="Name"
                   required
@@ -65,6 +65,16 @@
                />
             </div>
             <div class="formulario_input">
+               <label for="image" class="input_subtitulo">Image</label>
+               <input
+                  type="file"
+                  id="image"
+                  name="image"
+                  class="input"
+                  accept=".jpg, .png, .jpeg"
+               />
+            </div>
+            <div class="formulario_input">
                <label for="" class="input_subtitulo">Password</label>
                <input
                   type="password"
@@ -82,20 +92,20 @@
                <input
                   type="password"
                   id="password"
-                  name="password"
+                  name=""
                   class="input"
                   placeholder="Confirm password"
                   required
                />
             </div>
             <div class="formulario_boton">
-               <button class="boton_enviar">
-                  <a href="/">Sign up</a>
+               <button type="submit" class="boton_enviar">
+                  Sign up
                </button>
             </div>
             <div class="formulario_foot">
                <h2 class="foot_titulo">Do you have an account?</h2>
-               <a href="/login" class="foot_cuenta">Log in</a>
+               <a href="/user/login" class="foot_cuenta">Log in</a>
             </div>
          </form>
       </main>
