@@ -48,7 +48,6 @@ const registrationValidationRules = [
       .bail()
       .custom((value, { req }) => value === req.body.password)
       .withMessage('Passwords must match'),
-   //TODO: FIX a pesar de que la imagen no se guarda en el nuevo usuario, esta si se envia
    body('image').custom((value, { req }) => {
       let file = req.file
       let acceptedExtensions = ['.jpg', '.png', '.jpeg', '.gif']

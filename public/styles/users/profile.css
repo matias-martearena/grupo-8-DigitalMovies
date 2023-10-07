@@ -1,0 +1,8 @@
+p {
+   color: white;
+}
+
+.profile {
+   display: flex;
+   flex-direction: column;
+}

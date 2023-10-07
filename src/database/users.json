@@ -1,92 +1,26 @@
 [
     {
-        "category": "login-off",
-        "email": "JohnSmith@mail.com",
-        "first_name": "Matias",
-        "id": "USR000",
-        "image": "",
-        "last_name": "Martearena",
-        "password": "A1bcdefghi"
+        "id": "user_1696623160587",
+        "name": "Olivia",
+        "surname": "Juarez",
+        "mail": "holasoyoli@gmail.com",
+        "image": "/images/users/user-default.jpg",
+        "password": "$2a$10$xjphuGajajziQZrT8hMGueWiNNYnxFkN/l3fV16MArxg9th4z.uUG"
     },
     {
-        "category": "login-on",
-        "email": "EmilyJohnson@mail.com",
-        "first_name": "Pablo",
-        "id": "USR001",
-        "image": "",
-        "last_name": "Bejarano",
-        "password": "X2klmnopqr"
+        "id": "user_1696633421039",
+        "name": "Matias",
+        "surname": "Martearena",
+        "mail": "matihola@gmail.com",
+        "image": "/images/users/user-default.jpg",
+        "password": "$2a$10$.oO29elICJN9s.O6i6Q5VOSekePamReklkqpFJU8tAxR.WTmPVW42"
     },
     {
-        "category": "login-on-tier-1",
-        "email": "MichaelBrown@mail.com",
-        "first_name": "Ignacio",
-        "id": "USR002",
-        "image": "",
-        "last_name": "Beguier",
-        "password": "M3stuvwxyz"
-    },
-    {
-        "category": "login-on-tier-2",
-        "email": "SarahDavis@mail.com",
-        "first_name": "Luciano",
-        "id": "USR003",
-        "image": "",
-        "last_name": "Ayrala",
-        "password": "P4qrstuvw"
-    },
-    {
-        "category": "manager",
-        "email": "DavidClark@mail.com",
-        "first_name": "Reagan",
-        "id": "USR004",
-        "image": "",
-        "last_name": "Phillimore",
-        "password": "Y5ijklmnop"
-    },
-    {
-        "category": "manager",
-        "email": "OliviaMiller@mail.com",
-        "first_name": "Giovanna",
-        "id": "USR005",
-        "image": "",
-        "last_name": "Cusworth",
-        "password": "N6bcdefghj"
-    },
-    {
-        "category": "manager",
-        "email": "WilliamJones@mail.com",
-        "first_name": "Pancho",
-        "id": "USR006",
-        "image": "",
-        "last_name": "Boutellier",
-        "password": "B7klmnopqr"
-    },
-    {
-        "category": "manager",
-        "email": "SophiaTaylor@mail.com",
-        "first_name": "Cristabel",
-        "id": "USR007",
-        "image": "",
-        "last_name": "Nealy",
-        "password": "C8qrstuvwxyz"
-    },
-    {
-        "category": "manager",
-        "email": "JamesMoore@mail.com",
-        "first_name": "Ursula",
-        "id": "USR008",
-        "image": "",
-        "last_name": "Sansam",
-        "password": "Z9abcdefgk"
-    },
-    {
-        "category": "manager",
-        "email": "AvaWilson@mail.com",
-        "first_name": "Lorettalorna",
-        "id": "USR009",
-        "image": "",
-        "last_name": "Garnett",
-        "password": "H0ijklmnop"
+        "id": "user_1696634242381",
+        "name": "Ignacio",
+        "surname": "Martearena",
+        "mail": "holasoynacho@gmail.com",
+        "image": "/images/users/img-1696634242259.jpg",
+        "password": "$2a$10$JJejXvI4t/mWUPRCNDpViebut3Jrokb9VfHiW9PgxWrg7Nh.bsLJK"
     }
 ]
