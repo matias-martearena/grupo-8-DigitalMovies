@@ -110,3 +110,27 @@ Para el siguiente sprint, deberiamos calcular mejor los tiempos y tareas, el equ
    Que se deberia mejorar en este sprint 5?: No asistio.
 
 ---
+
+# Retro del Sprint 5
+
+### Conclusiones
+
+**Que se debe empezar a hacer?**
+**Que se tiene que hacer mas?**
+**Que se tiene que seguir haciendo?**
+**Que se tiene que hacer menos?**
+**Y que se tiene que dejar de hacer en el sprint 6?**
+
+-  Conclusion del grupo:
+
+   -  Que se debe empezar a hacer?: Se tiene que dar prioridad a la realizacion de la primera parte del sprint 6 para poder empezar a hacer las correcciones del sprint 5.
+
+   -  Que se tiene que hacer mas?: Darle foco a las correciones de sprint pasados para que no se acumulen. Tambien el equipo en general tiene que dar mas disposicion para dividir tareas.
+
+   -  Que se tiene que seguir haciendo?: Dividir tareas y establecer plazos para las mismas.
+
+   -  Que se tiene que hacer menos?: Se deberia dejar de hacer las tareas de manera tan general, hacerlas de manera mas focalizada implicaria no tener mas correcciones en un futuro.
+
+   -  Que se tiene que dejar de hacer?: Dejar de ignorar los plazos de entrega de las tareas. No dejar todo para la ultima semana y que algunos miembros del equipo ayuden.
+
+---

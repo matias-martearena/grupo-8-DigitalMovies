@@ -197,3 +197,31 @@
    -  Que vas a hacer hoy?: No asistio.
 
 ---
+
+**Semana: 09/10/2023 - 13/10/2023 Reunion: N°7**
+
+-  Mati:
+
+   -  Que se hizo ayer?: La creacion del tablero de trabajo del sprint 6. La correccion del retro.md. La implementacion de los weekly y la planificacion de la base de datos.
+   -  Te encontraste con algun impedimento?: Ninguno.
+   -  Que vas a hacer hoy?: La creacion del modelo de bases de datos.
+
+-  Pablo:
+
+   -  Que se hizo ayer?: La creacion del tablero de trabajo del sprint 6. La correccion del retro.md. La implementacion de los weekly y la planificacion de la base de datos.
+   -  Te encontraste con algun impedimento?: Ninguno.
+   -  Que vas a hacer hoy?: La creacion del modelo de bases de datos.
+
+-  Ignacio:
+
+   -  Que se hizo ayer?: No asistio.
+   -  Te encontraste con algun impedimento?: No asistio.
+   -  Que vas a hacer hoy?: No asistio.
+
+-  Luciano:
+
+   -  Que se hizo ayer?: No asistio.
+   -  Te encontraste con algun impedimento?: No asistio.
+   -  Que vas a hacer hoy?: No asistio.
+
+---
