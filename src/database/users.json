@@ -88,5 +88,13 @@
         "image": "",
         "last_name": "Garnett",
         "password": "H0ijklmnop"
+    },
+    {
+        "email": "pablobejarano2112@gmail.com",
+        "first_name": "Pablo Facundo",
+        "id": "USR1695953871212",
+        "image": "/images/img-1695953871131.jpg",
+        "last_name": "Bejarano",
+        "password": "$2a$10$FznYpXAcMzQEzlrtnAEXS.HI7eYej0JRJxuK2n4k.vjCNX.5t58TO"
     }
 ]
