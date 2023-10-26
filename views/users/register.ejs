@@ -13,12 +13,12 @@
                <source src="/video/interstellar-trailer.mp4" type="video/mp4" />
             </video>
          </section>
-         <form action="/user" method="post" class="formulario" enctype="multipart/form-data">
-            <img
-               src="/img/logo-camera-1.png"
-               alt="movies"
-               class="formulario_logo"
-            />
+         <form
+            action="/user/register"
+            method="post"
+            enctype="multipart/form-data"
+            class="formulario"
+         >
             <h1 class="formulario_titulo">Create your account</h1>
             <div class="formulario_input">
                <label for="first_name" class="input_subtitulo">Name</label>
@@ -27,9 +27,14 @@
                   id="first_name"
                   name="first_name"
                   class="input"
-                  placeholder="Name"
-                  required
+                  placeholder="First name"
+                  value="<%= locals.oldData ? oldData.first_name : null %>"
                />
+               <% if (locals.errors && errors.first_name) { %>
+               <p class="errors" style="color: white">
+                  <%= errors.first_name.msg %>
+               </p>
+               <% } %>
             </div>
             <div class="formulario_input">
                <label for="last_name" class="input_subtitulo">Surname</label>
@@ -38,20 +43,14 @@
                   id="last_name"
                   name="last_name"
                   class="input"
-                  placeholder="Surname"
-                  required
+                  placeholder="Last name"
+                  value="<%= locals.oldData ? oldData.last_name : null %>"
                />
-            </div>
-            <div class="formulario_input">
-               <label for="date" class="input_subtitulo">Date of birth</label>
-               <input
-                  type="date"
-                  id="date"
-                  name="date"
-                  class="input"
-                  placeholder="Date of birth"
-                  required
-               />
+               <% if (locals.errors && errors.last_name) { %>
+               <p class="errors" style="color: white">
+                  <%= errors.last_name.msg %>
+               </p>
+               <% } %>
             </div>
             <div class="formulario_input">
                <label for="email" class="input_subtitulo">Email</label>
@@ -61,18 +60,13 @@
                   name="email"
                   class="input"
                   placeholder="Email"
-                  required
+                  value="<%= locals.oldData ? oldData.email : null %>"
                />
-            </div>
-            <div class="formulario_input">
-               <label for="image" class="input_subtitulo">Image</label>
-               <input
-                  type="file"
-                  id="image"
-                  name="image"
-                  class="input"
-                  accept=".jpg, .png, .jpeg"
-               />
+               <% if (locals.errors && errors.email) { %>
+               <p class="errors" style="color: white">
+                  <%= errors.email.msg %>
+               </p>
+               <% } %>
             </div>
             <div class="formulario_input">
                <label for="" class="input_subtitulo">Password</label>
@@ -82,8 +76,13 @@
                   name="password"
                   class="input"
                   placeholder="Password"
-                  required
+                  value="<%= locals.oldData ? oldData.password : null %>"
                />
+               <% if (locals.errors && errors.password) { %>
+               <p class="errors" style="color: white">
+                  <%= errors.password.msg %>
+               </p>
+               <% } %>
             </div>
             <div class="formulario_input">
                <label for="password" class="input_subtitulo"
@@ -92,16 +91,28 @@
                <input
                   type="password"
                   id="password"
-                  name=""
+                  name="confirm_password"
                   class="input"
                   placeholder="Confirm password"
-                  required
+                  value="<%= locals.oldData ? oldData.confirm_password : null %>"
                />
+               <% if (locals.errors && errors.confirm_password) { %>
+               <p class="errors" style="color: white">
+                  <%= errors.confirm_password.msg %>
+               </p>
+               <% } %>
+            </div>
+            <div class="formulario_input">
+               <label for="image" class="input_subtitulo">Image</label>
+               <input type="file" name="image" class="input" />
+               <% if (locals.errors && errors.image) { %>
+               <p class="errors" style="color: white">
+                  <%= errors.image.msg %>
+               </p>
+               <% } %>
             </div>
             <div class="formulario_boton">
-               <button type="submit" class="boton_enviar">
-                  Sign up
-               </button>
+               <button type="submit" class="boton_enviar">Sign up</button>
             </div>
             <div class="formulario_foot">
                <h2 class="foot_titulo">Do you have an account?</h2>

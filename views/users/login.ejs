@@ -19,49 +19,43 @@
                   <p>Welcome</p>
                </div>
                <section>
-                  <form action="/" method="POST">
+                  <form action="/user/login" method="POST">
                      <label for="email">Email</label>
                      <input
-                        type="email"
-                        id="email"
-                        required
+                        type="text"
                         class="email"
                         name="email"
-                        placeholder="Email"
+                        placeholder="Mail"
+                        value="<%= locals.oldData ? oldData.email : null %>"
                      />
+                     <% if (locals.errors && errors.email) { %>
+                     <p class="errors" style="color: white">
+                        <%= errors.email.msg %>
+                     </p>
+                     <% } %>
                      <label for="password">Password</label>
                      <input
                         type="password"
-                        id="password"
-                        required
                         class="password"
                         name="password"
                         placeholder="Password"
-                        autocomplete="on"
+                        value="<%= locals.oldData ? oldData.password : null %>"
                      />
-                     <p>Remember username and password?</p>
-                     <div class="remember-check">
-                        <label for="remember-usser"
-                           >Ussername
-                           <input
-                              type="checkbox"
-                              id="remember-usser"
-                              class="remember-usser"
-                              name="remember-usser"
-                        /></label>
-                        <label for="remember-pass"
-                           >Password
-                           <input
-                              type="checkbox"
-                              id="remember-pass"
-                              class="remember-pass"
-                              name="remember-pass"
-                        /></label>
+                     <% if (locals.errors && errors.password) { %>
+                     <p class="errors" style="color: white">
+                        <%= errors.password.msg %>
+                     </p>
+                     <% } %>
+                     <div class="remember">
+                        <input
+                           type="checkbox"
+                           name="remember"
+                           id="remember"
+                        />Remember me
                      </div>
-                     <a href="/" class="bn3637 bn38">Sign in</a>
+                     <button type="submit" class="bn38">Sign in</button>
                   </form>
                </section>
-               <p><a href="#" class="register-link">Forgot password?</a></p>
                <p>
                   <a href="/user/register" class="register-link"
                      >Don't have an account?</a

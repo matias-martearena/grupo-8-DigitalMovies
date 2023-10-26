@@ -1,46 +1,144 @@
-const fs = require('fs')
-const path = require('path')
+// ---------- Password module ---------- //
 const bcrypt = require('bcryptjs')
 
+// ---------- Validation module ---------- //
+const { validationResult } = require('express-validator')
+
+// ---------- Database ---------- //
 const trailerVideos = require('../database/trailers.json')
 const arrCartProducts = require('../database/cartProducts.json')
+const arrCards = require('../database/cards.json')
 
-const usersFilePath = path.join(
-   __dirname,
-   '..',
-   'database',
-   'users.json'
-)
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'))
+// ---------- Models ---------- //
+const User = require('../models/User')
 
 const userController = {
+   register: (req, res) => {
+      res.render('users/register')
+   },
+
+   processRegister: (req, res) => {
+      const resultValidation = validationResult(req)
+
+      if (resultValidation.errors.length > 0) {
+         return res.render('users/register', {
+            errors: resultValidation.mapped(),
+            oldData: req.body,
+         })
+      }
+
+      let userInDB = User.findByField('mail', req.body.email)
+
+      if (userInDB) {
+         return res.render('users/register', {
+            errors: {
+               email: {
+                  msg: 'Email already in use!',
+               },
+            },
+            oldData: req.body,
+         })
+      }
+
+      let newImg = function () {
+         if (req.file?.filename) {
+            return `/images/users/${req.file?.filename}`
+         } else {
+            return '/images/users/user-default.jpg'
+         }
+      }
+
+      let hashPassword = bcrypt.hashSync(req.body.password, 10)
+
+      let userToCreate = {
+         name: req.body.first_name,
+         surname: req.body.last_name,
+         mail: req.body.email,
+         image: newImg(),
+         password: hashPassword,
+      }
+
+      let userCreated = User.create(userToCreate)
+      return res.redirect('/user/login')
+   },
+
    login: (req, res) => {
-      res.render('users/login', {
+      return res.render('users/login', {
          trailers: trailerVideos,
       })
    },
-   store: (req, res) => {
-      const newId = 'USR' + Date.now()
-      const newImgName = '/images' + req.file?.filename
-      const newUser = {
-         email: req.body.email,
-         first_name: req.body.first_name,
-         id: newId,
-         image: newImgName,
-         last_name: req.body.last_name,
-         password: bcrypt.hashSync(req.body.password, 10)
+
+   loginProcess: (req, res) => {
+      const resultValidation = validationResult(req)
+
+      if (resultValidation.errors.length > 0) {
+         return res.render('users/login', {
+            errors: resultValidation.mapped(),
+            oldData: req.body,
+            trailers: trailerVideos,
+         })
       }
-      users.push(newUser)
-      fs.writeFileSync(usersFilePath, JSON.stringify(users))
-      res.redirect('/')
+
+      let userToLogin = User.findByField('mail', req.body.email)
+
+      if (!userToLogin) {
+         return res.render('users/login', {
+            errors: {
+               email: {
+                  msg: 'User not found',
+               },
+            },
+            oldData: req.body,
+            trailers: trailerVideos,
+         })
+      }
+
+      if (userToLogin) {
+         let passwordOk = bcrypt.compareSync(
+            req.body.password,
+            userToLogin.password
+         )
+
+         if (!passwordOk) {
+            return res.render('users/login', {
+               errors: {
+                  password: {
+                     msg: 'Credentials are invalid',
+                  },
+               },
+               oldData: req.body,
+               trailers: trailerVideos,
+            })
+         }
+
+         if (req.body.remember) {
+            res.cookie('userMail', req.body.email, { maxAge: 1000 * 60 * 60 })
+         }
+
+         delete userToLogin.password
+         req.session.userLogged = userToLogin
+         return res.render('users/profile', {
+            user: req.session.userLogged,
+         })
+      }
    },
-   cart: (req, res) => {
-      res.render('users/cart', {
-         cartProducts: arrCartProducts,
+
+   profile: (req, res) => {
+      return res.render('users/profile', {
+         user: req.session.userLogged,
       })
    },
-   register: (req, res) => {
-      res.render('users/register')
+
+   logout: (req, res) => {
+      res.clearCookie('userMail')
+      req.session.destroy()
+      return res.redirect('/')
+   },
+
+   cart: (req, res) => {
+      return res.render('users/cart', {
+         cartProducts: arrCartProducts,
+      })
    },
 }
 

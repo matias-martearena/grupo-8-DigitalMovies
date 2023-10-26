@@ -139,16 +139,11 @@ a:hover {
    scale: 0.9;
 }
 
-.log_out_btn {
-   display: none;
-}
-
 /* LOGIN BUTTONS */
 
 .login_btn {
    display: flex;
    gap: 1rem;
-   display: none;
 }
 
 .login_btn a {
