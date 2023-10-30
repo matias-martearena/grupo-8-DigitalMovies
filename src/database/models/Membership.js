@@ -4,7 +4,7 @@ module.exports = (sequelize, dataTypes) => {
         "Memberships", 
         {
             id: {
-                type: dataTypes.INTERGER,
+                type: dataTypes.INTEGER,
                 primaryKey: true,
                 autoIncrement: true,
             },
@@ -15,7 +15,7 @@ module.exports = (sequelize, dataTypes) => {
                 type: dataTypes.DECIMAL,
             },
             tier: {
-                type: dataTypes.INTERGER,
+                type: dataTypes.INTEGER,
             },
             discount_one: {
                 type: dataTypes.STRING,

@@ -1,10 +1,14 @@
-const arrCards = require('../database/cards.json')
+
+const db = require('../database/models')
 
 const mainController = {
    home: (req, res) => {
-      res.render('home', {
-         card: arrCards,
-      })
+      db.Medias.findAll()
+         .then(function(media){
+            res.render('home', {
+               card: media,
+            })
+         })
    },
    detail: (req, res) => {
       const { id } = req.params

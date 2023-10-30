@@ -4,7 +4,7 @@ module.exports = (sequelize, dataTypes) => {
         "Medias", 
         {
             id: {
-                type: dataTypes.INTERGER,
+                type: dataTypes.INTEGER,
                 primaryKey: true,
                 autoIncrement: true,
             },
@@ -18,7 +18,7 @@ module.exports = (sequelize, dataTypes) => {
                 type: dataTypes.STRING,
             },
             rating: {
-                type: dataTypes.INTERGER,
+                type: dataTypes.INTEGER,
             },
             synopsis: {
                 type: dataTypes.STRING,
@@ -36,5 +36,12 @@ module.exports = (sequelize, dataTypes) => {
             timestamp: false,
         }
     )
+
+    //Media.associate = function(models){
+    //    Cart.belongsTo(models.Carts, {
+    //        as: "carts",
+    //        foreignkEY: "product_id"
+    //    })
+    //}
     return Media;
 }
