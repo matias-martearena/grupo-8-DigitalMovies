@@ -1,26 +1,36 @@
 const express = require('express')
-const multer = require('multer')
-const path = require('path')
 const router = express.Router()
 
+// ---------- Controllers ---------- //
 const userController = require('../controllers/userController')
 
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-       const pathImage = path.join(__dirname, '..', '..', 'public', 'images')
-       cb(null, pathImage)
-    },
-    filename: (req, file, cb) => {
-       const newFileName = '/img-' + Date.now() + path.extname(file.originalname)
-       cb(null, newFileName)
-    },
- })
+// ---------- Middlewares ---------- //
+const registrationValidation = require('../middlewares/validationRegister')
+const loginValidation = require('../middlewares/validationLogin')
+const guestMiddleware = require('../middlewares/guestMiddleware')
+const authMiddleware = require('../middlewares/authMiddleware')
+const upload = require('../middlewares/userMulterMiddleware')
 
-const upload = multer({ storage: storage })
+// Proceso de registro del usuario
+router.get('/register', guestMiddleware, userController.register)
+router.post(
+   '/register',
+   upload.single('image'),
+   registrationValidation,
+   userController.processRegister
+)
 
-router.get('/login', userController.login)
+// Proceso de logeo del usuario
+router.get('/login', guestMiddleware, userController.login)
+router.post('/login', loginValidation, userController.loginProcess)
+
+// Perfil del usuario
+router.get('/profile', authMiddleware, userController.profile)
+
+// Logout
+router.get('/logout', userController.logout)
+
+// Carrito de compras del usuario
 router.get('/cart', userController.cart)
-router.get('/register', userController.register)
-router.post('/', upload.single('image'), userController.store)
 
 module.exports = router

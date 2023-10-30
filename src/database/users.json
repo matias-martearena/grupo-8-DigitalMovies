@@ -1,1 +1,27 @@
-[]
+[
+    {
+        "id": "user_1696623160587",
+        "name": "Olivia",
+        "surname": "Juarez",
+        "mail": "holasoyoli@gmail.com",
+        "image": "/images/users/user-default.jpg",
+        "password": "$2a$10$xjphuGajajziQZrT8hMGueWiNNYnxFkN/l3fV16MArxg9th4z.uUG"
+    },
+    {
+        "id": "user_1696633421039",
+        "name": "Matias",
+        "surname": "Martearena",
+        "mail": "matihola@gmail.com",
+        "image": "/images/users/user-default.jpg",
+        "password": "$2a$10$.oO29elICJN9s.O6i6Q5VOSekePamReklkqpFJU8tAxR.WTmPVW42"
+    },
+    {
+        "id": "user_1696634242381",
+        "name": "Ignacio",
+        "surname": "Martearena",
+        "mail": "holasoynacho@gmail.com",
+        "image": "/images/users/img-1696634242259.jpg",
+        "password": "$2a$10$JJejXvI4t/mWUPRCNDpViebut3Jrokb9VfHiW9PgxWrg7Nh.bsLJK"
+
+    }
+]

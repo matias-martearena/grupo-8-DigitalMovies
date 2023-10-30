@@ -169,3 +169,59 @@
    -  Que vas a hacer hoy?: Crear la ruta para la pagina de registro y ver de hacer la base de datos para usuarios.
 
 ---
+
+**Dia: 28/09/2023 Reunion: N°6**
+
+-  Mati:
+
+   -  Que se hizo ayer?: Se termino de estudiar todo lo referente a bases de datos, se adelanto clases para poder despejar el mayor tiempo posible para trabajar a partir de hoy con el sprint 5.
+   -  Te encontraste con algun impedimento?: Ninguno.
+   -  Que vas a hacer hoy?: Empezar a desarrollar el sprint 5 en orden basado en las consignas.
+
+-  Pablo:
+
+   -  Que se hizo ayer?: Estudiar y repasar para poder empezar con el sprint 5 dado que el grupo acordo reunirse este dia.
+   -  Te encontraste con algun impedimento?: Ninguno.
+   -  Que vas a hacer hoy?: Empezar a desarrollar el sprint 5 en orden basado en las consignas.
+
+-  Ignacio:
+
+   -  Que se hizo ayer?: Estudie los materiales del playground.
+   -  Te encontraste con algun impedimento?: Hay temas que me estan costando en la practica.
+   -  Que vas a hacer hoy?: Clases en la facultad, mañana empiezo con el sprint 5.
+
+-  Luciano:
+
+   -  Que se hizo ayer?: No asistio.
+   -  Te encontraste con algun impedimento?: No asistio.
+   -  Que vas a hacer hoy?: No asistio.
+
+---
+
+**Semana: 09/10/2023 - 13/10/2023 Reunion: N°7**
+
+-  Mati:
+
+   -  Que se hizo ayer?: La creacion del tablero de trabajo del sprint 6. La correccion del retro.md. La implementacion de los weekly y la planificacion de la base de datos.
+   -  Te encontraste con algun impedimento?: Ninguno.
+   -  Que vas a hacer hoy?: La creacion del modelo de bases de datos.
+
+-  Pablo:
+
+   -  Que se hizo ayer?: La creacion del tablero de trabajo del sprint 6. La correccion del retro.md. La implementacion de los weekly y la planificacion de la base de datos.
+   -  Te encontraste con algun impedimento?: Ninguno.
+   -  Que vas a hacer hoy?: La creacion del modelo de bases de datos.
+
+-  Ignacio:
+
+   -  Que se hizo ayer?: No asistio.
+   -  Te encontraste con algun impedimento?: No asistio.
+   -  Que vas a hacer hoy?: No asistio.
+
+-  Luciano:
+
+   -  Que se hizo ayer?: No asistio.
+   -  Te encontraste con algun impedimento?: No asistio.
+   -  Que vas a hacer hoy?: No asistio.
+
+---

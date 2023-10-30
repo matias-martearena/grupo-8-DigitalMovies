@@ -7,7 +7,14 @@ https://digital-movies-yhq9.onrender.com
 ## Tablero de trabajo (trello):
 
 https://trello.com/b/gcNeW69n/sprint-2
+
 https://trello.com/b/nElvQbKF/sprint-3
+
+https://trello.com/b/4fsRhsOG/sprint-4
+
+https://trello.com/b/6YV0aHz4/sprint-5
+
+https://trello.com/b/4hqBhLn4/sprint-6
 
 ## Grupo 1 - Pagina web e-commerce cine
 
@@ -38,9 +45,7 @@ El ingreso a las funciónes estarán sujetas a la clasificación por edades de l
 💻 Equipo: #ElDrimTim 🖥
 
 -  Pablo Bejarano: El futuro experto en ciberseguridad 🕵️‍♂️💻
--  Matias Macchi: El enfermito de los juegos 🎮
 -  Ignacio Beguier: Si pudiera dormir todo el día lo haría 🐼💤
--  Elias Reile: El basquetbolista del equipo 🏀
 -  Matias Martearena: El abuelo del grupo "A esta hora ya estaria durmiendo" 👴
 -  Luciano Ayrala: El enfermito de los juegos 2 🎮©
 
