@@ -1,19 +1,19 @@
-<% arrMembership.forEach((product) => { %>
+<% product.forEach((product) => { %>
 <section class="membership-container">
    <h2 class="membership_tier-title"><%= product.tier %></h2>
    <p class="membership_tier-description"><%= product.description %></p>
    <article class="membership_discounts-container">
       <div class="discounts">
          <i class="fa-solid fa-ticket"></i>
-         <p><%= product.discount0 %></p>
+         <p><%= product.discount_one %></p>
       </div>
       <div class="discounts">
          <i class="fa-solid fa-cookie-bite"></i>
-         <p><%= product.discount1 %></p>
+         <p><%= product.discount_two %></p>
       </div>
       <div class="discounts">
          <i class="fa-solid fa-play"></i>
-         <p><%= product.discount2 %></p>
+         <p><%= product.discount_three %></p>
       </div>
    </article>
    <p class="membership_price">$<%= product.price %></p>

@@ -1,7 +1,7 @@
 module.exports = (sequelize, dataTypes) => {
 
     const Media = sequelize.define(
-        "Medias", 
+        "Media", 
         {
             id: {
                 type: dataTypes.INTEGER,
@@ -32,8 +32,10 @@ module.exports = (sequelize, dataTypes) => {
             }
         },
         {
-            tableName: "medias",
+            tableName: "media",
             timestamp: false,
+            createdAt: false,
+            updatedAt: false,
         }
     )
 

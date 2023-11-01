@@ -8,6 +8,7 @@ const { validationResult } = require('express-validator')
 const trailerVideos = require('../database/trailers.json')
 const arrCartProducts = require('../database/cartProducts.json')
 const arrCards = require('../database/cards.json')
+const db = require('../database/models')
 
 // ---------- Models ---------- //
 const User = require('../models/User')
@@ -63,9 +64,7 @@ const userController = {
    },
 
    login: (req, res) => {
-      return res.render('users/login', {
-         trailers: trailerVideos,
-      })
+      return res.render('users/login')
    },
 
    loginProcess: (req, res) => {

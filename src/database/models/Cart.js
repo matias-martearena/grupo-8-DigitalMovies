@@ -1,7 +1,7 @@
 module.exports = (sequelize, dataTypes) => {
 
     const Cart = sequelize.define(
-        "Carts", 
+        "Cart", 
         {
             id: {
                 type: dataTypes.INTEGER,
@@ -23,8 +23,10 @@ module.exports = (sequelize, dataTypes) => {
             
         },
         {
-            tableName: "carts",
+            tableName: "cart",
             timestamp: false,
+            createdAt: false,
+            updatedAt: false,
         }
     )
 
