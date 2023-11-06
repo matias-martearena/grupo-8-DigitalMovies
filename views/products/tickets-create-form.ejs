@@ -10,22 +10,22 @@
       <main>
          <form action="/tickets" method="post" enctype="multipart/form-data">
             <div>
-               <label for="description">Description</label>
+               <label for="synopsis">Synopsis</label>
                <input
                   type="text"
-                  id="description"
-                  name="description"
+                  id="synopsis"
+                  name="synopsis"
                   placeholder="Ex: After meeting Gwen Stacy, Spider-Man from Brooklyn is..."
                   required
                />
             </div>
             <div>
-               <label for="function">Function</label>
+               <label for="function">Room</label>
                <input
-                  type="text"
-                  id="function"
-                  name="function"
-                  placeholder="Ex: From Monday to Wednesday at 6:00 PM."
+                  type="number"
+                  id="Room"
+                  name="Room"
+                  placeholder="1, 2"
                   required
                />
             </div>

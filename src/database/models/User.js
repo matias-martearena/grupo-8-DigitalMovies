@@ -1,22 +1,22 @@
 module.exports = (sequelize, dataTypes) => {
 
-    const Showtime = sequelize.define(
-        "Showtimes", 
+    const User = sequelize.define(
+        "User", 
         {
             id: {
-                type: dataTypes.INTERGER,
+                type: dataTypes.INTEGER,
                 primaryKey: true,
                 autoIncrement: true,
             },
-            price: {
-                type: dataTypes.DECIMAL,
-                allowNull: false,
-            },
-            room: {
+            first_name: {
                 type: dataTypes.STRING,
                 allowNull: false,
             },
-            genre: {
+            last_name: {
+                type: dataTypes.STRING,
+                allowNull: false,
+            },
+            email: {
                 type: dataTypes.STRING,
                 allowNull: false,
             },
@@ -24,19 +24,17 @@ module.exports = (sequelize, dataTypes) => {
                 type: dataTypes.STRING,
                 allowNull: true,
             },
-            synopsis: {
-                type: dataTypes.STRING,
-                allowNull: true,
-            },
-            title: {
+            password: {
                 type: dataTypes.STRING,
                 allowNull: false,
-            }
+            },
         },
         {
-            tableName: "showtimes",
+            tableName: "user",
             timestamp: false,
+            createdAt: false,
+            updatedAt: false,
         }
     )
-    return Showtime;
+    return User;
 }

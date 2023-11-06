@@ -19,7 +19,7 @@
                type="text"
                id="description"
                name="description"
-               value="<%= membershipToEdit.id %>"
+               value="<%= membershipToEdit.description %>"
             />
          </div>
          <div>
@@ -28,7 +28,7 @@
                type="text"
                id="discount0"
                name="discount0"
-               value="<%= membershipToEdit.discount0 %>"
+               value="<%= membershipToEdit.discount_one %>"
             />
          </div>
          <div>
@@ -37,7 +37,7 @@
                 type="text"
                 id="discount1"
                 name="discount1"
-                value="<%= membershipToEdit.discount1 %>"
+                value="<%= membershipToEdit.discount_two %>"
              />
           </div>
           <div>
@@ -46,7 +46,7 @@
                 type="text"
                 id="discount2"
                 name="discount2"
-                value="<%= membershipToEdit.discount2 %>"
+                value="<%= membershipToEdit.discount_three %>"
              />
           </div>
          <div>
@@ -72,7 +72,7 @@
             </div>
          </form>
          <form
-            action="/membership/delete/<%= membership.id %>?_method=delete"
+            action="/membership/delete/<%= membershipToEdit.id %>?_method=delete"
             method="post"
          >
             <button type="submit">Delete card</button>

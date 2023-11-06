@@ -1,10 +1,10 @@
 module.exports = (sequelize, dataTypes) => {
 
     const Snack = sequelize.define(
-        "Snacks", 
+        "Snack", 
         {
             id: {
-                type: dataTypes.INTERGER,
+                type: dataTypes.INTEGER,
                 primaryKey: true,
                 autoIncrement: true,
             },
@@ -19,8 +19,10 @@ module.exports = (sequelize, dataTypes) => {
             },
         },
         {
-            tableName: "snacks",
+            tableName: "snack",
             timestamp: false,
+            createdAt: false,
+            updatedAt: false,
         }
     )
     return Snack;
