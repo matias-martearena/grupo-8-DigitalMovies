@@ -1,10 +1,10 @@
 module.exports = (sequelize, dataTypes) => {
 
     const Membership = sequelize.define(
-        "Memberships", 
+        "Membership", 
         {
             id: {
-                type: dataTypes.INTERGER,
+                type: dataTypes.INTEGER,
                 primaryKey: true,
                 autoIncrement: true,
             },
@@ -15,7 +15,7 @@ module.exports = (sequelize, dataTypes) => {
                 type: dataTypes.DECIMAL,
             },
             tier: {
-                type: dataTypes.INTERGER,
+                type: dataTypes.INTEGER,
             },
             discount_one: {
                 type: dataTypes.STRING,
@@ -28,8 +28,10 @@ module.exports = (sequelize, dataTypes) => {
             }
         },
         {
-            tableName: "memberships",
+            tableName: "membership",
             timestamp: false,
+            createdAt: false,
+            updatedAt: false,
         }
     )
     return Membership;

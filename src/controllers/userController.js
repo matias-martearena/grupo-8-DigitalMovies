@@ -5,19 +5,17 @@ const bcrypt = require('bcryptjs')
 const { validationResult } = require('express-validator')
 
 // ---------- Database ---------- //
-const trailerVideos = require('../database/trailers.json')
 const arrCartProducts = require('../database/cartProducts.json')
-const arrCards = require('../database/cards.json')
+const db = require('../database/models')
 
 // ---------- Models ---------- //
-const User = require('../models/User')
 
 const userController = {
    register: (req, res) => {
       res.render('users/register')
    },
 
-   processRegister: (req, res) => {
+    processRegister: (req, res) => {
       const resultValidation = validationResult(req)
 
       if (resultValidation.errors.length > 0) {
@@ -27,18 +25,24 @@ const userController = {
          })
       }
 
-      let userInDB = User.findByField('mail', req.body.email)
-
-      if (userInDB) {
-         return res.render('users/register', {
-            errors: {
-               email: {
-                  msg: 'Email already in use!',
+      db.User.findOne({
+         where: {
+            email: req.body.email,
+         }
+      })
+      .then((userInDB)=> {
+         if (userInDB) {
+            return res.render('users/register', {
+               errors: {
+                  email: {
+                     msg: 'Email already in use!',
+                  },
                },
-            },
-            oldData: req.body,
-         })
-      }
+               oldData: req.body,
+            })
+         }
+      })
+      
 
       let newImg = function () {
          if (req.file?.filename) {
@@ -50,77 +54,75 @@ const userController = {
 
       let hashPassword = bcrypt.hashSync(req.body.password, 10)
 
-      let userToCreate = {
-         name: req.body.first_name,
-         surname: req.body.last_name,
-         mail: req.body.email,
-         image: newImg(),
+      db.User.create( {
+         first_name: req.body.first_name,
+         last_name: req.body.last_name,
+         email: req.body.email,
          password: hashPassword,
-      }
-
-      let userCreated = User.create(userToCreate)
-      return res.redirect('/user/login')
-   },
+      })
+      .then(()=> {
+         return res.redirect('/user/login')
+      })
+   }, 
 
    login: (req, res) => {
-      return res.render('users/login', {
-         trailers: trailerVideos,
-      })
+      return res.render('users/login')
    },
 
    loginProcess: (req, res) => {
-      const resultValidation = validationResult(req)
+     const resultValidation = validationResult(req)
 
       if (resultValidation.errors.length > 0) {
          return res.render('users/login', {
             errors: resultValidation.mapped(),
             oldData: req.body,
-            trailers: trailerVideos,
          })
       }
 
-      let userToLogin = User.findByField('mail', req.body.email)
-
-      if (!userToLogin) {
-         return res.render('users/login', {
-            errors: {
-               email: {
-                  msg: 'User not found',
-               },
-            },
-            oldData: req.body,
-            trailers: trailerVideos,
-         })
-      }
-
-      if (userToLogin) {
-         let passwordOk = bcrypt.compareSync(
-            req.body.password,
-            userToLogin.password
-         )
-
-         if (!passwordOk) {
+      db.User.findOne({
+         where: {
+            email: req.body.email,
+         }
+      })
+      .then((userToLogin)=> {
+         if (!userToLogin) {
             return res.render('users/login', {
                errors: {
-                  password: {
-                     msg: 'Credentials are invalid',
+                  email: {
+                     msg: 'User not found',
                   },
                },
                oldData: req.body,
-               trailers: trailerVideos,
             })
          }
-
-         if (req.body.remember) {
-            res.cookie('userMail', req.body.email, { maxAge: 1000 * 60 * 60 })
+         if (userToLogin) {
+            let passwordOk = bcrypt.compareSync(
+               req.body.password,
+               userToLogin.password
+            )
+   
+            if (!passwordOk) {
+               return res.render('users/login', {
+                  errors: {
+                     password: {
+                        msg: 'Credentials are invalid',
+                     },
+                  },
+                  oldData: req.body,
+               })
+            }
+   
+            if (req.body.remember) {
+               res.cookie('userMail', req.body.email, { maxAge: 1000 * 60 * 60 })
+            }
+   
+            delete userToLogin.password
+            req.session.userLogged = userToLogin
+            return res.render('users/profile', {
+               user: req.session.userLogged,
+            })
          }
-
-         delete userToLogin.password
-         req.session.userLogged = userToLogin
-         return res.render('users/profile', {
-            user: req.session.userLogged,
-         })
-      }
+      })
    },
 
    profile: (req, res) => {

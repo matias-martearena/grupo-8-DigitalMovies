@@ -2,7 +2,6 @@
 <html lang="en">
    <head>
       <%- include('./partials/head')%>
-      <link rel="stylesheet" href="/styles/login/login-page.css" />
       <link rel="stylesheet" href="/styles/users/profile.css" />
       <title>Digital Movies</title>
    </head>
@@ -10,11 +9,11 @@
       <%- include('./partials/header')%>
       <main>
          <section class="profile">
-            <p><%= user.name %></p>
+            <p><%= user.first_name %></p>
             <div>
                <img src="<%= user.image %>" alt="<%= user.name %>" />
             </div>
-            <p><%= user.mail %></p>
+            <p><%= user.email %></p>
             <button type="button"><a href="/user/logout">Logout</a></button>
          </section>
       </main>

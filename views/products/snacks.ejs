@@ -15,7 +15,7 @@
             <% snacksProducts.forEach((snack)=> { %>
             <section class="tarjeta">
                <img
-                  src="<%= snack.image %>"
+                  src="/images/snacks/<%= snack.image %>"
                   alt="<%= snack.description %>"
                   class="fotoTarjeta"
                />
@@ -32,32 +32,7 @@
             <% }) %>
          </div>
          <h4>Promotions</h4>
-         <div class="productos">
-            <% snackCombos.forEach((snack)=> { %>
-            <section class="tarjeta">
-               <img
-                  src="<%= snack.images1 %>"
-                  alt="<%= snack.name %>"
-                  class="fotoTarjeta"
-               />
-               <i class="fa-solid fa-circle-plus" id="icono"></i>
-               <img
-                  src="<%= snack.images2 %>"
-                  alt="<%= snack.name %>"
-                  class="fotoTarjeta"
-               />
-               <div class="container-descripcion">
-                  <div>
-                     <p class="precio"><%= snack.price %></p>
-                     <h3 class="descripcion"><%= snack.name %></h3>
-                  </div>
-                  <button type="submit">
-                     <i class="fa-solid fa-cart-plus"></i>
-                  </button>
-               </div>
-            </section>
-            <% }) %>
-         </div>
+         
       </main>
       <%- include('./partials/footer')%>
       <script src="/js/navbar.js"></script>
