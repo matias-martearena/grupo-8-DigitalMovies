@@ -134,3 +134,27 @@ Para el siguiente sprint, deberiamos calcular mejor los tiempos y tareas, el equ
    -  Que se tiene que dejar de hacer?: Dejar de ignorar los plazos de entrega de las tareas. No dejar todo para la ultima semana y que algunos miembros del equipo ayuden.
 
 ---
+
+# Retro del Sprint 6
+
+### Conclusiones
+
+**Que se debe empezar a hacer?**
+**Que se tiene que hacer mas?**
+**Que se tiene que seguir haciendo?**
+**Que se tiene que hacer menos?**
+**Y que se tiene que dejar de hacer en el sprint 6?**
+
+-  Conclusion del grupo:
+
+   -  Que se debe empezar a hacer?: Se debe mejorar la division de tareas, pero, en un sentido mas especifico. Es decir, devidir las tareas en subtareas y a esas subtareas asignarlas a los dos miembros del equipo que trabajan (Pablo y Mati).
+
+   -  Que se tiene que hacer mas?: Correcciones generales y planos de entregas mas puntuales.
+
+   -  Que se tiene que seguir haciendo?: Trabajar como venimos haciendo, la comunicacion tambien mejoro.
+
+   -  Que se tiene que hacer menos?: Acumular tareas.
+
+   -  Que se tiene que dejar de hacer?: Acumular correcciones.
+
+---
