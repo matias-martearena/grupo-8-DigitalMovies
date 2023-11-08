@@ -1,22 +1,11 @@
 const express = require('express')
-const multer = require('multer')
-const path = require('path')
 const router = express.Router()
 
+// ---------- Controllers ---------- //
 const snacksController = require('../controllers/snacksController')
 
-const storage = multer.diskStorage({
-   destination: (req, file, cb) => {
-      const pathImage = path.join(__dirname, '..', '..', 'public', 'images')
-      cb(null, pathImage)
-   },
-   filename: (req, file, cb) => {
-      const newFileName = '/img-' + Date.now() + path.extname(file.originalname)
-      cb(null, newFileName)
-   },
-})
-
-const upload = multer({ storage: storage })
+// ---------- Middlewares ---------- //
+const upload = require('../middlewares/snackMulterMiddleware')
 
 router.get('/', snacksController.snacksIndex)
 router.get('/create', snacksController.snacksCreate)

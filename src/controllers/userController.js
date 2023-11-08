@@ -15,7 +15,7 @@ const userController = {
       res.render('users/register')
    },
 
-    processRegister: (req, res) => {
+   processRegister: (req, res) => {
       const resultValidation = validationResult(req)
 
       if (resultValidation.errors.length > 0) {
@@ -25,25 +25,7 @@ const userController = {
          })
       }
 
-      db.User.findOne({
-         where: {
-            email: req.body.email,
-         }
-      })
-      .then((userInDB)=> {
-         if (userInDB) {
-            return res.render('users/register', {
-               errors: {
-                  email: {
-                     msg: 'Email already in use!',
-                  },
-               },
-               oldData: req.body,
-            })
-         }
-      })
-      
-
+      //TODO: hacer uso de esta variable
       let newImg = function () {
          if (req.file?.filename) {
             return `/images/users/${req.file?.filename}`
@@ -54,23 +36,22 @@ const userController = {
 
       let hashPassword = bcrypt.hashSync(req.body.password, 10)
 
-      db.User.create( {
+      db.User.create({
          first_name: req.body.first_name,
          last_name: req.body.last_name,
          email: req.body.email,
          password: hashPassword,
-      })
-      .then(()=> {
+      }).then(() => {
          return res.redirect('/user/login')
       })
-   }, 
+   },
 
    login: (req, res) => {
       return res.render('users/login')
    },
 
    loginProcess: (req, res) => {
-     const resultValidation = validationResult(req)
+      const resultValidation = validationResult(req)
 
       if (resultValidation.errors.length > 0) {
          return res.render('users/login', {
@@ -82,9 +63,8 @@ const userController = {
       db.User.findOne({
          where: {
             email: req.body.email,
-         }
-      })
-      .then((userToLogin)=> {
+         },
+      }).then(userToLogin => {
          if (!userToLogin) {
             return res.render('users/login', {
                errors: {
@@ -100,7 +80,7 @@ const userController = {
                req.body.password,
                userToLogin.password
             )
-   
+
             if (!passwordOk) {
                return res.render('users/login', {
                   errors: {
@@ -111,11 +91,13 @@ const userController = {
                   oldData: req.body,
                })
             }
-   
+
             if (req.body.remember) {
-               res.cookie('userMail', req.body.email, { maxAge: 1000 * 60 * 60 })
+               res.cookie('userMail', req.body.email, {
+                  maxAge: 1000 * 60 * 60,
+               })
             }
-   
+
             delete userToLogin.password
             req.session.userLogged = userToLogin
             return res.render('users/profile', {

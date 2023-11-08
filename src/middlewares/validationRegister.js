@@ -1,5 +1,6 @@
 const { body } = require('express-validator')
 const path = require('node:path')
+const db = require('../database/models')
 
 const registrationValidationRules = [
    body('first_name')
@@ -32,7 +33,18 @@ const registrationValidationRules = [
       .withMessage('Please enter a valid mail address')
       .bail()
       .isLength({ max: 100 })
-      .withMessage('The mail can have a maximum of one hundred characters'),
+      .withMessage('The mail can have a maximum of one hundred characters')
+      .bail()
+      .custom(async (value, { req }) => {
+         const existingUser = await db.User.findOne({
+            where: {
+               email: value,
+            },
+         })
+         if (existingUser) {
+            throw new Error('Email is already in use')
+         }
+      }),
    body('password')
       .notEmpty()
       .withMessage('You must complete the password form')
