@@ -25,16 +25,23 @@
                   value="<%= productToEdit.image %>"
                   class="form-input"
                />
+               <% if (locals.errors && errors.image) { %>
+               <p class="errors"><%= errors.image.msg %></p>
+               <% } %>
             </div>
             <div>
                <label for="price">Ingrese precio</label>
                <input
-                  type="number"
+                  type="text"
                   id="price"
                   name="price"
+                  placeholder="0.99"
                   value="<%= productToEdit.price %>"
                   class="form-input"
                />
+               <% if (locals.errors && errors.price) { %>
+               <p class="errors"><%= errors.price.msg %></p>
+               <% } %>
             </div>
             <div>
                <label for="description">Ingrese descripcion corta</label>
@@ -44,8 +51,10 @@
                   name="description"
                   value="<%= productToEdit.description %>"
                   class="form-input"
-                  accept=".jpg, .png, .jpeg"
                />
+               <% if (locals.errors && errors.description) { %>
+               <p class="errors"><%= errors.description.msg %></p>
+               <% } %>
             </div>
             <div>
                <button type="submit">Save item</button>
