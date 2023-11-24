@@ -2,25 +2,28 @@
 <html lang="en">
    <head>
       <%- include('./partials/head')%>
-      <!-- <link rel="stylesheet" href=""> -->
       <title>Tickets Edit Form</title>
    </head>
    <body>
       <%- include('./partials/header')%>
       <main>
+         <h2>Edit ticket</h2>
          <form
             action="/tickets/edit/<%= ticketToEdit.id %>?_method=put"
             method="post"
             enctype="multipart/form-data"
          >
             <div>
-               <label for="synopsis">Description</label>
+               <label for="price">Price</label>
                <input
                   type="text"
-                  id="synopsis"
-                  name="synopsis"
-                  value=" <%= ticketToEdit.synopsis  %>"
+                  id="price"
+                  name="price"
+                  value="<%= ticketToEdit.price  %>"
                />
+               <% if (locals.errors && errors.price) { %>
+               <p class="errors"><%= errors.price.msg %></p>
+               <% } %>
             </div>
             <div>
                <label for="room">Room</label>
@@ -28,8 +31,24 @@
                   type="number"
                   id="room"
                   name="room"
-                  value=" <%= ticketToEdit.room  %>"
+                  value="<%= ticketToEdit.room  %>"
                />
+               <% if (locals.errors && errors.room) { %>
+               <p class="errors"><%= errors.room.msg %></p>
+               <% } %>
+            </div>
+            <div>
+               <label for="genre">Genres</label>
+               <input
+                  type="text"
+                  id="genre"
+                  name="genre"
+                  placeholder="Ex: Science fiction, Horror"
+                  value="<%= ticketToEdit.genre %>"
+               />
+               <% if (locals.errors && errors.genre) { %>
+               <p class="errors"><%= errors.genre.msg %></p>
+               <% } %>
             </div>
             <div>
                <label for="image">Image</label>
@@ -37,17 +56,24 @@
                   type="file"
                   id="image"
                   name="image"
-                  value=" <%= ticketToEdit.image  %>"
+                  value="<%= ticketToEdit.image  %>"
                />
+               <% if (locals.errors && errors.image) { %>
+               <p class="errors"><%= errors.image.msg %></p>
+               <% } %>
             </div>
             <div>
-               <label for="price">Price</label>
+               <label for="synopsis">Synopsis</label>
                <input
                   type="text"
-                  id="price"
-                  name="price"
-                  value=" <%= ticketToEdit.price  %>"
+                  id="synopsis"
+                  name="synopsis"
+                  placeholder="Ex: After meeting Gwen Stacy, Spider-Man from Brooklyn is..."
+                  value="<%= ticketToEdit.synopsis %>"
                />
+               <% if (locals.errors && errors.synopsis) { %>
+               <p class="errors"><%= errors.synopsis.msg %></p>
+               <% } %>
             </div>
             <div>
                <label for="title">Title</label>
@@ -55,9 +81,12 @@
                   type="text"
                   id="title"
                   name="title"
-                  pattern="[A-Za-z: ]{2,100}"
-                  value=" <%= ticketToEdit.title  %>"
+                  placeholder="Ex: Avatar, Alien, Barbie, etc..."
+                  value="<%= ticketToEdit.title %>"
                />
+               <% if (locals.errors && errors.title) { %>
+               <p class="errors"><%= errors.title.msg %></p>
+               <% } %>
             </div>
             <div>
                <button type="submit">Confirm edit</button>

@@ -8,7 +8,62 @@
    <body>
       <%- include('./partials/header')%>
       <main>
-         <form action="/tickets" method="post" enctype="multipart/form-data">
+         <form
+            action="/tickets/create"
+            method="post"
+            enctype="multipart/form-data"
+         >
+            <div>
+               <label for="price">Price</label>
+               <input
+                  type="text"
+                  id="price"
+                  name="price"
+                  placeholder="Ex: 1.99"
+                  value="<%= locals.oldData ? oldData.price : null %>"
+               />
+               <% if (locals.errors && errors.price) { %>
+               <p class="errors"><%= errors.price.msg %></p>
+               <% } %>
+            </div>
+            <div>
+               <label for="room">Room</label>
+               <input
+                  type="number"
+                  id="room"
+                  name="room"
+                  placeholder="Ex: 1"
+                  value="<%= locals.oldData ? oldData.room : null %>"
+               />
+               <% if (locals.errors && errors.room) { %>
+               <p class="errors"><%= errors.room.msg %></p>
+               <% } %>
+            </div>
+            <div>
+               <label for="genre">Genres</label>
+               <input
+                  type="text"
+                  id="genre"
+                  name="genre"
+                  placeholder="Ex: Science fiction, Horror"
+                  value="<%= locals.oldData ? oldData.genre : null %>"
+               />
+               <% if (locals.errors && errors.genre) { %>
+               <p class="errors"><%= errors.genre.msg %></p>
+               <% } %>
+            </div>
+            <div>
+               <label for="image">Image</label>
+               <input
+                  type="file"
+                  id="image"
+                  name="image"
+                  value="<%= locals.oldData ? oldData.image : null %>"
+               />
+               <% if (locals.errors && errors.image) { %>
+               <p class="errors"><%= errors.image.msg %></p>
+               <% } %>
+            </div>
             <div>
                <label for="synopsis">Synopsis</label>
                <input
@@ -16,37 +71,11 @@
                   id="synopsis"
                   name="synopsis"
                   placeholder="Ex: After meeting Gwen Stacy, Spider-Man from Brooklyn is..."
-                  required
+                  value="<%= locals.oldData ? oldData.synopsis : null %>"
                />
-            </div>
-            <div>
-               <label for="function">Room</label>
-               <input
-                  type="number"
-                  id="Room"
-                  name="Room"
-                  placeholder="1, 2"
-                  required
-               />
-            </div>
-            <div>
-                <label for="image">Image</label>
-                <input
-                   type="file"
-                   id="image"
-                   name="image"
-                   accept=".jpg, .png, .jpeg"
-                   required
-                />
-             </div>
-            <div>
-               <label for="price">Price</label>
-               <input
-                  type="text"
-                  id="price"
-                  name="price"
-                  placeholder="Ex: 2$"
-               />
+               <% if (locals.errors && errors.synopsis) { %>
+               <p class="errors"><%= errors.synopsis.msg %></p>
+               <% } %>
             </div>
             <div>
                <label for="title">Title</label>
@@ -54,10 +83,12 @@
                   type="text"
                   id="title"
                   name="title"
-                  pattern="[A-Za-z: ]{2,100}"
                   placeholder="Ex: Avatar, Alien, Barbie, etc..."
-                  required
+                  value="<%= locals.oldData ? oldData.title : null %>"
                />
+               <% if (locals.errors && errors.title) { %>
+               <p class="errors"><%= errors.title.msg %></p>
+               <% } %>
             </div>
             <div>
                <button type="submit">Save ticket</button>
