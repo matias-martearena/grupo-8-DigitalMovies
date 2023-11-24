@@ -13,52 +13,52 @@
             method="post"
             enctype="multipart/form-data"
          >
-         <div>
-            <label for="synopsis">Description</label>
-            <input
-               type="text"
-               id="synopsis"
-               name="synopsis"
-               value=" <%= ticketToEdit.synopsis  %>"
-            />
-         </div>
-         <div>
-            <label for="room">Room</label>
-            <input
-               type="number"
-               id="room"
-               name="room"
-               value=" <%= ticketToEdit.room  %>"
-            />
-         </div>
-         <div>
-             <label for="image">Image</label>
-             <input
-                type="file"
-                id="image"
-                name="image"
-                value=" <%= ticketToEdit.image  %>"
-             />
-          </div>
-         <div>
-            <label for="price">Price</label>
-            <input
-               type="text"
-               id="price"
-               name="price"
-               value=" <%= ticketToEdit.price  %>"
-            />
-         </div>
-         <div>
-            <label for="title">Title</label>
-            <input
-               type="text"
-               id="title"
-               name="title"
-               pattern="[A-Za-z: ]{2,100}"
-               value=" <%= ticketToEdit.title  %>"
-            />
-         </div>
+            <div>
+               <label for="synopsis">Description</label>
+               <input
+                  type="text"
+                  id="synopsis"
+                  name="synopsis"
+                  value=" <%= ticketToEdit.synopsis  %>"
+               />
+            </div>
+            <div>
+               <label for="room">Room</label>
+               <input
+                  type="number"
+                  id="room"
+                  name="room"
+                  value=" <%= ticketToEdit.room  %>"
+               />
+            </div>
+            <div>
+               <label for="image">Image</label>
+               <input
+                  type="file"
+                  id="image"
+                  name="image"
+                  value=" <%= ticketToEdit.image  %>"
+               />
+            </div>
+            <div>
+               <label for="price">Price</label>
+               <input
+                  type="text"
+                  id="price"
+                  name="price"
+                  value=" <%= ticketToEdit.price  %>"
+               />
+            </div>
+            <div>
+               <label for="title">Title</label>
+               <input
+                  type="text"
+                  id="title"
+                  name="title"
+                  pattern="[A-Za-z: ]{2,100}"
+                  value=" <%= ticketToEdit.title  %>"
+               />
+            </div>
             <div>
                <button type="submit">Confirm edit</button>
             </div>
@@ -71,6 +71,5 @@
          </form>
       </main>
       <%- include('./partials/footer')%>
-      <script src="/js/navbar.js"></script>
    </body>
 </html>

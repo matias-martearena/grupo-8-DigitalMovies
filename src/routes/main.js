@@ -11,7 +11,6 @@ router.get('/', mainController.home)
 router.get('/products/:id', mainController.detail)
 router.get('/manage', mainController.editor)
 router.get('/membership', membershipController.membership)
-
 router.get('/tickets', ticketsController.showtimes)
 
 module.exports = router

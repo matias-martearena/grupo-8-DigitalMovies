@@ -2,23 +2,29 @@
 <html lang="en">
    <head>
       <%- include('./partials/head')%>
-      <!-- <link rel="stylesheet" href=""> -->
       <title>Cards Create Form</title>
    </head>
    <body>
       <%- include('./partials/header')%>
       <main>
-         <form action="/cards" method="post" enctype="multipart/form-data">
+         <h2>Create a new media card</h2>
+         <form
+            action="/cards/create"
+            method="post"
+            enctype="multipart/form-data"
+         >
             <div>
                <label for="genres">Genres</label>
                <input
                   type="text"
                   id="genres"
                   name="genres"
-                  pattern="[a-zA-Z, ]{2,50}"
-                  placeholder="Ex: Horror, Science Fiction..."
-                  required
+                  placeholder="Horror, Science Fiction..."
+                  value="<%= locals.oldData ? oldData.genres : null %>"
                />
+               <% if (locals.errors && errors.genres) { %>
+               <p class="errors"><%= errors.genres.msg %></p>
+               <% } %>
             </div>
             <div>
                <label for="image">Image</label>
@@ -26,9 +32,11 @@
                   type="file"
                   id="image"
                   name="image"
-                  accept=".jpg, .png, .jpeg"
-                  required
+                  value="<%= locals.oldData ? oldData.image : null %>"
                />
+               <% if (locals.errors && errors.image) { %>
+               <p class="errors"><%= errors.image.msg %></p>
+               <% } %>
             </div>
             <div>
                <label for="link">Trailer link's</label>
@@ -36,8 +44,12 @@
                   type="text"
                   id="link"
                   name="link"
-                  placeholder="Ex: https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                  placeholder="https://youtu.be/_cpXhGxGfgY?si=fW2-x4QxY6XfPMpR"
+                  value="<%= locals.oldData ? oldData.link : null %>"
                />
+               <% if (locals.errors && errors.link) { %>
+               <p class="errors"><%= errors.link.msg %></p>
+               <% } %>
             </div>
             <div>
                <label for="rating">Rating</label>
@@ -45,20 +57,24 @@
                   type="number"
                   id="rating"
                   name="rating"
-                  pattern="[0-9/]{3,7}"
-                  placeholder="Ex: 76/100"
-                  required
+                  placeholder="76"
+                  value="<%= locals.oldData ? oldData.rating : null %>"
                />
+               <% if (locals.errors && errors.rating) { %>
+               <p class="errors"><%= errors.rating.msg %></p>
+               <% } %>
             </div>
             <div>
                <label for="synopsis">Synopsis</label>
-               <textarea
+               <input
                   type="text"
                   id="synopsis"
                   name="synopsis"
-                  pattern="[A-Za-z.,()'\ ]{20,200}"
-                  required
-               ></textarea>
+                  value="<%= locals.oldData ? oldData.synopsis : null %>"
+               />
+               <% if (locals.errors && errors.synopsis) { %>
+               <p class="errors"><%= errors.synopsis.msg %></p>
+               <% } %>
             </div>
             <div>
                <label for="title">Title</label>
@@ -66,16 +82,31 @@
                   type="text"
                   id="title"
                   name="title"
-                  pattern="[A-Za-z: ]{2,100}"
-                  placeholder="Ex: Avatar"
-                  required
+                  placeholder="The Batman"
+                  value="<%= locals.oldData ? oldData.title : null %>"
                />
+               <% if (locals.errors && errors.title) { %>
+               <p class="errors"><%= errors.title.msg %></p>
+               <% } %>
+            </div>
+            <div>
+               <label for="price">Price</label>
+               <input
+                  type="text"
+                  id="price"
+                  name="price"
+                  placeholder="0.99"
+                  value="<%= locals.oldData ? oldData.price : null %>"
+               />
+               <% if (locals.errors && errors.price) { %>
+               <p class="errors"><%= errors.price.msg %></p>
+               <% } %>
             </div>
             <div>
                <label for="category">Category</label>
                <select name="category" id="category">
-                  <option value="movie">Movie</option>
-                  <option value="serie">Serie</option>
+                  <option value="Movie">Movie</option>
+                  <option value="Serie">Serie</option>
                </select>
             </div>
             <div>
@@ -84,6 +115,5 @@
          </form>
       </main>
       <%- include('./partials/footer')%>
-      <script src="/js/navbar.js"></script>
    </body>
 </html>
