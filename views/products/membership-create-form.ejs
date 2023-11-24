@@ -2,22 +2,25 @@
 <html lang="en">
    <head>
       <%- include('./partials/head')%>
-      <!-- <link rel="stylesheet" href=""> -->
       <title>Membership Create Form</title>
    </head>
    <body>
       <%- include('./partials/header')%>
       <main>
-         <form action="/membership" method="post" enctype="multipart/form-data">
+         <h2>Create a new membership</h2>
+         <form action="/membership/create" method="post">
             <div>
                <label for="description">Description</label>
                <input
                   type="text"
                   id="description"
                   name="description"
-                  placeholder="Ex: Subscribe to digital movies and enjoy the best benefits at an incredible price"
-                  required
+                  placeholder="Subscribe to digital movies and enjoy the best benefits at an incredible price"
+                  value="<%= locals.oldData ? oldData.description : null %>"
                />
+               <% if (locals.errors && errors.description) { %>
+               <p class="errors"><%= errors.description.msg %></p>
+               <% } %>
             </div>
             <div>
                <label for="discount0">Discount 1</label>
@@ -25,9 +28,12 @@
                   type="text"
                   id="discount0"
                   name="discount0"
-                  placeholder="Ex: Ticket discounts."
-                  required
+                  placeholder="Ticket discounts"
+                  value="<%= locals.oldData ? oldData.discount0 : null %>"
                />
+               <% if (locals.errors && errors.discount0) { %>
+               <p class="errors"><%= errors.discount0.msg %></p>
+               <% } %>
             </div>
             <div>
                <label for="discount1">Discount 2</label>
@@ -35,9 +41,12 @@
                   type="text"
                   id="discount1"
                   name="discount1"
-                  placeholder="Ex: Snack discounts."
-                  required
+                  placeholder="Snack discounts"
+                  value="<%= locals.oldData ? oldData.discount1 : null %>"
                />
+               <% if (locals.errors && errors.discount1) { %>
+               <p class="errors"><%= errors.discount1.msg %></p>
+               <% } %>
             </div>
             <div>
                <label for="discount2">Discount 3</label>
@@ -45,28 +54,38 @@
                   type="text"
                   id="discount2"
                   name="discount2"
-                  placeholder="Ex: Access to selected digital movies."
-                  required
+                  placeholder="Access to selected digital movies"
+                  value="<%= locals.oldData ? oldData.discount2 : null %>"
                />
+               <% if (locals.errors && errors.discount2) { %>
+               <p class="errors"><%= errors.discount2.msg %></p>
+               <% } %>
             </div>
             <div>
                <label for="price">Price</label>
                <input
-                  type="number"
+                  type="text"
                   id="price"
                   name="price"
-                  placeholder="Ex: 2.0"
+                  placeholder="1.99"
+                  value="<%= locals.oldData ? oldData.price : null %>"
                />
+               <% if (locals.errors && errors.price) { %>
+               <p class="errors"><%= errors.price.msg %></p>
+               <% } %>
             </div>
             <div>
                <label for="tier">Tier</label>
                <input
-                  type="text"
+                  type="number"
                   id="tier"
                   name="tier"
-                  placeholder="Ex: Plan tier 1"
-                  required
+                  placeholder="Only a number. Ex: 1"
+                  value="<%= locals.oldData ? oldData.tier : null %>"
                />
+               <% if (locals.errors && errors.tier) { %>
+               <p class="errors"><%= errors.tier.msg %></p>
+               <% } %>
             </div>
             <div>
                <button type="submit">Save ticket</button>
