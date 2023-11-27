@@ -25,21 +25,13 @@ const userController = {
          })
       }
 
-      //TODO: hacer uso de esta variable
-      let newImg = function () {
-         if (req.file?.filename) {
-            return `/images/users/${req.file?.filename}`
-         } else {
-            return '/images/users/user-default.jpg'
-         }
-      }
-
       let hashPassword = bcrypt.hashSync(req.body.password, 10)
 
       db.User.create({
          first_name: req.body.first_name,
          last_name: req.body.last_name,
          email: req.body.email,
+         image: req.file?.filename || 'user-default.jpg',
          password: hashPassword,
       }).then(() => {
          return res.redirect('/user/login')
