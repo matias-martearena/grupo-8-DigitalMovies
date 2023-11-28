@@ -1,34 +1,32 @@
 const express = require('express')
-const multer = require('multer')
 const router = express.Router()
-const path = require('path')
 
+// ---------- Controllers ---------- //
 const cardsController = require('../controllers/cardsController')
 
-const storage = multer.diskStorage({
-   destination: (req, file, cb) => {
-      const pathImage = path.join(
-         __dirname,
-         '..',
-         '..',
-         'public',
-         'images',
-         'movies'
-      )
-      cb(null, pathImage)
-   },
-   filename: (req, file, cb) => {
-      const newFileName = '/img-' + Date.now() + path.extname(file.originalname)
-      cb(null, newFileName)
-   },
-})
+// ---------- Middlewares ---------- //
+const upload = require('../middlewares/cardMulterMiddleware')
+const mediaValidationData = require('../middlewares/validationMedia')
 
-const upload = multer({ storage: storage })
-
+// ---------- Create a movie or serie card ---------- //
 router.get('/create', cardsController.cardsCreate)
-router.post('/', upload.single('image'), cardsController.cardsStore)
+router.post(
+   '/create',
+   upload.single('image'),
+   mediaValidationData,
+   cardsController.cardsStore
+)
+
+// ---------- Edit a movie or serie card ---------- //
 router.get('/edit/:id', cardsController.cardsEdit)
-router.put('/edit/:id', upload.single('image'), cardsController.cardsUpdate)
+router.put(
+   '/edit/:id',
+   upload.single('image'),
+   mediaValidationData,
+   cardsController.cardsUpdate
+)
+
+// ---------- Delete a movie or serie card ---------- //
 router.delete('/delete/:id', cardsController.cardsDestroy)
 
 module.exports = router

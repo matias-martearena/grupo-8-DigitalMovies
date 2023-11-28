@@ -16,6 +16,8 @@ https://trello.com/b/6YV0aHz4/sprint-5
 
 https://trello.com/b/4hqBhLn4/sprint-6
 
+https://trello.com/b/i5gDOiW4/sprint-7
+
 ## Grupo 1 - Pagina web e-commerce cine
 
 **Productos y servicios**

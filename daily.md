@@ -225,3 +225,31 @@
    -  Que vas a hacer hoy?: No asistio.
 
 ---
+
+**Semana: 06/11/2023 - 13/11/2023 Reunion: N°8**
+
+-  Mati:
+
+   -  Que se hizo ayer?:
+   -  Te encontraste con algun impedimento?:
+   -  Que vas a hacer hoy?:
+
+-  Pablo:
+
+   -  Que se hizo ayer?:
+   -  Te encontraste con algun impedimento?:
+   -  Que vas a hacer hoy?:
+
+-  Ignacio:
+
+   -  Que se hizo ayer?: No asistio.
+   -  Te encontraste con algun impedimento?: No asistio.
+   -  Que vas a hacer hoy?: No asistio.
+
+-  Luciano:
+
+   -  Que se hizo ayer?: No asistio.
+   -  Te encontraste con algun impedimento?: No asistio.
+   -  Que vas a hacer hoy?: No asistio.
+
+---

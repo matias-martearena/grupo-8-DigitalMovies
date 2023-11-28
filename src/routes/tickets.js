@@ -1,27 +1,35 @@
 const express = require('express')
-const multer = require('multer')
 const router = express.Router()
-const path = require('path')
 
+// ---------- Controllers ---------- //
 const ticketsController = require('../controllers/ticketsController')
 
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-       const pathImage = path.join(__dirname, '..', '..', 'public', 'images')
-       cb(null, pathImage)
-    },
-    filename: (req, file, cb) => {
-       const newFileName = '/img-' + Date.now() + path.extname(file.originalname)
-       cb(null, newFileName)
-    },
- })
+// ---------- Middlewares ---------- //
+const upload = require('../middlewares/ticketMulterMiddleware')
+const ticketValidationData = require('../middlewares/validationTicket')
 
-const upload = multer({ storage: storage })
+// ---------- /tickets Showtimes Page ---------- //
+router.get('/', ticketsController.showtimes)
 
+// ---------- Create a new ticket ---------- //
 router.get('/create', ticketsController.ticketsCreate)
-router.post('/', upload.single('image'), ticketsController.ticketsStore)
+router.post(
+   '/create',
+   upload.single('image'),
+   ticketValidationData,
+   ticketsController.ticketsStore
+)
+
+// ---------- Edit or update a ticket ---------- //
 router.get('/edit/:id', ticketsController.ticketsEdit)
-router.put('/edit/:id', upload.single('image'), ticketsController.ticketsUpdate)
+router.put(
+   '/edit/:id',
+   upload.single('image'),
+   ticketValidationData,
+   ticketsController.ticketsUpdate
+)
+
+// ---------- Delete a ticket ---------- //
 router.delete('/delete/:id', ticketsController.ticketsDestroy)
 
 module.exports = router

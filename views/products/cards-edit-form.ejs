@@ -2,16 +2,17 @@
 <html lang="en">
    <head>
       <%- include('./partials/head')%>
-      <!-- <link rel="stylesheet" href=""> -->
       <title>Cards Edit Form</title>
    </head>
    <body>
       <%- include('./partials/header')%>
       <main>
+         <h2>Edit or update media card</h2>
          <form
             action="/cards/edit/<%= cardToEdit.id %>?_method=put"
             method="post"
             enctype="multipart/form-data"
+            id="card-form"
          >
             <div>
                <label for="genres">Genres</label>
@@ -19,9 +20,14 @@
                   type="text"
                   id="genres"
                   name="genres"
-                  pattern="[a-zA-Z,]{2,50}"
                   value="<%= cardToEdit.genre %>"
                />
+               <div style="color: yellow">
+                  <p class="error-genres field-feedback"></p>
+                  <% if (locals.errors && errors.genres) { %>
+                  <p class="errors"><%= errors.genres.msg %></p>
+                  <% } %>
+               </div>
             </div>
             <div>
                <label for="image">Image</label>
@@ -29,9 +35,14 @@
                   type="file"
                   id="image"
                   name="image"
-                  accept=".jpg, .png, .jpeg"
                   value="<%= cardToEdit.image %>"
                />
+               <div style="color: yellow">
+                  <p class="error-image field-feedback"></p>
+                  <% if (locals.errors && errors.image) { %>
+                  <p class="errors"><%= errors.image.msg %></p>
+                  <% } %>
+               </div>
             </div>
             <div>
                <label for="link">Trailer link's</label>
@@ -41,16 +52,27 @@
                   name="link"
                   value="<%= cardToEdit.link %>"
                />
+               <div style="color: yellow">
+                  <p class="error-link field-feedback"></p>
+                  <% if (locals.errors && errors.link) { %>
+                  <p class="errors"><%= errors.link.msg %></p>
+                  <% } %>
+               </div>
             </div>
             <div>
                <label for="rating">Rating</label>
                <input
-                  type="text"
+                  type="number"
                   id="rating"
                   name="rating"
-                  pattern="[0-9/]{3,7}"
                   value="<%= cardToEdit.rating %>"
                />
+               <div style="color: yellow">
+                  <p class="error-rating field-feedback"></p>
+                  <% if (locals.errors && errors.rating) { %>
+                  <p class="errors"><%= errors.rating.msg %></p>
+                  <% } %>
+               </div>
             </div>
             <div>
                <label for="synopsis">Synopsis</label>
@@ -58,9 +80,14 @@
                   type="text"
                   id="synopsis"
                   name="synopsis"
-                  pattern="[A-Za-z.,()'\ ]{20,200}"
                   value="<%= cardToEdit.synopsis %>"
                />
+               <div style="color: yellow">
+                  <p class="error-synopsis field-feedback"></p>
+                  <% if (locals.errors && errors.synopsis) { %>
+                  <p class="errors"><%= errors.synopsis.msg %></p>
+                  <% } %>
+               </div>
             </div>
             <div>
                <label for="title">Title</label>
@@ -68,15 +95,36 @@
                   type="text"
                   id="title"
                   name="title"
-                  pattern="[A-Za-z0-9: ]{2,100}"
                   value="<%= cardToEdit.title %>"
                />
+               <div style="color: yellow">
+                  <p class="error-title field-feedback"></p>
+                  <% if (locals.errors && errors.title) { %>
+                  <p class="errors"><%= errors.title.msg %></p>
+                  <% } %>
+               </div>
+            </div>
+            <div>
+               <label for="price">Price</label>
+               <input
+                  type="text"
+                  id="price"
+                  name="price"
+                  placeholder="0.99"
+                  value="<%= cardToEdit.price%>"
+               />
+               <div style="color: yellow">
+                  <p class="error-price field-feedback"></p>
+                  <% if (locals.errors && errors.price) { %>
+                  <p class="errors"><%= errors.price.msg %></p>
+                  <% } %>
+               </div>
             </div>
             <div>
                <label for="category">Category</label>
                <select name="category" id="category">
-                  <option value="movie">Movie</option>
-                  <option value="serie">Serie</option>
+                  <option value="Movie">Movie</option>
+                  <option value="Serie">Serie</option>
                </select>
             </div>
             <div>
@@ -91,6 +139,6 @@
          </form>
       </main>
       <%- include('./partials/footer')%>
-      <script src="/js/navbar.js"></script>
+      <script src="/scripts/validationsCard.js"></script>
    </body>
 </html>

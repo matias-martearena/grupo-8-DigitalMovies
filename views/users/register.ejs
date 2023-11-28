@@ -10,16 +10,23 @@
       <main class="main_formulario">
          <section class="hero">
             <video autoplay muted loop plays-inline id="myVideo">
-               <source src="/videos/interstellar-trailer.mp4" type="video/mp4" />
+               <source
+                  src="/videos/interstellar-trailer.mp4"
+                  type="video/mp4"
+               />
             </video>
+         </section>
+         <section class="errors">
+            <ul></ul>
          </section>
          <form
             action="/user/register"
             method="post"
             enctype="multipart/form-data"
             class="formulario"
+            id="registerUserForm"
          >
-            <h1 class="formulario_titulo">Create your account</h1>
+            <h2 class="formulario_titulo">Create your account</h2>
             <div class="formulario_input">
                <label for="first_name" class="input_subtitulo">Name</label>
                <input
@@ -30,11 +37,12 @@
                   placeholder="First name"
                   value="<%= locals.oldData ? oldData.first_name : null %>"
                />
-               <% if (locals.errors && errors.first_name) { %>
-               <p class="errors" style="color: white">
-                  <%= errors.first_name.msg %>
-               </p>
-               <% } %>
+               <div class="error-first-name" style="color: yellow">
+                  <p class="error-first-name field-feedback"></p>
+                  <% if (locals.errors && errors.first_name) { %>
+                  <p class="errors"><%= errors.first_name.msg %></p>
+                  <% } %>
+               </div>
             </div>
             <div class="formulario_input">
                <label for="last_name" class="input_subtitulo">Surname</label>
@@ -46,11 +54,12 @@
                   placeholder="Last name"
                   value="<%= locals.oldData ? oldData.last_name : null %>"
                />
-               <% if (locals.errors && errors.last_name) { %>
-               <p class="errors" style="color: white">
-                  <%= errors.last_name.msg %>
-               </p>
-               <% } %>
+               <div class="error-last-name" style="color: yellow">
+                  <p class="error-last-name field-feedback"></p>
+                  <% if (locals.errors && errors.last_name) { %>
+                  <p class="errors"><%= errors.last_name.msg %></p>
+                  <% } %>
+               </div>
             </div>
             <div class="formulario_input">
                <label for="email" class="input_subtitulo">Email</label>
@@ -62,11 +71,12 @@
                   placeholder="Email"
                   value="<%= locals.oldData ? oldData.email : null %>"
                />
-               <% if (locals.errors && errors.email) { %>
-               <p class="errors" style="color: white">
-                  <%= errors.email.msg %>
-               </p>
-               <% } %>
+               <div class="error-email" style="color: yellow">
+                  <p class="error-email field-feedback"></p>
+                  <% if (locals.errors && errors.email) { %>
+                  <p class="errors"><%= errors.email.msg %></p>
+                  <% } %>
+               </div>
             </div>
             <div class="formulario_input">
                <label for="" class="input_subtitulo">Password</label>
@@ -78,11 +88,12 @@
                   placeholder="Password"
                   value="<%= locals.oldData ? oldData.password : null %>"
                />
-               <% if (locals.errors && errors.password) { %>
-               <p class="errors" style="color: white">
-                  <%= errors.password.msg %>
-               </p>
-               <% } %>
+               <div class="error-password" style="color: yellow">
+                  <p class="error-password field-feedback"></p>
+                  <% if (locals.errors && errors.password) { %>
+                  <p class="errors"><%= errors.password.msg %></p>
+                  <% } %>
+               </div>
             </div>
             <div class="formulario_input">
                <label for="password" class="input_subtitulo"
@@ -90,26 +101,28 @@
                >
                <input
                   type="password"
-                  id="password"
+                  id="confirm_password"
                   name="confirm_password"
                   class="input"
                   placeholder="Confirm password"
                   value="<%= locals.oldData ? oldData.confirm_password : null %>"
                />
-               <% if (locals.errors && errors.confirm_password) { %>
-               <p class="errors" style="color: white">
-                  <%= errors.confirm_password.msg %>
-               </p>
-               <% } %>
+               <div class="error-confirm-password" style="color: yellow">
+                  <p class="error-confirm-password field-feedback"></p>
+                  <% if (locals.errors && errors.confirm_password) { %>
+                  <p class="errors"><%= errors.confirm_password.msg %></p>
+                  <% } %>
+               </div>
             </div>
             <div class="formulario_input">
                <label for="image" class="input_subtitulo">Image</label>
-               <input type="file" name="image" class="input" />
-               <% if (locals.errors && errors.image) { %>
-               <p class="errors" style="color: white">
-                  <%= errors.image.msg %>
-               </p>
-               <% } %>
+               <input type="file" id="user_image" name="image" class="input" />
+               <div class="error-image" style="color: yellow">
+                  <p class="error-image field-feedback"></p>
+                  <% if (locals.errors && errors.image) { %>
+                  <p class="errors"><%= errors.image.msg %></p>
+                  <% } %>
+               </div>
             </div>
             <div class="formulario_boton">
                <button type="submit" class="boton_enviar">Sign up</button>
@@ -121,5 +134,6 @@
          </form>
       </main>
       <%- include('./partials/footer')%>
+      <script src="/scripts/validationsUserResgister.js"></script>
    </body>
 </html>

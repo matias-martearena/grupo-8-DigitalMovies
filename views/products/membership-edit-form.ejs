@@ -2,7 +2,6 @@
 <html lang="en">
    <head>
       <%- include('./partials/head')%>
-      <!-- <link rel="stylesheet" href=""> -->
       <title>Membership Edit Form</title>
    </head>
    <body>
@@ -11,62 +10,98 @@
          <form
             action="/membership/edit/<%= membershipToEdit.id %>?_method=put"
             method="post"
-            enctype="multipart/form-data"
+            id="membership-form"
          >
-         <div>
-            <label for="description">Description</label>
-            <input
-               type="text"
-               id="description"
-               name="description"
-               value="<%= membershipToEdit.description %>"
-            />
-         </div>
-         <div>
-            <label for="discount0">Discount 1</label>
-            <input
-               type="text"
-               id="discount0"
-               name="discount0"
-               value="<%= membershipToEdit.discount_one %>"
-            />
-         </div>
-         <div>
-             <label for="discount1">Discount 2</label>
-             <input
-                type="text"
-                id="discount1"
-                name="discount1"
-                value="<%= membershipToEdit.discount_two %>"
-             />
-          </div>
-          <div>
-             <label for="discount2">Discount 3</label>
-             <input
-                type="text"
-                id="discount2"
-                name="discount2"
-                value="<%= membershipToEdit.discount_three %>"
-             />
-          </div>
-         <div>
-            <label for="price">Price</label>
-            <input
-               type="number"
-               id="price"
-               name="price"
-               value="<%= membershipToEdit.price %>"
-            />
-         </div>
-         <div>
-            <label for="tier">Tier</label>
-            <input
-               type="text"
-               id="tier"
-               name="tier"
-               value="<%= membershipToEdit.tier %>"
-            />
-         </div>
+            <div>
+               <label for="description">Description</label>
+               <input
+                  type="text"
+                  id="description"
+                  name="description"
+                  value="<%= membershipToEdit.description %>"
+               />
+               <div style="color: yellow">
+                  <p class="error-description field-feedback"></p>
+                  <% if (locals.errors && errors.description) { %>
+                  <p class="errors"><%= errors.description.msg %></p>
+                  <% } %>
+               </div>
+            </div>
+            <div>
+               <label for="discount0">Discount 1</label>
+               <input
+                  type="text"
+                  id="discount0"
+                  name="discount0"
+                  value="<%= membershipToEdit.discount_one %>"
+               />
+               <div style="color: yellow">
+                  <p class="error-discount0 field-feedback"></p>
+                  <% if (locals.errors && errors.discount0) { %>
+                  <p class="errors"><%= errors.discount0.msg %></p>
+                  <% } %>
+               </div>
+            </div>
+            <div>
+               <label for="discount1">Discount 2</label>
+               <input
+                  type="text"
+                  id="discount1"
+                  name="discount1"
+                  value="<%= membershipToEdit.discount_two %>"
+               />
+               <div style="color: yellow">
+                  <p class="error-discount1 field-feedback"></p>
+                  <% if (locals.errors && errors.discount1) { %>
+                  <p class="errors"><%= errors.discount1.msg %></p>
+                  <% } %>
+               </div>
+            </div>
+            <div>
+               <label for="discount2">Discount 3</label>
+               <input
+                  type="text"
+                  id="discount2"
+                  name="discount2"
+                  value="<%= membershipToEdit.discount_three %>"
+               />
+               <div style="color: yellow">
+                  <p class="error-discount2 field-feedback"></p>
+                  <% if (locals.errors && errors.discount2) { %>
+                  <p class="errors"><%= errors.discount2.msg %></p>
+                  <% } %>
+               </div>
+            </div>
+            <div>
+               <label for="price">Price</label>
+               <input
+                  type="text"
+                  id="price"
+                  name="price"
+                  value="<%= membershipToEdit.price %>"
+               />
+               <div style="color: yellow">
+                  <p class="error-price field-feedback"></p>
+                  <% if (locals.errors && errors.price) { %>
+                  <p class="errors"><%= errors.price.msg %></p>
+                  <% } %>
+               </div>
+            </div>
+            <div>
+               <label for="tier">Tier</label>
+               <input
+                  type="number"
+                  id="tier"
+                  name="tier"
+                  value="<%= membershipToEdit.tier %>"
+               />
+               <div style="color: yellow">
+                  <p class="error-tier field-feedback"></p>
+                  <% if (locals.errors && errors.tier) { %>
+                  <p class="errors"><%= errors.tier.msg %></p>
+                  <% } %>
+               </div>
+            </div>
             <div>
                <button type="submit">Confirm edit</button>
             </div>
@@ -79,6 +114,6 @@
          </form>
       </main>
       <%- include('./partials/footer')%>
-      <script src="/js/navbar.js"></script>
+      <script src="/scripts/validationsMembership.js"></script>
    </body>
 </html>

@@ -19,33 +19,37 @@
                   <p>Welcome</p>
                </div>
                <section>
-                  <form action="/user/login" method="POST">
+                  <form action="/user/login" method="POST" id="loginUserForm">
                      <label for="email">Email</label>
                      <input
                         type="text"
                         class="email"
+                        id="email"
                         name="email"
                         placeholder="email"
                         value="<%= locals.oldData ? oldData.email : null %>"
                      />
-                     <% if (locals.errors && errors.email) { %>
-                     <p class="errors" style="color: white">
-                        <%= errors.email.msg %>
-                     </p>
-                     <% } %>
+                     <div class="error-email" style="color: yellow">
+                        <p class="error-email field-feedback"></p>
+                        <% if (locals.errors && errors.email) { %>
+                        <p class="errors"><%= errors.email.msg %></p>
+                        <% } %>
+                     </div>
                      <label for="password">Password</label>
                      <input
                         type="password"
                         class="password"
                         name="password"
+                        id="password"
                         placeholder="Password"
                         value="<%= locals.oldData ? oldData.password : null %>"
                      />
-                     <% if (locals.errors && errors.password) { %>
-                     <p class="errors" style="color: white">
-                        <%= errors.password.msg %>
-                     </p>
-                     <% } %>
+                     <div class="error-password" style="color: yellow">
+                        <p class="error-password field-feedback"></p>
+                        <% if (locals.errors && errors.password) { %>
+                        <p class="errors"><%= errors.password.msg %></p>
+                        <% } %>
+                     </div>
                      <div class="remember">
                         <input
                            type="checkbox"
@@ -65,5 +69,6 @@
          </section>
       </main>
       <%- include('./partials/footer')%>
+      <script src="/scripts/validationsUserLogin.js"></script>
    </body>
 </html>

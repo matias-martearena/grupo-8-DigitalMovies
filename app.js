@@ -46,4 +46,6 @@ app.set('view engine', 'ejs')
 
 // ------------- PORT ----------------------- //
 const PORT = process.env.PORT || 3001
-app.listen(PORT, () => console.log(`Servidor en PORT:${PORT} corriendo`))
+app.listen(PORT, () =>
+   console.log(`Servidor en PORT:http://localhost:${PORT}/`)
+)
