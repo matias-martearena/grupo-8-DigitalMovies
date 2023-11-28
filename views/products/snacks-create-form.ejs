@@ -15,6 +15,7 @@
             method="post"
             enctype="multipart/form-data"
             class="form"
+            id="snacks-form"
          >
             <div>
                <label for="image">Ingrese una imagen</label>
@@ -25,9 +26,12 @@
                   class="form-input"
                   value="<%= locals.oldData ? oldData.image : null %>"
                />
-               <% if (locals.errors && errors.image) { %>
-               <p class="errors"><%= errors.image.msg %></p>
-               <% } %>
+               <div style="color: yellow">
+                  <p class="error-image field-feedback"></p>
+                  <% if (locals.errors && errors.image) { %>
+                  <p class="errors"><%= errors.image.msg %></p>
+                  <% } %>
+               </div>
             </div>
             <div>
                <label for="price">Ingrese precio</label>
@@ -39,9 +43,12 @@
                   class="form-input"
                   value="<%= locals.oldData ? oldData.price : null %>"
                />
-               <% if (locals.errors && errors.price) { %>
-               <p class="errors"><%= errors.price.msg %></p>
-               <% } %>
+               <div style="color: yellow">
+                  <p class="error-price field-feedback"></p>
+                  <% if (locals.errors && errors.price) { %>
+                  <p class="errors"><%= errors.price.msg %></p>
+                  <% } %>
+               </div>
             </div>
             <div>
                <label for="description">Ingrese descripcion corta</label>
@@ -53,9 +60,12 @@
                   class="form-input"
                   value="<%= locals.oldData ? oldData.description : null %>"
                />
-               <% if (locals.errors && errors.description) { %>
-               <p class="errors"><%= errors.description.msg %></p>
-               <% } %>
+               <div style="color: yellow">
+                  <p class="error-description field-feedback"></p>
+                  <% if (locals.errors && errors.description) { %>
+                  <p class="errors"><%= errors.description.msg %></p>
+                  <% } %>
+               </div>
             </div>
             <div>
                <button type="submit">Save item</button>
@@ -63,5 +73,6 @@
          </form>
       </main>
       <%- include('./partials/footer')%>
+      <script src="/scripts/validationsSnack.js"></script>
    </body>
 </html>
