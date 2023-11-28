@@ -12,6 +12,7 @@
             action="/tickets/edit/<%= ticketToEdit.id %>?_method=put"
             method="post"
             enctype="multipart/form-data"
+            id="ticketForm"
          >
             <div>
                <label for="price">Price</label>
@@ -21,9 +22,12 @@
                   name="price"
                   value="<%= ticketToEdit.price  %>"
                />
-               <% if (locals.errors && errors.price) { %>
-               <p class="errors"><%= errors.price.msg %></p>
-               <% } %>
+               <div style="color: yellow">
+                  <p class="error-price field-feedback"></p>
+                  <% if (locals.errors && errors.price) { %>
+                  <p class="errors"><%= errors.price.msg %></p>
+                  <% } %>
+               </div>
             </div>
             <div>
                <label for="room">Room</label>
@@ -33,9 +37,12 @@
                   name="room"
                   value="<%= ticketToEdit.room  %>"
                />
-               <% if (locals.errors && errors.room) { %>
-               <p class="errors"><%= errors.room.msg %></p>
-               <% } %>
+               <div style="color: yellow">
+                  <p class="error-room field-feedback"></p>
+                  <% if (locals.errors && errors.room) { %>
+                  <p class="errors"><%= errors.room.msg %></p>
+                  <% } %>
+               </div>
             </div>
             <div>
                <label for="genre">Genres</label>
@@ -46,9 +53,12 @@
                   placeholder="Ex: Science fiction, Horror"
                   value="<%= ticketToEdit.genre %>"
                />
-               <% if (locals.errors && errors.genre) { %>
-               <p class="errors"><%= errors.genre.msg %></p>
-               <% } %>
+               <div style="color: yellow">
+                  <p class="error-genre field-feedback"></p>
+                  <% if (locals.errors && errors.genre) { %>
+                  <p class="errors"><%= errors.genre.msg %></p>
+                  <% } %>
+               </div>
             </div>
             <div>
                <label for="image">Image</label>
@@ -58,9 +68,12 @@
                   name="image"
                   value="<%= ticketToEdit.image  %>"
                />
-               <% if (locals.errors && errors.image) { %>
-               <p class="errors"><%= errors.image.msg %></p>
-               <% } %>
+               <div style="color: yellow">
+                  <p class="error-image field-feedback"></p>
+                  <% if (locals.errors && errors.image) { %>
+                  <p class="errors"><%= errors.image.msg %></p>
+                  <% } %>
+               </div>
             </div>
             <div>
                <label for="synopsis">Synopsis</label>
@@ -71,9 +84,12 @@
                   placeholder="Ex: After meeting Gwen Stacy, Spider-Man from Brooklyn is..."
                   value="<%= ticketToEdit.synopsis %>"
                />
-               <% if (locals.errors && errors.synopsis) { %>
-               <p class="errors"><%= errors.synopsis.msg %></p>
-               <% } %>
+               <div style="color: yellow">
+                  <p class="error-synopsis field-feedback"></p>
+                  <% if (locals.errors && errors.synopsis) { %>
+                  <p class="errors"><%= errors.synopsis.msg %></p>
+                  <% } %>
+               </div>
             </div>
             <div>
                <label for="title">Title</label>
@@ -84,9 +100,12 @@
                   placeholder="Ex: Avatar, Alien, Barbie, etc..."
                   value="<%= ticketToEdit.title %>"
                />
-               <% if (locals.errors && errors.title) { %>
-               <p class="errors"><%= errors.title.msg %></p>
-               <% } %>
+               <div style="color: yellow">
+                  <p class="error-title field-feedback"></p>
+                  <% if (locals.errors && errors.title) { %>
+                  <p class="errors"><%= errors.title.msg %></p>
+                  <% } %>
+               </div>
             </div>
             <div>
                <button type="submit">Confirm edit</button>
@@ -100,5 +119,6 @@
          </form>
       </main>
       <%- include('./partials/footer')%>
+      <script src="/scripts/validationsTicket.js"></script>
    </body>
 </html>
