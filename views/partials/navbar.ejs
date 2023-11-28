@@ -18,8 +18,9 @@
             <i class="fa-solid fa-magnifying-glass"></i>
          </button>
       </form>
-      <% if (locals.isLogged) { %>
+      <% if (locals.isLogged == true) { %>
       <div class="login_btn">
+         <a href="/user/login" class="log_btn">Log In</a>
          <a href="/user/cart" class="fa-solid fa-cart-shopping"></a>
          <a href="/user/profile" class="fa-solid fa-user"></a>
          <a href="/user/logout" class="log_out_btn">Log Out</a>
