@@ -8,7 +8,7 @@
       <%- include('./partials/header')%>
       <main>
          <h2>Create a new membership</h2>
-         <form action="/membership/create" method="post">
+         <form action="/membership/create" method="post" id="membership-form">
             <div>
                <label for="description">Description</label>
                <input
@@ -18,9 +18,12 @@
                   placeholder="Subscribe to digital movies and enjoy the best benefits at an incredible price"
                   value="<%= locals.oldData ? oldData.description : null %>"
                />
-               <% if (locals.errors && errors.description) { %>
-               <p class="errors"><%= errors.description.msg %></p>
-               <% } %>
+               <div style="color: yellow">
+                  <p class="error-description field-feedback"></p>
+                  <% if (locals.errors && errors.description) { %>
+                  <p class="errors"><%= errors.description.msg %></p>
+                  <% } %>
+               </div>
             </div>
             <div>
                <label for="discount0">Discount 1</label>
@@ -31,9 +34,12 @@
                   placeholder="Ticket discounts"
                   value="<%= locals.oldData ? oldData.discount0 : null %>"
                />
-               <% if (locals.errors && errors.discount0) { %>
-               <p class="errors"><%= errors.discount0.msg %></p>
-               <% } %>
+               <div style="color: yellow">
+                  <p class="error-discount0 field-feedback"></p>
+                  <% if (locals.errors && errors.discount0) { %>
+                  <p class="errors"><%= errors.discount0.msg %></p>
+                  <% } %>
+               </div>
             </div>
             <div>
                <label for="discount1">Discount 2</label>
@@ -44,9 +50,12 @@
                   placeholder="Snack discounts"
                   value="<%= locals.oldData ? oldData.discount1 : null %>"
                />
-               <% if (locals.errors && errors.discount1) { %>
-               <p class="errors"><%= errors.discount1.msg %></p>
-               <% } %>
+               <div style="color: yellow">
+                  <p class="error-discount1 field-feedback"></p>
+                  <% if (locals.errors && errors.discount1) { %>
+                  <p class="errors"><%= errors.discount1.msg %></p>
+                  <% } %>
+               </div>
             </div>
             <div>
                <label for="discount2">Discount 3</label>
@@ -57,9 +66,12 @@
                   placeholder="Access to selected digital movies"
                   value="<%= locals.oldData ? oldData.discount2 : null %>"
                />
-               <% if (locals.errors && errors.discount2) { %>
-               <p class="errors"><%= errors.discount2.msg %></p>
-               <% } %>
+               <div style="color: yellow">
+                  <p class="error-discount2 field-feedback"></p>
+                  <% if (locals.errors && errors.discount2) { %>
+                  <p class="errors"><%= errors.discount2.msg %></p>
+                  <% } %>
+               </div>
             </div>
             <div>
                <label for="price">Price</label>
@@ -70,9 +82,12 @@
                   placeholder="1.99"
                   value="<%= locals.oldData ? oldData.price : null %>"
                />
-               <% if (locals.errors && errors.price) { %>
-               <p class="errors"><%= errors.price.msg %></p>
-               <% } %>
+               <div style="color: yellow">
+                  <p class="error-price field-feedback"></p>
+                  <% if (locals.errors && errors.price) { %>
+                  <p class="errors"><%= errors.price.msg %></p>
+                  <% } %>
+               </div>
             </div>
             <div>
                <label for="tier">Tier</label>
@@ -83,9 +98,12 @@
                   placeholder="Only a number. Ex: 1"
                   value="<%= locals.oldData ? oldData.tier : null %>"
                />
-               <% if (locals.errors && errors.tier) { %>
-               <p class="errors"><%= errors.tier.msg %></p>
-               <% } %>
+               <div style="color: yellow">
+                  <p class="error-tier field-feedback"></p>
+                  <% if (locals.errors && errors.tier) { %>
+                  <p class="errors"><%= errors.tier.msg %></p>
+                  <% } %>
+               </div>
             </div>
             <div>
                <button type="submit">Save ticket</button>
@@ -93,5 +111,6 @@
          </form>
       </main>
       <%- include('./partials/footer')%>
+      <script src="/scripts/validationsMembership.js"></script>
    </body>
 </html>
