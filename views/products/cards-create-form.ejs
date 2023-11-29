@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <%- include('./partials/head')%>
+      <%- include('../partials/head')%>
       <title>Cards Create Form</title>
    </head>
    <body>
-      <%- include('./partials/header')%>
+      <%- include('../partials/navbar')%>
       <main>
          <h2>Create a new media card</h2>
          <form
@@ -83,6 +83,7 @@
                   type="text"
                   id="synopsis"
                   name="synopsis"
+                  placeholder="A strange black entity from another world bonds with Peter Parker and causes inner turmoil as he contends with new villains, temptations, and revenge. Peter ..."
                   value="<%= locals.oldData ? oldData.synopsis : null %>"
                />
                <div style="color: yellow">
@@ -98,7 +99,7 @@
                   type="text"
                   id="title"
                   name="title"
-                  placeholder="The Batman"
+                  placeholder="Batman"
                   value="<%= locals.oldData ? oldData.title : null %>"
                />
                <div style="color: yellow">
@@ -136,7 +137,7 @@
             </div>
          </form>
       </main>
-      <%- include('./partials/footer')%>
+      <%- include('../partials/footer')%>
       <script src="/scripts/validationsCard.js"></script>
    </body>
 </html>

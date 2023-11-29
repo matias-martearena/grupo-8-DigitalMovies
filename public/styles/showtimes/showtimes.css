@@ -29,25 +29,25 @@ h4{
 main{
     margin-top: 10px;
 }
-.productos{
+.products{
     display: grid;
     grid-template-columns: repeat(1, minmax(300px, 1fr));
     gap: 5px;
 }
-.tarjeta {
+.card {
   display:flex;
   perspective: 1000px; 
   position: relative;
   margin: 1rem; 
 }
-.funciones{
+.show{
   color:#ea572a;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin-top: 5px;
   word-spacing: 5px;
 }
-.container-descripcion form{
+.container-description form{
   position: absolute; 
   bottom: 5%; 
   left: 50%;
@@ -56,7 +56,7 @@ main{
   flex-direction: column;
   align-items: center;
 }
-.boton-comprar {
+.buy-button {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -72,7 +72,7 @@ main{
   overflow: hidden;
 }
 
-.boton-comprar:hover {
+.buy-button:hover {
   background-color: var(--palete-2-5);
   transform: scale(1.1);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
@@ -84,7 +84,7 @@ main{
   margin-top: 5px;
 }
 
-.boton-comprar:hover #cart {
+.buy-button:hover #cart {
   opacity: 1;
 }
 
@@ -94,7 +94,7 @@ main{
 
 
 
-.fotoTarjeta {
+.cardPhoto {
   width: 100%;
   height: 100%;
   max-height: 100%;
@@ -103,7 +103,7 @@ main{
   transition: opacity 0.5s; 
 }
 
-.tarjeta-back {
+.card-back {
   transform: rotateY(180deg);
   position: absolute;
   padding: 7px;
@@ -123,19 +123,19 @@ main{
   visibility: hidden; /* Inicialmente, la parte posterior es invisible */
 }
 
-.container-descripcion {
+.container-description {
   display: block;
   text-align: center;
   align-items: center;
 }
-.container-descripcion h3{
+.container-description h3{
   text-align: center;
   justify-content: center;
   text-decoration: underline;
   margin-bottom: 10px;
 }
 
-.descripcion {
+.description {
   display: none;
   color: var(--palete-2-3);
 }
@@ -143,23 +143,23 @@ main{
   font-size: 15px;
 }
 
-.tarjeta:hover .tarjeta-inner {
+.card:hover .card-inner {
   transform: rotateY(180deg);
 }
 
-.tarjeta:hover .tarjeta-back {
+.card:hover .card-back {
   transform: rotateY(0deg);
   z-index: 1; 
   opacity: 1; 
   visibility: visible; 
 }
 
-.tarjeta:hover .descripcion {
+.card:hover .description {
   display: flex; 
 }
 
 @media (min-width: 426px) and (max-width: 768px){
-    .productos{
+    .products{
         display: grid;
         grid-template-columns: repeat(2, minmax(100px, 1fr));
         gap: 20px;
@@ -167,7 +167,7 @@ main{
         }
 }
 @media (min-width: 769px) and (max-width: 1024px){
-    .productos{
+    .products{
         display: grid;
         grid-template-columns: repeat(3, minmax(100px, 1fr));
         gap: 20px;
@@ -175,7 +175,7 @@ main{
         }
 }
 @media (min-width: 1024px){
-    .productos{
+    .products{
         display: grid;
         grid-template-columns: repeat(4, minmax(100px, 1fr));
         gap: 20px;
@@ -183,7 +183,7 @@ main{
         }
 }
 @media (min-width: 1440px){
-  .productos{
+  .products{
     display: grid;
     grid-template-columns: repeat(5, minmax(100px, 1fr));
     gap: 20px;

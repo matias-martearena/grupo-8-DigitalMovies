@@ -3,18 +3,19 @@ const db = require('../database/models')
 function userLoggedMiddleware(req, res, next) {
    res.locals.isLogged = false
    
-   let mailInCookie = req.cookies.userMail
+   let mailInCookie = ''
 
+   if(req.cookies.userMail != undefined){
+      mailInCookie = req.cookies.userMail
+   }
+   db.User.findOne({
+      where: {
+         email: mailInCookie
+      }
+   })
+   .then(userFromCookie => {
+      console.log(userFromCookie)
 
-   if(mailInCookie != undefined){
-      db.User.findOne({
-         where: {
-            email: mailInCookie
-         }
-      })
-      .then(userFromCookie => {
-         console.log(userFromCookie)
-   
       if (userFromCookie) {
          req.session.userLogged = userFromCookie
       }
@@ -23,9 +24,8 @@ function userLoggedMiddleware(req, res, next) {
          res.locals.isLogged = true
          res.locals.userLogged = req.session.userLogged
       }
-      })
-   }
-   next()
+      next()
+   })
 }
 
 module.exports = userLoggedMiddleware

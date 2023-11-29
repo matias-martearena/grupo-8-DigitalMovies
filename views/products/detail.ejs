@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <%- include('./partials/head')%>
+      <%- include('../partials/head')%>
       <link rel="stylesheet" href="/styles/detail/detail.css" />
       <title><%= product.title %></title>
    </head>
    <body>
-      <%- include('./partials/header')%>
+      <%- include('../partials/navbar')%>
       <main class="main-container">
          <figure class="img-container">
             <img
@@ -28,6 +28,6 @@
             <button><a href="<%= product.link %>">Trailer</a></button>
          </section>
       </main>
-      <%- include('./partials/footer')%>
+      <%- include('../partials/footer')%>
    </body>
 </html>

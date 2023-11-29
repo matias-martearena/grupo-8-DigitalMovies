@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <%- include('./partials/head')%>
+      <%- include('../partials/head')%>
       <link rel="stylesheet" href="/styles/cart/cart.css" />
    </head>
    <body>
-      <%- include('./partials/header')%>
+      <%- include('../partials/navbar')%>
       <main class="main-container">
          <!-- LEFT BOX -->
          <section class="left-box-container">
             <!-- PRODUCTS -->
-            <%- include('./partials/cartProducts')%>
+            <%- include('../partials/cartProducts')%>
          </section>
          <!-- RIGHT BOX -->
          <section class="purchase_summary-container">
@@ -29,6 +29,6 @@
             <button type="submit">Go pay</button>
          </section>
       </main>
-      <%- include('./partials/footer')%>
+      <%- include('../partials/footer')%>
    </body>
 </html>

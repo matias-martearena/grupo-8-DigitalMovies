@@ -3,26 +3,26 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <%- include('./partials/head')%>
+      <%- include('../partials/head')%>
       <link rel="stylesheet" href="/styles/snacks/snacks.css" />
       <title>Document</title>
    </head>
    <body>
-      <%- include('./partials/header')%>
+      <%- include('../partials/navbar')%>
       <main>
          <h4>Products</h4>
-         <div class="productos">
+         <div class="products">
             <% snacksProducts.forEach((snack)=> { %>
-            <section class="tarjeta">
+            <section class="card">
                <img
                   src="/images/snacks/<%= snack.image %>"
                   alt="<%= snack.description %>"
-                  class="fotoTarjeta"
+                  class="cardPhoto"
                />
-               <div class="container-descripcion">
+               <div class="container-description">
                   <div>
-                     <p class="precio"><%= snack.price %></p>
-                     <h3 class="descripcion"><%= snack.description %></h3>
+                     <p class="price"><%= snack.price %></p>
+                     <h3 class="description"><%= snack.description %></h3>
                   </div>
                   <button type="submit">
                      <i class="fa-solid fa-cart-plus"></i>
@@ -33,6 +33,6 @@
          </div>
          <h4>Promotions</h4>
       </main>
-      <%- include('./partials/footer')%>
+      <%- include('../partials/footer')%>
    </body>
 </html>

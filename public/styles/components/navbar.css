@@ -126,6 +126,11 @@ a:hover {
    transition: background-color 0.3s ease-in-out;
 }
 
+.profile_pic {
+   border-radius: 50%;
+   height: 2.5rem;
+}
+
 .log_btn:hover,
 .log_out_btn:hover,
 .sign_up_btn:hover {

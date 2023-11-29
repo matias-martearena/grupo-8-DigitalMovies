@@ -1,0 +1,25 @@
+<% ticket.forEach((ticket) => { %>
+<section class="card">
+   <div class="card-front">
+      <img
+         src="/images/tickets/<%= ticket.image %>"
+         alt="<%= ticket.title %>"
+         class="cardPhoto"
+      />
+   </div>
+   <div class="card-back">
+      <div class="container-description">
+         <h3 class="description"><%= ticket.title %></h3>
+         <h3 class="description"><%= ticket.synopsis %></h3>
+         <p class="show">Genres: <%= ticket.genre %></p>
+         <p class="show">Room: <%= ticket.room %></p>
+         <form class="form-class">
+            <button type="submit" class="buy-button">
+               <%= ticket.price %>
+               <i class="fa-solid fa-cart-plus" id="cart"></i>
+            </button>
+         </form>
+      </div>
+   </div>
+</section>
+<% }) %>

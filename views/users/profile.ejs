@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <%- include('./partials/head')%>
+      <%- include('../partials/head')%>
       <link rel="stylesheet" href="/styles/users/profile.css" />
       <title>Digital Movies</title>
    </head>
    <body class="background">
-      <%- include('./partials/header')%>
+      <%- include('../partials/navbar')%>
       <main>
          <section class="profile">
             <p><%= user.first_name %></p>
@@ -17,6 +17,6 @@
             <button type="button"><a href="/user/logout">Logout</a></button>
          </section>
       </main>
-      <%- include('./partials/footer')%>
+      <%- include('../partials/footer')%>
    </body>
 </html>

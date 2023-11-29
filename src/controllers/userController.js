@@ -5,7 +5,6 @@ const bcrypt = require('bcryptjs')
 const { validationResult } = require('express-validator')
 
 // ---------- Database ---------- //
-const arrCartProducts = require('../database/cartProducts.json')
 const db = require('../database/models')
 
 // ---------- Models ---------- //
@@ -113,7 +112,7 @@ const userController = {
 
    cart: (req, res) => {
       return res.render('users/cart', {
-         cartProducts: arrCartProducts,
+         cartProducts: [],
       })
    },
 }
