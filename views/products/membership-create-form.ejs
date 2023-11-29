@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <%- include('./partials/head')%>
+      <%- include('../partials/head')%>
       <title>Membership Create Form</title>
    </head>
    <body>
-      <%- include('./partials/header')%>
+      <%- include('../partials/navbar')%>
       <main>
          <h2>Create a new membership</h2>
          <form action="/membership/create" method="post" id="membership-form">
@@ -110,7 +110,7 @@
             </div>
          </form>
       </main>
-      <%- include('./partials/footer')%>
+      <%- include('../partials/footer')%>
       <script src="/scripts/validationsMembership.js"></script>
    </body>
 </html>

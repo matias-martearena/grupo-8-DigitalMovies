@@ -3,12 +3,12 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <%- include('./partials/head')%>
+      <%- include('../partials/head')%>
       <link rel="stylesheet" href="/styles/snacks/snacks-form.css" />
       <title>Snacks create form</title>
    </head>
    <body>
-      <%- include('./partials/header')%>
+      <%- include('../partials/navbar')%>
       <main>
          <form
             action="/snacks/create"
@@ -18,7 +18,7 @@
             id="snacks-form"
          >
             <div>
-               <label for="image">Ingrese una imagen</label>
+               <label for="image">Image</label>
                <input
                   type="file"
                   id="image"
@@ -34,7 +34,7 @@
                </div>
             </div>
             <div>
-               <label for="price">Ingrese precio</label>
+               <label for="price">Price</label>
                <input
                   type="text"
                   id="price"
@@ -51,7 +51,7 @@
                </div>
             </div>
             <div>
-               <label for="description">Ingrese descripcion corta</label>
+               <label for="description">Description</label>
                <input
                   type="text"
                   id="description"
@@ -72,7 +72,7 @@
             </div>
          </form>
       </main>
-      <%- include('./partials/footer')%>
+      <%- include('../partials/footer')%>
       <script src="/scripts/validationsSnack.js"></script>
    </body>
 </html>

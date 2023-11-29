@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <%- include('./partials/head')%>
+      <%- include('../partials/head')%>
       <title>Membership Edit Form</title>
    </head>
    <body>
-      <%- include('./partials/header')%>
+      <%- include('../partials/navbar')%>
       <main>
          <form
             action="/membership/edit/<%= membershipToEdit.id %>?_method=put"
@@ -113,7 +113,7 @@
             <button type="submit">Delete card</button>
          </form>
       </main>
-      <%- include('./partials/footer')%>
+      <%- include('../partials/footer')%>
       <script src="/scripts/validationsMembership.js"></script>
    </body>
 </html>
