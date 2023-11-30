@@ -1,14 +1,17 @@
 const db = require('../database/models')
-const { membership } = require('./membershipController')
+const randomMovieFunction = require('../../public/scripts/randomMovie')
 
 const mainController = {
    home: (req, res) => {
+      const randomTrailer = randomMovieFunction()
       db.Media.findAll().then(function (media) {
          res.render('home', {
             card: media,
+            trailer: randomTrailer,
          })
       })
    },
+
    detail: (req, res) => {
       const { id } = req.params
       db.Media.findByPk(id).then(media => {
@@ -17,6 +20,7 @@ const mainController = {
          })
       })
    },
+
    editor: (req, res) => {
       Promise.all([
          db.Media.findAll(),

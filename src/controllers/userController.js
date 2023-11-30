@@ -7,11 +7,15 @@ const { validationResult } = require('express-validator')
 // ---------- Database ---------- //
 const db = require('../database/models')
 
-// ---------- Models ---------- //
+// ---------- Script ------------ //
+const randomMovieFunction = require('../../public/scripts/randomMovie')
 
 const userController = {
    register: (req, res) => {
-      res.render('users/register')
+      const randomTrailer = randomMovieFunction()
+      res.render('users/register', {
+         trailer: randomTrailer,
+      })
    },
 
    processRegister: (req, res) => {
@@ -38,7 +42,10 @@ const userController = {
    },
 
    login: (req, res) => {
-      return res.render('users/login')
+      const randomTrailer = randomMovieFunction()
+      return res.render('users/login', {
+         trailer: randomTrailer,
+      })
    },
 
    loginProcess: (req, res) => {
