@@ -4,6 +4,7 @@
          <a href="/">DM</a>
       </div>
       <ul class="links">
+         <li><a href="/">Home</a></li>
          <li><a href="/membership">Membership</a></li>
          <li><a href="/tickets">Tickets</a></li>
          <li><a href="/snacks">Snacks</a></li>
@@ -20,7 +21,12 @@
       </form>
       <% if (locals.isLogged == true) { %>
       <div class="login_btn">
-         <a href="/user/profile" fa-solid fa-user> <img src="/images/users/<%= locals.userLogged.image %>" class="profile_pic"> </a>
+         <a href="/user/profile" fa-solid fa-user>
+            <img
+               src="/images/users/<%= locals.userLogged.image %>"
+               class="profile_pic"
+            />
+         </a>
          <a href="/user/cart" class="fa-solid fa-cart-shopping"></a>
          <a href="/user/logout" class="log_out_btn">Log Out</a>
       </div>
