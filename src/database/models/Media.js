@@ -9,6 +9,7 @@ module.exports = (sequelize, dataTypes) => {
          },
          genre: {
             type: dataTypes.STRING,
+            allowNull: false,
          },
          image: {
             type: dataTypes.STRING,
@@ -18,9 +19,11 @@ module.exports = (sequelize, dataTypes) => {
          },
          rating: {
             type: dataTypes.INTEGER,
+            allowNull: false,
          },
          synopsis: {
             type: dataTypes.STRING,
+            allowNull: false,
          },
          title: {
             type: dataTypes.STRING,
@@ -28,6 +31,7 @@ module.exports = (sequelize, dataTypes) => {
          },
          price: {
             type: dataTypes.DECIMAL,
+            allowNull: false,
          },
          category: {
             type: dataTypes.STRING,
