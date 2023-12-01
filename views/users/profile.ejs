@@ -8,14 +8,14 @@
    <body class="background">
       <%- include('../partials/navbar')%>
       <main>
-         <section class="profile">
+         <article class="profile">
             <p><%= user.first_name %></p>
             <div>
                <img src="<%= user.image %>" alt="<%= user.name %>" />
             </div>
             <p><%= user.email %></p>
             <button type="button"><a href="/user/logout">Logout</a></button>
-         </section>
+         </article>
       </main>
       <%- include('../partials/footer')%>
    </body>

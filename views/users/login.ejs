@@ -8,16 +8,14 @@
    <body class="background">
       <%- include('../partials/navbar')%>
       <main>
-         <section class="hero">
+         <article class="hero">
             <video autoplay muted loop plays-inline id="myVideo">
                <source src="/videos/<%= trailer %>" type="video/mp4" />
             </video>
-         </section>
-         <section class="login-page">
-            <div class="page-card">
-               <div class="welcome-logo">
-                  <p>Welcome</p>
-               </div>
+         </article>
+         <article class="login-page">
+            <section class="page-card">
+               <p class="welcome-logo">Welcome</p>
                <section>
                   <form action="/user/login" method="POST" id="loginUserForm">
                      <label for="email">Email</label>
@@ -65,8 +63,8 @@
                      >Don't have an account?</a
                   >
                </p>
-            </div>
-         </section>
+            </section>
+         </article>
       </main>
       <%- include('../partials/footer')%>
       <script src="/scripts/validationsUserLogin.js"></script>

@@ -1,76 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <%- include('../partials/head')%>
       <link rel="stylesheet" href="/styles/snacks/snacks-form.css" />
-      <title>Snacks create form</title>
    </head>
    <body>
       <%- include('../partials/navbar')%>
       <main>
-         <form
-            action="/snacks/create"
-            method="post"
-            enctype="multipart/form-data"
-            class="form"
-            id="snacks-form"
-         >
-            <div>
-               <label for="image">Image</label>
-               <input
-                  type="file"
-                  id="image"
-                  name="image"
-                  class="form-input"
-                  value="<%= locals.oldData ? oldData.image : null %>"
-               />
-               <div style="color: yellow">
-                  <p class="error-image field-feedback"></p>
-                  <% if (locals.errors && errors.image) { %>
-                  <p class="errors"><%= errors.image.msg %></p>
-                  <% } %>
+         <article>
+            <h1 class="snack-create-form-title">Create a snack</h1>
+            <form
+               action="/snacks/create"
+               method="post"
+               enctype="multipart/form-data"
+               class="form"
+               id="snacks-form"
+            >
+               <section>
+                  <label for="image">Image</label>
+                  <input
+                     type="file"
+                     id="image"
+                     name="image"
+                     class="form-input"
+                     value="<%= locals.oldData ? oldData.image : null %>"
+                  />
+                  <div style="color: yellow">
+                     <p class="error-image field-feedback"></p>
+                     <% if (locals.errors && errors.image) { %>
+                     <p class="errors"><%= errors.image.msg %></p>
+                     <% } %>
+                  </div>
+               </section>
+               <section>
+                  <label for="price">Price</label>
+                  <input
+                     type="text"
+                     id="price"
+                     name="price"
+                     placeholder="4.99"
+                     class="form-input"
+                     value="<%= locals.oldData ? oldData.price : null %>"
+                  />
+                  <div style="color: yellow">
+                     <p class="error-price field-feedback"></p>
+                     <% if (locals.errors && errors.price) { %>
+                     <p class="errors"><%= errors.price.msg %></p>
+                     <% } %>
+                  </div>
+               </section>
+               <section>
+                  <label for="description">Description</label>
+                  <input
+                     type="text"
+                     id="description"
+                     name="description"
+                     placeholder="Soda with chips"
+                     class="form-input"
+                     value="<%= locals.oldData ? oldData.description : null %>"
+                  />
+                  <div style="color: yellow">
+                     <p class="error-description field-feedback"></p>
+                     <% if (locals.errors && errors.description) { %>
+                     <p class="errors"><%= errors.description.msg %></p>
+                     <% } %>
+                  </div>
+               </section>
+               <div>
+                  <button type="submit">Save item</button>
                </div>
-            </div>
-            <div>
-               <label for="price">Price</label>
-               <input
-                  type="text"
-                  id="price"
-                  name="price"
-                  placeholder="4.99"
-                  class="form-input"
-                  value="<%= locals.oldData ? oldData.price : null %>"
-               />
-               <div style="color: yellow">
-                  <p class="error-price field-feedback"></p>
-                  <% if (locals.errors && errors.price) { %>
-                  <p class="errors"><%= errors.price.msg %></p>
-                  <% } %>
-               </div>
-            </div>
-            <div>
-               <label for="description">Description</label>
-               <input
-                  type="text"
-                  id="description"
-                  name="description"
-                  placeholder="Soda with chips"
-                  class="form-input"
-                  value="<%= locals.oldData ? oldData.description : null %>"
-               />
-               <div style="color: yellow">
-                  <p class="error-description field-feedback"></p>
-                  <% if (locals.errors && errors.description) { %>
-                  <p class="errors"><%= errors.description.msg %></p>
-                  <% } %>
-               </div>
-            </div>
-            <div>
-               <button type="submit">Save item</button>
-            </div>
-         </form>
+            </form>
+         </article>
       </main>
       <%- include('../partials/footer')%>
       <script src="/scripts/validationsSnack.js"></script>

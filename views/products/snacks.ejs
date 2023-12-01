@@ -1,37 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <%- include('../partials/head')%>
       <link rel="stylesheet" href="/styles/snacks/snacks.css" />
-      <title>Document</title>
    </head>
    <body>
       <%- include('../partials/navbar')%>
       <main>
-         <h4>Products</h4>
-         <div class="products">
-            <% snacksProducts.forEach((snack)=> { %>
-            <section class="card">
-               <img
-                  src="/images/snacks/<%= snack.image %>"
-                  alt="<%= snack.description %>"
-                  class="cardPhoto"
-               />
-               <div class="container-description">
-                  <div>
+         <article>
+            <p class="title">Snacks</p>
+            <section class="products">
+               <% snacksProducts.forEach((snack)=> { %>
+               <article class="card">
+                  <img
+                     src="/images/snacks/<%= snack.image %>"
+                     alt="<%= snack.description %>"
+                     class="cardPhoto"
+                  />
+                  <div class="container-description">
                      <p class="price"><%= snack.price %></p>
                      <h3 class="description"><%= snack.description %></h3>
+                     <button type="submit">
+                        <i class="fa-solid fa-cart-plus"></i>
+                     </button>
                   </div>
-                  <button type="submit">
-                     <i class="fa-solid fa-cart-plus"></i>
-                  </button>
-               </div>
+               </article>
+               <% }) %>
             </section>
-            <% }) %>
-         </div>
-         <h4>Promotions</h4>
+         </article>
       </main>
       <%- include('../partials/footer')%>
    </body>

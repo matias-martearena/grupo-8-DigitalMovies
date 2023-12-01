@@ -7,111 +7,114 @@
    <body>
       <%- include('../partials/navbar')%>
       <main>
-         <form
-            action="/tickets/create"
-            method="post"
-            enctype="multipart/form-data"
-            id="ticketForm"
-         >
-            <div>
-               <label for="price">Price</label>
-               <input
-                  type="text"
-                  id="price"
-                  name="price"
-                  placeholder="Ex: 1.99"
-                  value="<%= locals.oldData ? oldData.price : null %>"
-               />
-               <div style="color: yellow">
-                  <p class="error-price field-feedback"></p>
-                  <% if (locals.errors && errors.price) { %>
-                  <p class="errors"><%= errors.price.msg %></p>
-                  <% } %>
+         <article>
+            <h1>Create a ticket</h1>
+            <form
+               action="/tickets/create"
+               method="post"
+               enctype="multipart/form-data"
+               id="ticketForm"
+            >
+               <section>
+                  <label for="price">Price</label>
+                  <input
+                     type="text"
+                     id="price"
+                     name="price"
+                     placeholder="Ex: 1.99"
+                     value="<%= locals.oldData ? oldData.price : null %>"
+                  />
+                  <div style="color: yellow">
+                     <p class="error-price field-feedback"></p>
+                     <% if (locals.errors && errors.price) { %>
+                     <p class="errors"><%= errors.price.msg %></p>
+                     <% } %>
+                  </div>
+               </section>
+               <section>
+                  <label for="room">Room</label>
+                  <input
+                     type="number"
+                     id="room"
+                     name="room"
+                     placeholder="Ex: 1"
+                     value="<%= locals.oldData ? oldData.room : null %>"
+                  />
+                  <div style="color: yellow">
+                     <p class="error-room field-feedback"></p>
+                     <% if (locals.errors && errors.room) { %>
+                     <p class="errors"><%= errors.room.msg %></p>
+                     <% } %>
+                  </div>
+               </section>
+               <section>
+                  <label for="genre">Genres</label>
+                  <input
+                     type="text"
+                     id="genre"
+                     name="genre"
+                     placeholder="Ex: Science fiction, Horror"
+                     value="<%= locals.oldData ? oldData.genre : null %>"
+                  />
+                  <div style="color: yellow">
+                     <p class="error-genre field-feedback"></p>
+                     <% if (locals.errors && errors.genre) { %>
+                     <p class="errors"><%= errors.genre.msg %></p>
+                     <% } %>
+                  </div>
+               </section>
+               <section>
+                  <label for="image">Image</label>
+                  <input
+                     type="file"
+                     id="image"
+                     name="image"
+                     value="<%= locals.oldData ? oldData.image : null %>"
+                  />
+                  <div style="color: yellow">
+                     <p class="error-image field-feedback"></p>
+                     <% if (locals.errors && errors.image) { %>
+                     <p class="errors"><%= errors.image.msg %></p>
+                     <% } %>
+                  </div>
+               </section>
+               <section>
+                  <label for="synopsis">Synopsis</label>
+                  <input
+                     type="text"
+                     id="synopsis"
+                     name="synopsis"
+                     placeholder="Ex: After meeting Gwen Stacy, Spider-Man from Brooklyn is..."
+                     value="<%= locals.oldData ? oldData.synopsis : null %>"
+                  />
+                  <div style="color: yellow">
+                     <p class="error-synopsis field-feedback"></p>
+                     <% if (locals.errors && errors.synopsis) { %>
+                     <p class="errors"><%= errors.synopsis.msg %></p>
+                     <% } %>
+                  </div>
+               </section>
+               <section>
+                  <label for="title">Title</label>
+                  <input
+                     type="text"
+                     id="title"
+                     name="title"
+                     placeholder="Ex: Avatar, Alien, Barbie, etc..."
+                     value="<%= locals.oldData ? oldData.title : null %>"
+                  />
+                  <div style="color: yellow">
+                     <p class="error-title field-feedback"></p>
+                     <% if (locals.errors && errors.title) { %>
+                     <p class="errors"><%= errors.title.msg %></p>
+                     <% } %>
+                  </div>
+               </section>
+               <div>
+                  <button type="submit">Save ticket</button>
                </div>
-            </div>
-            <div>
-               <label for="room">Room</label>
-               <input
-                  type="number"
-                  id="room"
-                  name="room"
-                  placeholder="Ex: 1"
-                  value="<%= locals.oldData ? oldData.room : null %>"
-               />
-               <div style="color: yellow">
-                  <p class="error-room field-feedback"></p>
-                  <% if (locals.errors && errors.room) { %>
-                  <p class="errors"><%= errors.room.msg %></p>
-                  <% } %>
-               </div>
-            </div>
-            <div>
-               <label for="genre">Genres</label>
-               <input
-                  type="text"
-                  id="genre"
-                  name="genre"
-                  placeholder="Ex: Science fiction, Horror"
-                  value="<%= locals.oldData ? oldData.genre : null %>"
-               />
-               <div style="color: yellow">
-                  <p class="error-genre field-feedback"></p>
-                  <% if (locals.errors && errors.genre) { %>
-                  <p class="errors"><%= errors.genre.msg %></p>
-                  <% } %>
-               </div>
-            </div>
-            <div>
-               <label for="image">Image</label>
-               <input
-                  type="file"
-                  id="image"
-                  name="image"
-                  value="<%= locals.oldData ? oldData.image : null %>"
-               />
-               <div style="color: yellow">
-                  <p class="error-image field-feedback"></p>
-                  <% if (locals.errors && errors.image) { %>
-                  <p class="errors"><%= errors.image.msg %></p>
-                  <% } %>
-               </div>
-            </div>
-            <div>
-               <label for="synopsis">Synopsis</label>
-               <input
-                  type="text"
-                  id="synopsis"
-                  name="synopsis"
-                  placeholder="Ex: After meeting Gwen Stacy, Spider-Man from Brooklyn is..."
-                  value="<%= locals.oldData ? oldData.synopsis : null %>"
-               />
-               <div style="color: yellow">
-                  <p class="error-synopsis field-feedback"></p>
-                  <% if (locals.errors && errors.synopsis) { %>
-                  <p class="errors"><%= errors.synopsis.msg %></p>
-                  <% } %>
-               </div>
-            </div>
-            <div>
-               <label for="title">Title</label>
-               <input
-                  type="text"
-                  id="title"
-                  name="title"
-                  placeholder="Ex: Avatar, Alien, Barbie, etc..."
-                  value="<%= locals.oldData ? oldData.title : null %>"
-               />
-               <div style="color: yellow">
-                  <p class="error-title field-feedback"></p>
-                  <% if (locals.errors && errors.title) { %>
-                  <p class="errors"><%= errors.title.msg %></p>
-                  <% } %>
-               </div>
-            </div>
-            <div>
-               <button type="submit">Save ticket</button>
-            </div>
-         </form>
+            </form>
+         </article>
       </main>
       <%- include('../partials/footer')%>
       <script src="/scripts/validationsTicket.js"></script>

@@ -1,82 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <%- include('../partials/head')%>
       <link rel="stylesheet" href="/styles/snacks/snacks-form.css" />
-      <title>Snack edit form</title>
    </head>
    <body>
       <%- include('../partials/navbar')%>
       <main>
-         <form
-            action="/snacks/edit/<%= productToEdit.id %>?_method=put"
-            method="post"
-            enctype="multipart/form-data"
-            class="form"
-            id="snacks-form"
-         >
-            <div>
-               <label for="image">Image</label>
-               <input
-                  type="file"
-                  id="image"
-                  name="image"
-                  value="<%= productToEdit.image %>"
-                  class="form-input"
-               />
-               <div style="color: yellow">
-                  <p class="error-image field-feedback"></p>
-                  <% if (locals.errors && errors.image) { %>
-                  <p class="errors"><%= errors.image.msg %></p>
-                  <% } %>
+         <article>
+            <h1 class="snack-edit-form-title">Snack editor</h1>
+            <form
+               action="/snacks/edit/<%= productToEdit.id %>?_method=put"
+               method="post"
+               enctype="multipart/form-data"
+               class="form"
+               id="snacks-form"
+            >
+               <section>
+                  <label for="image">Image</label>
+                  <input
+                     type="file"
+                     id="image"
+                     name="image"
+                     value="<%= productToEdit.image %>"
+                     class="form-input"
+                  />
+                  <div style="color: yellow">
+                     <p class="error-image field-feedback"></p>
+                     <% if (locals.errors && errors.image) { %>
+                     <p class="errors"><%= errors.image.msg %></p>
+                     <% } %>
+                  </div>
+               </section>
+               <section>
+                  <label for="price">Price</label>
+                  <input
+                     type="text"
+                     id="price"
+                     name="price"
+                     placeholder="0.99"
+                     value="<%= productToEdit.price %>"
+                     class="form-input"
+                  />
+                  <div style="color: yellow">
+                     <p class="error-price field-feedback"></p>
+                     <% if (locals.errors && errors.price) { %>
+                     <p class="errors"><%= errors.price.msg %></p>
+                     <% } %>
+                  </div>
+               </section>
+               <section>
+                  <label for="description">Description</label>
+                  <input
+                     type="text"
+                     id="description"
+                     name="description"
+                     value="<%= productToEdit.description %>"
+                     class="form-input"
+                  />
+                  <div style="color: yellow">
+                     <p class="error-description field-feedback"></p>
+                     <% if (locals.errors && errors.description) { %>
+                     <p class="errors"><%= errors.description.msg %></p>
+                     <% } %>
+                  </div>
+               </section>
+               <div>
+                  <button type="submit">Save item</button>
                </div>
-            </div>
-            <div>
-               <label for="price">Price</label>
-               <input
-                  type="text"
-                  id="price"
-                  name="price"
-                  placeholder="0.99"
-                  value="<%= productToEdit.price %>"
-                  class="form-input"
-               />
-               <div style="color: yellow">
-                  <p class="error-price field-feedback"></p>
-                  <% if (locals.errors && errors.price) { %>
-                  <p class="errors"><%= errors.price.msg %></p>
-                  <% } %>
-               </div>
-            </div>
-            <div>
-               <label for="description">Description</label>
-               <input
-                  type="text"
-                  id="description"
-                  name="description"
-                  value="<%= productToEdit.description %>"
-                  class="form-input"
-               />
-               <div style="color: yellow">
-                  <p class="error-description field-feedback"></p>
-                  <% if (locals.errors && errors.description) { %>
-                  <p class="errors"><%= errors.description.msg %></p>
-                  <% } %>
-               </div>
-            </div>
-            <div>
-               <button type="submit">Save item</button>
-            </div>
-         </form>
-         <form
-            action="/snacks/delete/<%= productToEdit.id %>?_method=delete"
-            method="POST"
-            class="form"
-         >
-            <button type="submit ">Delete item</button>
-         </form>
+            </form>
+         </article>
+         <article>
+            <form
+               action="/snacks/delete/<%= productToEdit.id %>?_method=delete"
+               method="POST"
+               class="form"
+            >
+               <button type="submit ">Delete item</button>
+            </form>
+         </article>
       </main>
       <%- include('../partials/footer')%>
       <script src="/scripts/validationsSnack.js"></script>
