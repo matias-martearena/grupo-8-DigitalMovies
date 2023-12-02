@@ -12,6 +12,48 @@ const mainController = {
       })
    },
 
+   movies: (req, res) => {
+      const randomTrailer = randomMovieFunction()
+      db.Media.findAll({
+         where: {
+            category: 'Movie',
+         }
+      }).then(function (media) {
+         res.render('home', {
+            card: media,
+            trailer: randomTrailer,
+         })
+      })
+   },
+
+   series: (req, res) => {
+      const randomTrailer = randomMovieFunction()
+      db.Media.findAll({
+         where: {
+            category: 'Serie',
+         }
+      }).then(function (media) {
+         res.render('home', {
+            card: media,
+            trailer: randomTrailer,
+         })
+      })
+   },
+
+   ratingFilter: (req, res) => {
+      const randomTrailer = randomMovieFunction()
+      db.Media.findAll({
+         order: [
+            ['rating', 'DESC'],
+         ],
+      }).then(function (media) {
+         res.render('home', {
+            card: media,
+            trailer: randomTrailer,
+         })
+      })
+   },
+   
    detail: (req, res) => {
       const { id } = req.params
       db.Media.findByPk(id).then(media => {
