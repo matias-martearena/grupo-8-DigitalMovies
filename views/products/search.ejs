@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <%- include('../partials/head')%>
+      <link rel="stylesheet" href="/styles/home/home.css" />
+   </head>
+   <body>
+      <%- include('../partials/navbar')%>
+      <main>
+         <!-- BACKGROUND VIDEO  -->
+         <article class="hero">
+            <video
+               id="trailer"
+               class="back-video"
+               autoplay
+               loop
+               muted
+               plays-inline
+            >
+               <source src="/videos/<%= trailer %>" type="video/mp4" />
+            </video>
+            <h1>Digital Movies</h1>
+         </article>
+         <!-- MOVIES AND SERIES LINKS -->
+         <section class="filter-container">
+            <ul class="filter">
+               <li><a href="/movies">Movies</a></li>
+               <li><a href="/series">Series</a></li>
+               <li><a href="/best-rating">Best Rating</a></li>
+            </ul>
+         </section>
+         <!-- MOVIES AND SERIES CARDS -->
+         <section class="cards-conteiner">
+            <%- include('../partials/cards')%>
+         </section>
+      </main>
+      <%- include('../partials/footer')%>
+   </body>
+</html>

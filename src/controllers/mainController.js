@@ -1,5 +1,6 @@
 const db = require('../database/models')
 const randomMovieFunction = require('../../public/scripts/randomMovie')
+const { Sequelize, Op } = require('sequelize')
 
 const mainController = {
    home: (req, res) => {
@@ -12,12 +13,34 @@ const mainController = {
       })
    },
 
+   search: (req, res) => {
+      const randomTrailer = randomMovieFunction()
+      const { search } = req.query
+
+      db.Media.findAll({
+         where: {
+            title: {
+               [Op.like]: `%${search}%`,
+            },
+         },
+      })
+         .then(function (media) {
+            res.render('products/search', {
+               card: media,
+               trailer: randomTrailer,
+            })
+         })
+         .catch(function (error) {
+            res.status(500).send('Error interno del servidor')
+         })
+   },
+
    movies: (req, res) => {
       const randomTrailer = randomMovieFunction()
       db.Media.findAll({
          where: {
             category: 'Movie',
-         }
+         },
       }).then(function (media) {
          res.render('home', {
             card: media,
@@ -31,7 +54,7 @@ const mainController = {
       db.Media.findAll({
          where: {
             category: 'Serie',
-         }
+         },
       }).then(function (media) {
          res.render('home', {
             card: media,
@@ -43,9 +66,7 @@ const mainController = {
    ratingFilter: (req, res) => {
       const randomTrailer = randomMovieFunction()
       db.Media.findAll({
-         order: [
-            ['rating', 'DESC'],
-         ],
+         order: [['rating', 'DESC']],
       }).then(function (media) {
          res.render('home', {
             card: media,
@@ -53,7 +74,7 @@ const mainController = {
          })
       })
    },
-   
+
    detail: (req, res) => {
       const { id } = req.params
       db.Media.findByPk(id).then(media => {
