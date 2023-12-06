@@ -6,12 +6,13 @@ const membershipController = require('../controllers/membershipController')
 
 // ---------- Middlewares ---------- //
 const membershipValidationData = require('../middlewares/validationMembership')
+const adminAuthMiddleware = require('../middlewares/adminAuthMiddleware')
 
 // ---------- /membership ---------- //
 router.get('/', membershipController.membership)
 
 // ---------- Form create membreship ---------- //
-router.get('/create', membershipController.membershipCreate)
+router.get('/create', adminAuthMiddleware, membershipController.membershipCreate)
 router.post(
    '/create',
    membershipValidationData,
@@ -19,7 +20,7 @@ router.post(
 )
 
 // ---------- Form edit membreship ---------- //
-router.get('/edit/:id', membershipController.membershipEdit)
+router.get('/edit/:id', adminAuthMiddleware, membershipController.membershipEdit)
 router.put(
    '/edit/:id',
    membershipValidationData,

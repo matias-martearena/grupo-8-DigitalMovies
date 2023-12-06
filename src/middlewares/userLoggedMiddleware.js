@@ -2,6 +2,7 @@ const db = require('../database/models')
 
 function userLoggedMiddleware(req, res, next) {
    res.locals.isLogged = false
+   res.locals.isAdmin = false
    
    let mailInCookie = ''
 
@@ -23,7 +24,12 @@ function userLoggedMiddleware(req, res, next) {
       if (req.session && req.session.userLogged) {
          res.locals.isLogged = true
          res.locals.userLogged = req.session.userLogged
+
+         if(res.locals.userLogged.profile === 'admin'){
+            res.locals.isAdmin = true
+         }
       }
+      
       next()
    })
 }
