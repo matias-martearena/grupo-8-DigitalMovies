@@ -7,12 +7,13 @@ const snacksController = require('../controllers/snacksController')
 // ---------- Middlewares ---------- //
 const upload = require('../middlewares/snackMulterMiddleware')
 const snackValidationData = require('../middlewares/validationSnack')
+const adminAuthMiddleware = require('../middlewares/adminAuthMiddleware')
 
 // ---------- /snacks Snack Page ---------- //
 router.get('/', snacksController.snacksIndex)
 
 // ---------- Create a new snack ---------- //
-router.get('/create', snacksController.snacksCreate)
+router.get('/create', adminAuthMiddleware, snacksController.snacksCreate)
 router.post(
    '/create',
    upload.single('image'),
@@ -21,7 +22,7 @@ router.post(
 )
 
 // ---------- Edit or update a snack ---------- //
-router.get('/edit/:id', snacksController.snacksEdit)
+router.get('/edit/:id', adminAuthMiddleware, snacksController.snacksEdit)
 router.put(
    '/edit/:id',
    upload.single('image'),

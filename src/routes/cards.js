@@ -7,9 +7,10 @@ const cardsController = require('../controllers/cardsController')
 // ---------- Middlewares ---------- //
 const upload = require('../middlewares/cardMulterMiddleware')
 const mediaValidationData = require('../middlewares/validationMedia')
+const adminAuthMiddleware = require('../middlewares/adminAuthMiddleware')
 
 // ---------- Create a movie or serie card ---------- //
-router.get('/create', cardsController.cardsCreate)
+router.get('/create', adminAuthMiddleware, cardsController.cardsCreate)
 router.post(
    '/create',
    upload.single('image'),
@@ -18,7 +19,7 @@ router.post(
 )
 
 // ---------- Edit a movie or serie card ---------- //
-router.get('/edit/:id', cardsController.cardsEdit)
+router.get('/edit/:id', adminAuthMiddleware, cardsController.cardsEdit)
 router.put(
    '/edit/:id',
    upload.single('image'),

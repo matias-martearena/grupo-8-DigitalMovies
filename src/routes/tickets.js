@@ -7,12 +7,13 @@ const ticketsController = require('../controllers/ticketsController')
 // ---------- Middlewares ---------- //
 const upload = require('../middlewares/ticketMulterMiddleware')
 const ticketValidationData = require('../middlewares/validationTicket')
+const adminAuthMiddleware = require('../middlewares/adminAuthMiddleware')
 
 // ---------- /tickets Showtimes Page ---------- //
 router.get('/', ticketsController.showtimes)
 
 // ---------- Create a new ticket ---------- //
-router.get('/create', ticketsController.ticketsCreate)
+router.get('/create', adminAuthMiddleware, ticketsController.ticketsCreate)
 router.post(
    '/create',
    upload.single('image'),
@@ -21,7 +22,7 @@ router.post(
 )
 
 // ---------- Edit or update a ticket ---------- //
-router.get('/edit/:id', ticketsController.ticketsEdit)
+router.get('/edit/:id', adminAuthMiddleware, ticketsController.ticketsEdit)
 router.put(
    '/edit/:id',
    upload.single('image'),
