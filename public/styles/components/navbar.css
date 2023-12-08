@@ -33,353 +33,172 @@ li {
 
 a {
    text-decoration: none;
-   font-size: 1rem;
    color: var(--font-variant-color);
 }
 
-a:hover {
-   color: var(--palete-2-3);
-}
-
-/* NAVEGATION BAR */
-
+/* --------- NAVEGATION BAR --------- */
 .navbar {
    width: 100%;
-   height: 4rem;
-   margin: 0 auto;
-   padding: 1rem;
+   padding: 0.5rem;
    display: flex;
    align-items: center;
-   justify-content: space-between;
-   background-color: #0b3f308f;
+   background-color: transparent;
 }
 
-/* LOGO */
-
-.logo {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-
-.logo a {
+/* --------- LOGO --------- */
+.navbar-logo {
+   display: block;
    font-family: var(--logo-font);
    color: var(--font-variant-color);
-   font-size: 3rem;
+   font-size: 2.5rem;
+   margin-right: 0.6rem;
+   cursor: pointer;
 }
 
-/* LINKS */
-
-.navbar .links {
+/* --------- LINKS --------- */
+.navbar-links {
    display: none;
    gap: 2rem;
 }
 
-/* SEARCH BAR */
-
-.main_header_search_bar {
+/* --------- SEARCH BAR --------- */
+.navbar-search-bar {
    display: flex;
-   justify-content: center;
    align-items: center;
-   width: 30%;
-   max-width: 500px;
+   justify-content: center;
+   width: 100%;
+   height: 40px;
    background-color: var(--font-variant-color);
-   border-radius: 12px;
-   padding: 5px;
+   border-radius: 24px;
+   padding: 0 6px;
 }
 
-.main_header_search_bar input[type='text'] {
+.navbar-search-bar input {
    border: none;
    background-color: transparent;
    width: 100%;
-   padding: 5px;
+   padding: 6px;
    outline: none;
 }
 
-.main_header_button {
+.navbar-search-bar button {
    background-color: transparent;
    border: none;
    cursor: pointer;
+   padding-left: 2px;
 }
 
-.main_header_button i {
-   font-size: 18px;
+.navbar-search-bar i {
+   font-size: 1.1rem;
    color: var(--palete-2-4);
+   padding-right: 0.3rem;
 }
 
-/* HOME BUTTONS */
+/* --------- HAMBURGUER BUTTON --------- */
+.toggle-btn i {
+   color: var(--font-variant-color);
+   cursor: pointer;
+   font-size: 2.5rem;
+   display: block;
+   margin-left: 0.6rem;
+}
 
-.log_btn,
-.log_out_btn,
-.sign_up_btn {
-   display: inline-flex;
+/* --------- DROPDOWN MENU --------- */
+.dropdown-menu {
+   position: absolute;
+   z-index: 100;
+   top: 58px;
+   left: 0;
+   height: 0;
+   width: 100%;
+   background: rgba(0, 0, 0, 0.2);
+   backdrop-filter: blur(5px);
+   overflow: hidden;
+}
+
+.dropdown-menu.open {
+   height: auto;
+   border-top: 1px solid var(--font-variant-color);
+   border-bottom: 1px solid var(--font-variant-color);
+}
+
+.dropdown-menu-links {
+   padding: 0.5rem 0;
+   display: flex;
+   flex-direction: column;
    align-items: center;
    justify-content: center;
-   padding: 0.4rem 1rem;
-   font-size: 1rem;
-   text-align: center;
-   color: var(--font-variant-color);
-   backface-visibility: hidden;
-   border: 0.3rem solid transparent;
-   border-radius: 2rem;
-   border-color: transparent;
-   transition: background-color 0.3s ease-in-out;
 }
 
-.profile_pic {
-   border-radius: 50%;
-   height: 2.5rem;
+.dropdown-menu-links li {
+   padding: 0.7rem 0;
 }
 
-.log_btn:hover,
-.log_out_btn:hover,
-.sign_up_btn:hover {
-   background-color: var(--font-variant-color);
-   color: var(--palete-2-4);
-}
-
-.log_btn:active,
-.log_out_btn:active,
-.sign_up_btn:active {
-   scale: 0.9;
-}
-
-/* LOGIN BUTTONS */
-
-.login_btn {
-   display: flex;
-   gap: 1rem;
-}
-
-.login_btn a {
-   color: var(--font-variant-color);
-   font-size: 1.5rem;
-}
-
-.login_btn a:hover {
+.dropdown-menu-links a:hover {
    color: var(--palete-2-3);
 }
 
-.login_btn a:active {
+.dropdown-menu-links a:active {
+   text-decoration: underline;
+}
+
+.dropdown-menu-login-btn,
+.dropdown-menu-logout-btn {
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   margin-bottom: 0.5rem;
+}
+
+.dropdown-menu-login-btn i {
+   font-size: 1.5rem;
+}
+
+.dropdown-menu-login-btn i:hover {
+   color: var(--palete-2-3);
+}
+
+.navbar-btn {
+   padding: 0.3rem 0.8rem;
+   border-radius: 24px;
+   color: var(--font-variant-color);
+   transition: background-color 0.1s ease-in-out;
+}
+
+.navbar-btn:hover {
+   background-color: var(--font-variant-color);
+   color: var(--palete-2-4);
+   font-weight: 500;
+}
+
+.navbar-btn:active {
    scale: 0.9;
 }
 
-/* HAMBURGUER BUTTON */
-
-.toggle_btn {
-   color: var(--font-variant-color);
-   cursor: pointer;
-   font-size: 1.3rem;
-   display: block;
+.user-image {
+   width: 2rem;
+   height: 2rem;
+   border-radius: 50%;
 }
 
-/* DROPDOWN MENU */
-
-.dropdown_menu {
-   position: absolute;
-   z-index: 100;
-   right: 2rem;
-   top: 80px;
-   height: 0;
-   width: 300px;
-   background: rgba(255, 255, 255, 0.1);
-   backdrop-filter: blur(15px);
-   border-radius: 10px;
-   overflow: hidden;
-   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+.user-image:active {
+   border: 2px solid var(--font-variant-color);
+   scale: 0.9;
 }
 
-.dropdown_menu.open {
-   height: auto;
+/* --------- NAVBAR BUTTONS CONTAINER--------- */
+.navbar-login-btn,
+.navbar-logout-btn {
+   display: none;
 }
 
-.dropdown_menu li {
-   padding: 0.7rem;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-}
-
-/* RESPONSIVE DESIGN */
-
-@media (min-width: 320px) and (max-width: 425px) {
-   .navbar {
-      justify-content: space-evenly;
-   }
-
-   .logo p {
-      font-size: 1.5rem;
-   }
-
-   .main_header_search_bar {
-      height: 2rem;
-      width: 60%;
-   }
-
-   .home_btn {
-      display: none;
-   }
-
-   .dropdown_menu {
-      left: 2rem;
-      width: unset;
-   }
-
-   .user_btn {
-      padding: 0.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-   }
-}
-
-@media (min-width: 426px) and (max-width: 768px) {
-   .main_header_search_bar {
-      width: 50%;
-      margin-left: 0.75rem;
-   }
-
-   .user_btn {
-      display: none;
-   }
-
-   .home_btn {
-      display: flex;
-      gap: 0.2rem;
-   }
-
-   .home_btn a {
-      font-size: 0.9rem;
-   }
-}
-
-@media (min-width: 769px) and (max-width: 900px) {
-   .main_header_search_bar {
-      width: 65%;
-      margin-left: 1rem;
-   }
-}
-
+/* --------- MEDIA QUERYS --------- */
+/*
 @media (min-width: 769px) and (max-width: 1024px) {
-   .home_btn {
-      display: flex;
-      gap: 0.2rem;
-   }
-
-   .home_btn a {
-      font-size: 0.9rem;
-   }
-}
-
-@media (min-width: 900px) and (max-width: 1024px) {
-   .navbar .links {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      margin: 0 1rem;
-   }
-
-   .links a {
-      font-size: 0.9rem;
-   }
-
-   .navbar .toggle_btn {
-      display: none;
-   }
 }
 
 @media (min-width: 1025px) and (max-width: 1440px) {
-   .navbar {
-      margin: 0;
-      padding: 2.5rem 1rem;
-   }
-   .logo p {
-      font-size: 3rem;
-   }
-
-   .navbar .links {
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      padding: 0 1rem;
-   }
-
-   .navbar .links a {
-      font-size: 1.2rem;
-   }
-
-   .main_header_search_bar {
-      height: 3rem;
-      margin-left: 0.5rem;
-   }
-
-   .home_btn {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.5rem;
-   }
-
-   .home_btn a {
-      font-size: 1.2rem;
-   }
-
-   .log_btn,
-   .log_out_btn,
-   .sign_up_btn {
-      padding: 0rem 1rem;
-      border-radius: 1rem;
-   }
-
-   .toggle_btn {
-      display: none;
-   }
 }
 
-@media (min-width: 1441px) and (max-width: 1920px) {
-   .navbar {
-      margin: 0;
-      padding: 2.5rem 1rem;
-   }
-   .logo p {
-      font-size: 3.5rem;
-   }
-
-   .navbar .links {
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      padding: 0 1rem;
-   }
-
-   .navbar .links a {
-      font-size: 1.5rem;
-   }
-
-   .main_header_search_bar {
-      height: 3.2rem;
-      margin-left: 0.5rem;
-   }
-
-   .home_btn {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.5rem;
-   }
-
-   .home_btn a {
-      font-size: 1.5rem;
-   }
-
-   .log_btn,
-   .log_out_btn,
-   .sign_up_btn {
-      padding: 0rem 1rem;
-      border-radius: 1rem;
-   }
-
-   .toggle_btn {
-      display: none;
-   }
-}
+@media (min-width: 1441px) {
+} */

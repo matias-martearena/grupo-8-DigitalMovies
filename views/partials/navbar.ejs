@@ -1,55 +1,67 @@
 <header>
    <nav class="navbar">
-      <div class="logo">
-         <a href="/">DM</a>
-      </div>
-      <ul class="links">
+      <a class="navbar-logo" href="/">DM</a>
+      <ul class="navbar-links">
          <li><a href="/">Home</a></li>
          <li><a href="/membership">Membership</a></li>
          <li><a href="/tickets">Tickets</a></li>
          <li><a href="/snacks">Snacks</a></li>
       </ul>
-      <form action="/search" method="get" class="main_header_search_bar">
+      <form class="navbar-search-bar" action="/search" method="get">
          <input
             type="text"
             name="search"
             placeholder="Search movies and series"
          />
-         <button class="main_header_button" type="submit">
+         <button type="submit">
             <i class="fa-solid fa-magnifying-glass"></i>
          </button>
       </form>
-      <% if (locals.isLogged == true) { %>
-      <div class="login_btn">
-         <a href="/user/profile" fa-solid fa-user>
-            <img
-               src="/images/users/<%= locals.userLogged.image %>"
-               class="profile_pic"
-            />
-         </a>
-         <a href="/user/cart" class="fa-solid fa-cart-shopping"></a>
-         <a href="/user/logout" class="log_out_btn">Log Out</a>
-      </div>
-      <% } else { %>
-      <div class="home_btn">
-         <a href="/user/login" class="log_btn">Log In</a>
-         <a href="/user/register" class="sign_up_btn">Sign Up</a>
-      </div>
-      <% } %>
-      <div class="toggle_btn">
+      <div class="toggle-btn">
          <i class="fa-solid fa-bars"></i>
       </div>
-   </nav>
-   <div class="dropdown_menu">
-      <li><a href="/">Home</a></li>
-      <li><a href="/membership">Membership</a></li>
-      <li><a href="/tickets">Tickets</a></li>
-      <li><a href="/snacks">Snacks</a></li>
-      <div class="user_btn">
-         <a href="/user/login" class="log_btn">Log In</a>
-         <a href="/logout" class="log_out_btn">Log Out</a>
-         <a href="/user/register" class="sign_up_btn">Sign Up</a>
+      <div class="dropdown-menu">
+         <ul class="dropdown-menu-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/membership">Membership</a></li>
+            <li><a href="/tickets">Tickets</a></li>
+            <li><a href="/snacks">Snacks</a></li>
+         </ul>
+         <% if (locals.isLogged == true) { %>
+         <div class="dropdown-menu-login-btn">
+            <a href="/user/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="/user/logout" class="navbar-btn">Log Out</a>
+            <a href="/user/profile">
+               <img
+                  class="user-image"
+                  src="/images/users/<%= locals.userLogged.image %>"
+               />
+            </a>
+         </div>
+         <% } else { %>
+         <div class="dropdown-menu-logout-btn">
+            <a href="/user/login" class="navbar-btn">Log In</a>
+            <a href="/user/register" class="navbar-btn">Sign Up</a>
+         </div>
+         <% } %>
       </div>
-   </div>
+      <% if (locals.isLogged == true) { %>
+      <div class="navbar-login-btn">
+         <a href="/user/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+         <a href="/user/profile">
+            <img
+               class="user-image"
+               src="/images/users/<%= locals.userLogged.image %>"
+            />
+         </a>
+         <a href="/user/logout" class="navbar-btn">Log Out</a>
+      </div>
+      <% } else { %>
+      <div class="navbar-logout-btn">
+         <a href="/user/login" class="navbar-btn">Log In</a>
+         <a href="/user/register" class="navbar-btn">Sign Up</a>
+      </div>
+      <% } %>
+   </nav>
 </header>
 <script src="/scripts/navbar.js"></script>
