@@ -214,7 +214,7 @@ a {
 /* NAVBAR BUTTONS */
 .navbar-login-btn,
 .navbar-logout-btn {
-   display: flex;
+   display: none;
    align-items: center;
    justify-content: space-evenly;
    font-size: 1.2rem;
