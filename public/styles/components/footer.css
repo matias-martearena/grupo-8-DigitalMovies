@@ -27,7 +27,97 @@
    font-family: var(--body-font);
 }
 
+/* --------- FOOTER --------- */
+.footer-container {
+   font-size: 16px;
+}
+
+/* --------- FOOTER WAVE --------- */
 .footer-wave-container svg {
+   position: relative;
+   z-index: -100;
    width: 100%;
    height: auto;
+   margin-bottom: -0.5rem;
+}
+
+/* --------- FOOTER CONTENT CONTAINER --------- */
+.footer-content-container {
+   display: flex;
+   align-items: flex-end;
+   justify-content: space-between;
+   background-color: var(--palete-2-1);
+   padding: 1rem 0.5rem 0;
+}
+
+/* --------- LOGO --------- */
+.footer-logo {
+   display: block;
+   font-family: var(--logo-font);
+   color: var(--font-variant-color);
+   font-size: 2.5em;
+   cursor: pointer;
+   color: var(--background-variant-color);
+}
+
+/* --------- LINKS --------- */
+.footer-links {
+   display: flex;
+   gap: 0.5rem;
+}
+
+.footer-links a {
+   display: block;
+   font-size: 2em;
+   color: var(--background-variant-color);
+}
+
+.footer-links a:hover {
+   animation: rotate360 1s forwards;
+}
+
+.footer-links a:active {
+   scale: 0.8;
+}
+
+@keyframes rotate360 {
+   0%,
+   100% {
+      transform: rotateY(0deg);
+      color: var(--palete-2-3);
+   }
+
+   50% {
+      transform: rotateY(360deg);
+      color: var(--palete-2-5);
+   }
+}
+
+/* --------- COPY --------- */
+.footer-copy {
+   display: block;
+   text-align: start;
+   font-size: 1em;
+   background-color: var(--palete-2-1);
+   padding: 2rem 0 0.5rem 0.5rem;
+   margin-top: -0.8rem;
+   color: #0e0e0e;
+}
+
+/* --------- MEDIA QUERYS --------- */
+@media (426px <= width) {
+   .footer-container {
+      font-size: 20px;
+   }
+
+   /* --------- LINKS --------- */
+   .footer-links {
+      gap: 1em;
+   }
+}
+
+@media (1024px <= width) {
+   .footer-links {
+      gap: 1.5em;
+   }
 }
