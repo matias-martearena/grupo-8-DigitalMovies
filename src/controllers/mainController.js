@@ -1,20 +1,24 @@
 const db = require('../database/models')
 const randomMovieFunction = require('../../public/scripts/randomMovie')
+const randomMobileImg = require('../../public/scripts/randomMobileImg')
 const { Sequelize, Op } = require('sequelize')
 
 const mainController = {
    home: (req, res) => {
       const randomTrailer = randomMovieFunction()
+      const getMobileImg = randomMobileImg()
       db.Media.findAll().then(function (media) {
          res.render('home', {
             card: media,
             trailer: randomTrailer,
+            mobileImg: getMobileImg,
          })
       })
    },
 
    search: (req, res) => {
       const randomTrailer = randomMovieFunction()
+      const getMobileImg = randomMobileImg()
       const { search } = req.query
 
       db.Media.findAll({
@@ -28,6 +32,7 @@ const mainController = {
             res.render('products/search', {
                card: media,
                trailer: randomTrailer,
+               mobileImg: getMobileImg,
             })
          })
          .catch(function (error) {
@@ -37,6 +42,7 @@ const mainController = {
 
    movies: (req, res) => {
       const randomTrailer = randomMovieFunction()
+      const getMobileImg = randomMobileImg()
       db.Media.findAll({
          where: {
             category: 'Movie',
@@ -45,12 +51,14 @@ const mainController = {
          res.render('home', {
             card: media,
             trailer: randomTrailer,
+            mobileImg: getMobileImg,
          })
       })
    },
 
    series: (req, res) => {
       const randomTrailer = randomMovieFunction()
+      const getMobileImg = randomMobileImg()
       db.Media.findAll({
          where: {
             category: 'Serie',
@@ -59,18 +67,21 @@ const mainController = {
          res.render('home', {
             card: media,
             trailer: randomTrailer,
+            mobileImg: getMobileImg,
          })
       })
    },
 
    ratingFilter: (req, res) => {
       const randomTrailer = randomMovieFunction()
+      const getMobileImg = randomMobileImg()
       db.Media.findAll({
          order: [['rating', 'DESC']],
       }).then(function (media) {
          res.render('home', {
             card: media,
             trailer: randomTrailer,
+            mobileImg: getMobileImg,
          })
       })
    },

@@ -37,7 +37,9 @@ li {
    padding: 0.5rem;
    display: flex;
    align-items: center;
-   background-color: transparent;
+   background-color: var(--background-variant-color);
+   padding-bottom: 0.5rem;
+   margin-bottom: -0.5rem;
 }
 
 /* --------- LOGO --------- */
@@ -116,7 +118,7 @@ li {
 /* --------- DROPDOWN MENU --------- */
 .dropdown-menu {
    position: absolute;
-   z-index: 100;
+   z-index: 10000;
    top: 58px;
    left: 0;
    height: 0;

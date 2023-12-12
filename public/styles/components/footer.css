@@ -39,6 +39,8 @@
    width: 100%;
    height: auto;
    margin-bottom: -0.5rem;
+   margin-top: -20%;
+   background-color: var(--background-variant-color);
 }
 
 /* --------- LOGO --------- */
