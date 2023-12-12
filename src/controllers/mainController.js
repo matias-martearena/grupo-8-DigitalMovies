@@ -1,97 +1,137 @@
 const db = require('../database/models')
-const randomMovieFunction = require('../../public/scripts/randomMovie')
 const randomMobileImg = require('../../public/scripts/randomMobileImg')
-const { Sequelize, Op } = require('sequelize')
+const randomCardClass = require('../../public/scripts/cardRandomClasses')
+const randomDesktopImg = require('../../public/scripts/randomDesktopImg')
+const { Op } = require('sequelize')
 
 const mainController = {
-   home: (req, res) => {
-      const randomTrailer = randomMovieFunction()
+   home: async (req, res) => {
       const getMobileImg = randomMobileImg()
-      db.Media.findAll().then(function (media) {
-         res.render('home', {
-            card: media,
-            trailer: randomTrailer,
-            mobileImg: getMobileImg,
-         })
+      const getDesktopImg = randomDesktopImg()
+      const cardClass = []
+      const media = await db.Media.findAll()
+
+      for (let i = 0; i < media.length; i++) {
+         if (media[i].dataValues.id) {
+            cardClass.push(randomCardClass())
+         }
+      }
+
+      res.render('home', {
+         card: media,
+         mobileImg: getMobileImg,
+         desktopImg: getDesktopImg,
+         cardClass,
       })
    },
 
-   search: (req, res) => {
-      const randomTrailer = randomMovieFunction()
+   search: async (req, res) => {
       const getMobileImg = randomMobileImg()
+      const getDesktopImg = randomDesktopImg()
+      const cardClass = []
       const { search } = req.query
 
-      db.Media.findAll({
+      const media = await db.Media.findAll({
          where: {
             title: {
                [Op.like]: `%${search}%`,
             },
          },
       })
-         .then(function (media) {
-            res.render('products/search', {
-               card: media,
-               trailer: randomTrailer,
-               mobileImg: getMobileImg,
-            })
-         })
-         .catch(function (error) {
-            res.status(500).send('Error interno del servidor')
-         })
+
+      for (let i = 0; i < media.length; i++) {
+         if (media[i].dataValues.id) {
+            cardClass.push(randomCardClass())
+         }
+      }
+
+      res.render('products/search', {
+         card: media,
+         mobileImg: getMobileImg,
+         desktopImg: getDesktopImg,
+         cardClass,
+      })
    },
 
-   movies: (req, res) => {
-      const randomTrailer = randomMovieFunction()
+   movies: async (req, res) => {
       const getMobileImg = randomMobileImg()
-      db.Media.findAll({
+      const getDesktopImg = randomDesktopImg()
+      const cardClass = []
+
+      const media = await db.Media.findAll({
          where: {
             category: 'Movie',
          },
-      }).then(function (media) {
-         res.render('home', {
-            card: media,
-            trailer: randomTrailer,
-            mobileImg: getMobileImg,
-         })
+      })
+
+      for (let i = 0; i < media.length; i++) {
+         if (media[i].dataValues.id) {
+            cardClass.push(randomCardClass())
+         }
+      }
+
+      res.render('home', {
+         card: media,
+         mobileImg: getMobileImg,
+         desktopImg: getDesktopImg,
+         cardClass,
       })
    },
 
-   series: (req, res) => {
-      const randomTrailer = randomMovieFunction()
+   series: async (req, res) => {
       const getMobileImg = randomMobileImg()
-      db.Media.findAll({
+      const getDesktopImg = randomDesktopImg()
+      const cardClass = []
+
+      const media = await db.Media.findAll({
          where: {
             category: 'Serie',
          },
-      }).then(function (media) {
-         res.render('home', {
-            card: media,
-            trailer: randomTrailer,
-            mobileImg: getMobileImg,
-         })
+      })
+
+      for (let i = 0; i < media.length; i++) {
+         if (media[i].dataValues.id) {
+            cardClass.push(randomCardClass())
+         }
+      }
+
+      res.render('home', {
+         card: media,
+         mobileImg: getMobileImg,
+         desktopImg: getDesktopImg,
+         cardClass,
       })
    },
 
-   ratingFilter: (req, res) => {
-      const randomTrailer = randomMovieFunction()
+   ratingFilter: async (req, res) => {
       const getMobileImg = randomMobileImg()
-      db.Media.findAll({
+      const getDesktopImg = randomDesktopImg()
+      const cardClass = []
+
+      const media = await db.Media.findAll({
          order: [['rating', 'DESC']],
-      }).then(function (media) {
-         res.render('home', {
-            card: media,
-            trailer: randomTrailer,
-            mobileImg: getMobileImg,
-         })
+      })
+
+      for (let i = 0; i < media.length; i++) {
+         if (media[i].dataValues.id) {
+            cardClass.push(randomCardClass())
+         }
+      }
+
+      res.render('home', {
+         card: media,
+         mobileImg: getMobileImg,
+         desktopImg: getDesktopImg,
+         cardClass,
       })
    },
 
-   detail: (req, res) => {
+   detail: async (req, res) => {
       const { id } = req.params
-      db.Media.findByPk(id).then(media => {
-         res.render('products/detail', {
-            product: media,
-         })
+      const media = await db.Media.findByPk(id)
+
+      res.render('products/detail', {
+         product: media,
       })
    },
 

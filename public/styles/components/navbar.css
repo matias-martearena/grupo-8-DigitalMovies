@@ -243,11 +243,22 @@ li {
    gap: 0.5rem;
 }
 
-.navbar-login-btn > .navbar-btn,
 .navbar-logout-btn > .navbar-btn {
    font-size: 1.2rem;
    font-weight: 500;
-   width: 8ch;
+   width: 9ch;
+   border-radius: 24px;
+   padding: 0.5rem;
+   text-align: center;
+   color: var(--font-variant-color);
+   transition: background-color 0.2s ease-in-out;
+   border: 2px solid #eae5d92a;
+}
+
+.navbar-login-btn > .navbar-btn {
+   font-size: 1.2rem;
+   font-weight: 500;
+   width: 12ch;
    border-radius: 24px;
    padding: 0.5rem;
    text-align: center;
@@ -274,6 +285,11 @@ li {
 
 .navbar-login-btn i:hover {
    color: var(--palete-2-3);
+}
+
+.navbar-login-btn img {
+   width: 2rem;
+   height: 2rem;
 }
 
 /* --------- MEDIA QUERYS --------- */

@@ -1,14 +1,13 @@
-<% card.forEach((card)=> { %>
-<article class="card">
-   <a href="/products/<%= card.id %>">
-      <img
-         src="/images/movies/<%= card.image %>"
-         alt="<%= card.alt %>"
-         class="front"
-      />
-      <p class="title"><%= card.title %></p>
-      <p class="genres"><%= card.genres %></p>
-      <p class="rating"><%= card.rating %> / 100</p>
-   </a>
+<article class="card-container">
+   <% for (let i = 0; i < card.length; i++) { %>
+   <div class="<%= cardClass[i] %>">
+      <a href="/products/<%= card[i].id %>">
+         <img
+            src="/images/movies/<%= card[i].image %>"
+            alt="<%= card[i].alt %>"
+         />
+      </a>
+      <p class="title"><%= card[i].title %></p>
+   </div>
+   <% } %>
 </article>
-<% }) %>
