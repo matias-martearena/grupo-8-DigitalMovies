@@ -1,12 +1,12 @@
-<% cartProducts.forEach((product) => { %>
-<article class="cart_product">
+<article class="cart_product cartRows" id="row${index}">
    <img
       class="cart_product-img"
-      src="<%= product.image %>"
-      alt="<%= product.alt %>"
+      src=""
+      alt=""
    />
+   <p class="cart_product-title"> </p>
    <div class="cart_product_description-container">
-      <p class="cart_product-title"><%= product.name %></p>
+      <p class="cart_product-title"></p>
       <div class="btn-container">
          <button type="submit">Delete</button>
          <button type="submit">Buy Now</button>
@@ -15,13 +15,12 @@
    <div class="cart_product_quantity-container">
       <div class="more_less-btn">
          <button type="submit">+</button>
-         <p><%= product.quantity %></p>
+         <p class="cart_product_quantity"></p>
          <button type="submit">-</button>
       </div>
       <p class="cart_product_total-quantity">
-         Quantity Available: <%= product.quantityAvailable %>
+         Quantity Available: 
       </p>
    </div>
-   <p class="cart_product-price">$<%= product.price * product.quantity %></p>
+   <p class="cart_product-price">$</p>
 </article>
-<% })%>

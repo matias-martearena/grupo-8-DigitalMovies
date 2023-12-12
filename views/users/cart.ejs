@@ -18,8 +18,8 @@
             <ul class="list-products">
                <% cartProducts.forEach((product) => { %>
                <li>
-                  <%= product.name %>:
-                  <span>$<%= product.price * product.quantity %></span>
+                  <p class="cart_product-title"></p>>:
+                  <span cart_product-price></span>
                </li>
                <% }) %>
             </ul>
@@ -28,5 +28,6 @@
          </section>
       </main>
       <%- include('../partials/footer')%>
+      <script src="/js/cart.js" ></script>
    </body>
 </html>
