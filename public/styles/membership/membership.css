@@ -127,8 +127,7 @@
 }
 
 /* RESPONSIVE DESIGN */
-
-@media (min-width: 1025px) and (max-width: 1440px) {
+@media (1025px <= width) {
    .membership-tier-title {
       font-size: 2rem;
    }
@@ -150,34 +149,6 @@
    }
 
    .membership-btn {
-      font-size: 1.2rem;
-   }
-}
-
-@media (min-width: 1441px) and (max-width: 1920px) {
-   .membership-tier-title {
-      font-size: 3rem;
-   }
-
-   .membership-tier-description {
-      font-size: 2rem;
-      margin: 5rem 0;
-   }
-
-   .discounts {
-      height: 12rem;
-   }
-
-   .discounts i {
-      font-size: 4rem;
-   }
-
-   .discounts p {
-      font-size: 1.75rem;
-   }
-
-   .membership-price {
-      font-size: 2rem;
-      margin: 3rem 0 0;
+      font-size: 1.5rem;
    }
 }
