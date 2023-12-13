@@ -20,26 +20,33 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   font-family: var(--body-font);
+   font-family: 'Montserrat Alternates', sans-serif;
 }
 
 .background {
    font-family: 'Montserrat Alternates', sans-serif;
    background-color: #000;
    overflow-x: hidden;
+   margin-top: 0.5rem;
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   z-index: 0;
 }
 
 .hero {
    width: 100vw;
    height: 100vh;
-   /* overflow: auto; */
    position: relative;
    z-index: -100;
    background-color: #000;
    height: 100%;
 }
+
 #myVideo {
-   min-width: 100vh;
+   min-width: 100%;
    min-height: 100%;
 }
 
@@ -61,7 +68,6 @@
    background: rgba(0, 0, 0, 0.5);
    width: 100%;
    position: absolute;
-   
 }
 .page-card {
    width: 60vw;
@@ -150,9 +156,6 @@
 }
 
 @media (min-width: 769px) {
-   .background {
-      background-color: var(--color1-1);
-   }
    .main_formulario {
       justify-content: flex-start;
    }

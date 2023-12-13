@@ -3,12 +3,11 @@
    <head>
       <%- include('../partials/head')%>
       <link rel="stylesheet" href="/styles/showtimes/showtimes-form.css" />
-      <title>Tickets Edit Form</title>
    </head>
    <body>
       <%- include('../partials/navbar')%>
       <main class="form-body">
-         <h1 class="showtime-form-title">Edit ticket</h1>
+         <h2 class="showtime-form-title">Edit ticket</h2>
          <article>
             <form
                action="/tickets/edit/<%= ticketToEdit.id %>?_method=put"
@@ -119,7 +118,7 @@
             <form
                action="/tickets/delete/<%= ticketToEdit.id %>?_method=delete"
                method="post"
-               class="form"
+               class="form delete-form"
             >
                <button type="submit">Delete Ticket</button>
             </form>

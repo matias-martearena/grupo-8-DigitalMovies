@@ -5,9 +5,9 @@
       <link rel="stylesheet" href="/styles/register/register.css" />
       <title>Register</title>
    </head>
-   <body class="background">
+   <body>
       <%- include('../partials/navbar')%>
-      <main class="main_formulario">
+      <main class="main_formulario background">
          <section class="hero">
             <video autoplay muted loop plays-inline id="myVideo">
                <source src="/videos/<%= trailer %>" type="video/mp4" />
@@ -15,9 +15,7 @@
          </section>
          <article class="signup-page">
             <section class="page-card">
-               <h1 class="form-title">
-                  Create your account
-               </h1>
+               <h2 class="form-title">Create your account</h2>
                <form
                   action="/user/register"
                   method="post"
@@ -26,7 +24,9 @@
                   id="registerUserForm"
                >
                   <section class="formulario_input">
-                     <label for="first_name" class="input_subtitulo">Name</label>
+                     <label for="first_name" class="input_subtitulo"
+                        >Name</label
+                     >
                      <input
                         type="text"
                         id="first_name"
@@ -43,7 +43,9 @@
                      </div>
                   </section>
                   <section class="formulario_input">
-                     <label for="last_name" class="input_subtitulo">Surname</label>
+                     <label for="last_name" class="input_subtitulo"
+                        >Surname</label
+                     >
                      <input
                         type="text"
                         id="last_name"
