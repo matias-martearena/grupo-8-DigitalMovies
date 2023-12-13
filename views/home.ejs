@@ -3,36 +3,37 @@
    <head>
       <%- include('./partials/head')%>
       <link rel="stylesheet" href="/styles/home/home.css" />
+      <link rel="stylesheet" href="/styles/home/card.css" />
    </head>
    <body>
       <%- include('./partials/navbar')%>
-      <main>
-         <!-- BACKGROUND VIDEO  -->
-         <article class="hero">
-            <video
-               id="trailer"
-               class="back-video"
-               autoplay
-               loop
-               muted
-               plays-inline
-            >
-               <source src="/videos/<%= trailer %>" type="video/mp4" />
-            </video>
-            <h1>Digital Movies</h1>
+      <main class="home-main-container">
+         <!-- BACKGROUND IMAGE  -->
+         <article class="home-layout-container">
+            <section class="home-layout">
+               <img
+                  class="layout-mobile-img"
+                  src="/images/home/mobile/<%= mobileImg %>"
+                  alt="Movie"
+               />
+               <img
+                  class="layout-desktop-img"
+                  src="/images/home/desktop/<%= desktopImg %>"
+                  alt="Movie"
+               />
+               <p class="layout-mobile-title">Digital Movies</p>
+            </section>
          </article>
          <!-- MOVIES AND SERIES LINKS -->
-         <section class="filter-container">
-            <ul class="filter">
+         <section class="home-filter-container">
+            <ul class="home-filters">
                <li><a href="/movies">Movies</a></li>
                <li><a href="/series">Series</a></li>
                <li><a href="/best-rating">Best Rating</a></li>
             </ul>
          </section>
          <!-- MOVIES AND SERIES CARDS -->
-         <section class="cards-conteiner">
-            <%- include('./partials/cards')%>
-         </section>
+         <%- include('./partials/cards')%>
       </main>
       <%- include('./partials/footer')%>
    </body>

@@ -27,25 +27,25 @@
    font-family: var(--body-font);
 }
 
-body {
-   background-color: var(--background-variant-color);
-}
-
-a {
-   text-decoration: none;
-   font-size: 1rem;
-   color: var(--font-variant-color);
-}
-
 /* MAIN CONTAINER */
+.detail-main-container {
+   background-color: var(--background-variant-color);
+   margin-top: -0.5rem;
+   padding-top: 0.5rem;
+}
 
 .image {
-   width: 90vw;
+   width: 100%;
+   max-width: 250px;
    height: auto;
    display: block;
-   margin: 1rem auto;
+   margin: 0 auto;
    border: 1px solid var(--palete-2-5);
    border-radius: 0.5rem;
+}
+
+.detail-container {
+   margin: 0.5rem;
 }
 
 .detail-container .title {
@@ -54,11 +54,14 @@ a {
    font-size: 1.3rem;
    color: var(--font-variant-color);
    margin-bottom: 1rem;
+   margin-top: 1rem;
 }
 
 .detail-container .synopsis,
 .detail-container .genres,
-.detail-container .rating {
+.detail-container .rating,
+.detail-container .price,
+.detail-container .category {
    text-align: left;
    font-weight: 400;
    line-height: 1.4rem;
@@ -76,18 +79,44 @@ a {
    align-items: center;
 }
 
-.btn-container button {
-   width: 90px;
-   height: 50px;
+.detail-btn {
+   display: inline-block;
+   cursor: pointer;
+   text-decoration: none;
+   border: 2px solid var(--palete-2-3);
    color: var(--font-variant-color);
-   background-color: var(--palete-1-2);
-   font-weight: 500;
-   border-radius: 30px;
-   border: transparent;
-   transition: 0.1s color ease-in-out;
+   background-color: transparent;
+   border-radius: 0.25em;
+   padding: 0.3rem 0.7rem;
+   position: relative;
+   isolation: isolate;
 }
 
-.btn-container button:hover {
-   color: var(--palete-1-2);
-   background-color: var(--font-variant-color);
+.detail-btn a {
+   text-decoration: none;
+   color: var(--font-variant-color);
+}
+
+.detail-btn::after {
+   content: '';
+   position: absolute;
+   z-index: -100;
+   background-color: var(--palete-2-3);
+   inset: 0;
+   scale: 0 1;
+   transition: scale 450ms;
+   transform-origin: right;
+}
+
+.detail-btn:hover::after,
+.detail-btn:focus-visible::after {
+   transform-origin: left;
+   scale: 1 1;
+}
+
+@media (768px <= width) {
+   .detail-btn {
+      padding: 0.5rem 1rem;
+      font-size: 1.2rem;
+   }
 }

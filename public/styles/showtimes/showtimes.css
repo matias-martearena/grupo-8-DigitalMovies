@@ -15,173 +15,104 @@
    --palete-2-4: #0b3f30;
    --palete-2-5: #e39828;
 }
-body {
+
+/* ------------ SHOWTIMES MAIN CONTAINER ------------ */
+.showtimes-main-container {
    background-color: var(--background-variant-color);
+   margin-top: -0.5rem;
+   padding-top: 0.5rem;
 }
-.tickets-offer-title {
-   margin-top: 10px;
+
+/*  SHOWTIMES OFFER ------------ */
+.showtimes-offer-title {
+   background-color: var(--font-variant-color);
+   color: var(--background-variant-color);
    text-align: center;
-   font-size: 30px;
-   color: var(--palete-2-3);
-   font-size: 40px;
-   background-color: var(--palete-1-3);
+   animation-name: star;
+   animation-duration: 2.5s;
+   animation-iteration-count: infinite;
+   animation-delay: 1s;
 }
-main {
-   margin-top: 10px;
+
+@keyframes star {
+   0%,
+   100% {
+      color: var(--background-variant-color);
+      background-color: var(--font-variant-color);
+   }
+   50% {
+      color: var(--font-variant-color);
+      background-color: var(--palete-1-1);
+   }
 }
-.products {
-   display: grid;
-   grid-template-columns: repeat(1, minmax(300px, 1fr));
-   gap: 5px;
-}
-.card {
+
+/* ------------ TICKET ------------ */
+.tickets-container {
    display: flex;
-   perspective: 1000px;
-   position: relative;
-   margin: 1rem;
+   align-items: flex-start;
+   justify-content: center;
+   flex-wrap: wrap;
 }
-.show {
-   color: #ea572a;
-   font-weight: bold;
-   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-   margin-top: 5px;
-   word-spacing: 5px;
+
+.ticket {
+   margin: 0.5rem 0.25rem 0;
+   max-width: 275px;
+   height: max-content;
+   background-color: #1d1a1ac4;
+   color: var(--font-variant-color);
+   border: 2px solid #1d1a1ac4;
+   border-radius: 0.25em;
 }
-.container-description form {
-   position: absolute;
-   bottom: 5%;
-   left: 50%;
-   transform: translateX(-50%);
+
+.ticket .ticket-img {
+   width: 100%;
+   height: 400px;
+   border-radius: 0.25em;
+}
+
+.ticket-info {
+   padding: 0.25rem 0.5rem;
+}
+
+.ticket-info .ticket-title {
+   width: 250px;
+   font-weight: 700;
+   font-size: 1.1rem;
+   padding: 0.25rem 0;
+}
+
+.ticket-info > div {
    display: flex;
-   flex-direction: column;
    align-items: center;
+   gap: 0.5rem;
 }
-.buy-button {
-   display: flex;
-   flex-direction: column;
-   justify-content: flex-end;
-   align-items: center;
-   padding: 15px 30px;
-   background-color: var(--palete-2-3);
-   color: white;
-   border: none;
-   border-radius: 10px;
+
+.ticket-button {
+   display: inline-block;
    cursor: pointer;
-   transition: background-color 0.7s, transform 0.3s, box-shadow 0.3s;
-   font-size: 16px;
-   overflow: hidden;
+   text-decoration: none;
+   border: 2px solid var(--palete-2-3);
+   color: var(--font-variant-color);
+   background-color: transparent;
+   border-radius: 0.25em;
+   padding: 0.3rem 0.7rem;
+   position: relative;
+   isolation: isolate;
 }
 
-.buy-button:hover {
-   background-color: var(--palete-2-5);
-   transform: scale(1.1);
-   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-}
-
-#cart {
-   opacity: 0;
-   transition: opacity 0.3s ease-in-out;
-   margin-top: 5px;
-}
-
-.buy-button:hover #cart {
-   opacity: 1;
-}
-
-.precio {
-   margin-bottom: 5px;
-}
-
-.cardPhoto {
-   width: 100%;
-   height: 100%;
-   max-height: 100%;
-   object-fit: fill;
-   border-radius: 10px;
-   transition: opacity 0.5s;
-}
-
-.card-back {
-   transform: rotateY(180deg);
+.ticket-button::after {
+   content: '';
    position: absolute;
-   padding: 7px;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   backface-visibility: hidden; /* Evita que el contenido de la parte frontal se muestre en la parte posterior */
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   flex-direction: column;
-   background-color: white;
-   border: 1px solid black;
-   border-radius: 10px;
-   opacity: 0; /* Inicialmente, la parte posterior es transparente */
-   visibility: hidden; /* Inicialmente, la parte posterior es invisible */
-   text-align: center;
-   align-items: center;
+   z-index: -100;
+   background-color: var(--palete-2-3);
+   inset: 0;
+   scale: 0 1;
+   transition: scale 450ms;
+   transform-origin: right;
 }
 
-.container-description h3 {
-   text-align: center;
-   justify-content: center;
-   text-decoration: underline;
-   margin-bottom: 10px;
-}
-
-.description {
-   display: none;
-   color: var(--palete-2-3);
-}
-.precio {
-   font-size: 15px;
-}
-
-.card:hover .card-inner {
-   transform: rotateY(180deg);
-}
-
-.card:hover .card-back {
-   transform: rotateY(0deg);
-   z-index: 1;
-   opacity: 1;
-   visibility: visible;
-}
-
-.card:hover .description {
-   display: flex;
-}
-
-@media (min-width: 426px) and (max-width: 768px) {
-   .products {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(100px, 1fr));
-      gap: 20px;
-      margin-right: 15px;
-   }
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-   .products {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(100px, 1fr));
-      gap: 20px;
-      margin-right: 15px;
-   }
-}
-@media (min-width: 1024px) {
-   .products {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(100px, 1fr));
-      gap: 20px;
-      margin-right: 15px;
-   }
-}
-@media (min-width: 1440px) {
-   .products {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(100px, 1fr));
-      gap: 20px;
-      margin-right: 15px;
-   }
+.ticket-button:hover::after,
+.ticket-button:focus-visible::after {
+   transform-origin: left;
+   scale: 1 1;
 }

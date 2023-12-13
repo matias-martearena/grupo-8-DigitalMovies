@@ -27,20 +27,13 @@
    font-family: var(--body-font);
 }
 
-body {
-   height: 100vh;
-   background-color: var(--background-variant-color);
-   position: relative;
-   z-index: 1;
-}
-
 /* MAIN CONTENT */
-
 .main-container {
-   background-color: transparent;
+   background-color: var(--background-variant-color);
    display: flex;
    flex-direction: column;
-   margin: 2rem 0 4rem;
+   margin-top: -0.5rem;
+   padding-top: 0.5rem;
 }
 
 /* LEFT BOX */
@@ -229,7 +222,6 @@ body {
 }
 
 /* RESPONSIVE DESIGN */
-
 @media (min-width: 426px) and (max-width: 768px) {
    .btn-container {
       width: 50%;
@@ -237,10 +229,6 @@ body {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-   .main-container {
-      margin: 1rem 0 10rem;
-   }
-
    .cart_product-title {
       font-size: 2rem;
    }
@@ -256,7 +244,6 @@ body {
 
 @media (min-width: 1025px) and (max-width: 1440px) {
    .main-container {
-      margin: 0 0 15rem;
       flex-direction: row;
    }
 
@@ -326,7 +313,6 @@ body {
 
 @media (min-width: 1441px) and (max-width: 1920px) {
    .main-container {
-      margin: 0 0 15rem;
       flex-direction: row;
    }
 

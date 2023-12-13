@@ -6,7 +6,7 @@
    </head>
    <body>
       <%- include('../partials/navbar')%>
-      <main class="main-container">
+      <main class="detail-main-container">
          <figure class="img-container">
             <img
                class="image"
@@ -17,14 +17,16 @@
          <section class="detail-container">
             <p class="title"><%= product.title %></p>
             <p class="synopsis"><%= product.synopsis %></p>
-            <p class="genres"><%= product.genres %></p>
+            <p class="genres"><%= product.genre %></p>
             <p class="rating"><%= product.rating %> / 100</p>
             <p class="price"><%= product.price %></p>
             <p class="category"><%= product.category %></p>
          </section>
          <section class="btn-container">
-            <button type="submit">Buy</button>
-            <button><a href="<%= product.link %>">Trailer</a></button>
+            <button class="detail-btn" type="submit">Buy</button>
+            <button class="detail-btn">
+               <a href="<%= product.link %>">Trailer</a>
+            </button>
          </section>
       </main>
       <%- include('../partials/footer')%>

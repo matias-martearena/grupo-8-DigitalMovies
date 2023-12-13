@@ -27,18 +27,12 @@
    font-family: var(--body-font);
 }
 
-body {
-   height: 100vh;
-   background-color: var(--background-variant-color);
-   position: relative;
-   z-index: 1;
-}
-
 /* MAIN CONTAINER */
 
-.main-container {
-   width: 100%;
-   margin: 0 0 2rem;
+.membership-main-container {
+   background-color: var(--background-variant-color);
+   margin: -0.5rem 0 2rem;
+   padding-top: 0.5rem;
 }
 
 .membership-container {
@@ -48,19 +42,20 @@ body {
    text-align: center;
 }
 
-.membership_tier-title {
+.membership-tier-title {
    color: var(--palete-1-4);
    text-shadow: 2px 0 10px var(--palete-1-2);
    text-align: left;
+   font-size: 1.5rem;
 }
 
-.membership_tier-description {
+.membership-tier-description {
    color: var(--palete-1-3);
    margin-top: 1.5rem;
    padding: 0 0.5rem;
 }
 
-.membership_discounts-container {
+.membership-discounts-container {
    display: flex;
    align-items: flex-start;
    justify-content: space-evenly;
@@ -94,39 +89,50 @@ body {
    font-size: 0.8rem;
 }
 
-.membership_price {
+.membership-price {
    color: var(--palete-1-4);
    text-shadow: 2px 0 10px var(--palete-1-2);
    font-size: 1.2rem;
    text-align: left;
 }
 
-.membership_btn {
-   padding: 0.5rem;
-   margin: 1.5rem 0;
-   width: 100%;
-   max-width: 320px;
-   background-color: var(--font-variant-color);
-   color: var(--background-variant-color);
-   border: none;
-   border-radius: 5px;
-   font-weight: 500;
+.membership-btn {
+   display: inline-block;
+   cursor: pointer;
+   text-decoration: none;
+   border: 2px solid var(--palete-2-3);
+   color: var(--font-variant-color);
+   background-color: transparent;
+   border-radius: 0.25em;
+   padding: 0.3rem 0.7rem;
+   position: relative;
+   isolation: isolate;
 }
 
-.membership_btn:hover {
-   color: var(--font-variant-color);
-   background-color: var(--palete-1-1);
-   box-shadow: 0 0 2px var(--font-variant-color);
+.membership-btn::after {
+   content: '';
+   position: absolute;
+   z-index: -100;
+   background-color: var(--palete-2-3);
+   inset: 0;
+   scale: 0 1;
+   transition: scale 450ms;
+   transform-origin: right;
+}
+
+.membership-btn:hover::after,
+.membership-btn:focus-visible::after {
+   transform-origin: left;
+   scale: 1 1;
 }
 
 /* RESPONSIVE DESIGN */
-
-@media (min-width: 1025px) and (max-width: 1440px) {
-   .membership_tier-title {
+@media (1025px <= width) {
+   .membership-tier-title {
       font-size: 2rem;
    }
 
-   .membership_tier-description {
+   .membership-tier-description {
       font-size: 1.5rem;
    }
 
@@ -138,44 +144,11 @@ body {
       font-size: 1.3rem;
    }
 
-   .membership_price {
+   .membership-price {
       font-size: 1.5rem;
    }
 
-   .membership_btn {
-      font-size: 1.3rem;
-   }
-}
-
-@media (min-width: 1441px) and (max-width: 1920px) {
-   .membership_tier-title {
-      font-size: 3rem;
-   }
-
-   .membership_tier-description {
-      font-size: 2rem;
-      margin: 5rem 0;
-   }
-
-   .discounts {
-      height: 12rem;
-   }
-
-   .discounts i {
-      font-size: 4rem;
-   }
-
-   .discounts p {
-      font-size: 1.75rem;
-   }
-
-   .membership_price {
-      font-size: 2rem;
-      margin: 3rem 0 0;
-   }
-
-   .membership_btn {
-      font-size: 1.75rem;
-      max-width: 50%;
+   .membership-btn {
+      font-size: 1.5rem;
    }
 }

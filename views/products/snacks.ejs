@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <%- include('../partials/head')%>
+      <%- include('../partials/head') %>
       <link rel="stylesheet" href="/styles/snacks/snacks.css" />
    </head>
    <body>
-      <%- include('../partials/navbar')%>
-      <main>
-         <article>
-            <p class="title">Snacks</p>
-            <section class="products">
-               <% snacksProducts.forEach((snack)=> { %>
-               <article class="card">
-                  <img
-                     src="/images/snacks/<%= snack.image %>"
-                     alt="<%= snack.description %>"
-                     class="cardPhoto"
-                  />
-                  <div class="container-description">
-                     <p class="price"><%= snack.price %></p>
-                     <h3 class="description"><%= snack.description %></h3>
-                     <button type="submit">
+      <%- include('../partials/navbar') %>
+      <main class="snacks-main-container">
+         <h2 class="snack-main-title">Snacks</h2>
+         <section class="snack-container">
+            <% snacksProducts.forEach((snack)=> { %>
+            <article class="snack">
+               <img
+                  src="/images/snacks/<%= snack.image %>"
+                  alt="<%= snack.description %>"
+                  class="snack-img"
+               />
+               <div class="snack-info">
+                  <h3 class="snack-title"><%= snack.description %></h3>
+                  <div>
+                     <p class="snack-price"><%= snack.price %></p>
+                     <button class="snack-button" type="submit">
                         <i class="fa-solid fa-cart-plus"></i>
                      </button>
                   </div>
-               </article>
-               <% }) %>
-            </section>
-         </article>
+               </div>
+            </article>
+            <% }) %>
+         </section>
       </main>
-      <%- include('../partials/footer')%>
+      <%- include('../partials/footer') %>
    </body>
 </html>
