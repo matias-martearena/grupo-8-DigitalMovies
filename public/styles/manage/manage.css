@@ -1,0 +1,93 @@
+:root {
+    /* Thin 100; Light 300; Regular 400; Medium 500; Bold 700 */
+    --body-font: 'Montserrat Alternates', sans-serif;
+    --logo-font: 'Monoton', cursive;
+ 
+    --font-variant-color: #eae5d9;
+ 
+    --background-variant-color: #282121;
+ 
+    --palete-1-1: #332a1a;
+    --palete-1-2: #7c5b41;
+    --palete-1-3: #efdcd3;
+    --palete-1-4: #aa574b;
+    --palete-1-5: #541c13;
+ 
+    --palete-2-1: #ebd5b8;
+    --palete-2-2: #efbc9c;
+    --palete-2-3: #ea572a;
+    --palete-2-4: #0b4030;
+    --palete-2-5: #e39828;
+ }
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--body-font);
+ }
+ 
+ .page-body {
+    height: 100%;
+    background-color: var(--background-variant-color);
+    position: relative;
+    z-index: 1;
+ }
+
+ 
+
+.product-list{
+    margin: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 0.2rem var(--palete-2-3);
+    color: var(--palete-1-3);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+ .product-item {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    
+ }
+ .create-anchor{
+    background-color: var(--font-variant-color);
+    color: var(--background-variant-color);
+    border-radius: 5px;
+    padding: 0.2rem 1rem;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+ }
+ .product-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+ }
+
+ .manageButton{
+    border-radius: 1rem;
+    padding: 0.2rem 1rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: var(--palete-2-4);
+   color: var(--palete-1-3);
+   margin: 0 0.5rem;
+ }
+
+ /* RESPONSIVE DESIGN */
+
+@media (min-width: 1032px) and (max-width: 1920px) {
+    .product-type-list {
+        display: flex;
+        justify-content: space-around;
+        
+     }
+     .product-list{
+        flex-basis: 100%;
+     }
+}

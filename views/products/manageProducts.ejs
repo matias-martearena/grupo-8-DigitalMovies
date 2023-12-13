@@ -2,71 +2,77 @@
 <html lang="eng">
    <head>
       <%- include('../partials/head')%>
+      <link rel="stylesheet" href="/styles/manage/manage.css" />
    </head>
    <body>
       <%- include('../partials/navbar')%>
-      <main>
-         <article>
-            <section>
-               <a href="cards/create">Create media</a>
+      <main class="page-body">
+         <article class="product-type-list">
+            <section class="product-list">
+               <a class="create-anchor" href="cards/create">Create media</a>
                <% media.forEach((prod) => { %>
-               <p class="title"><%= prod.title %></p>
-               <form
-                  action="/cards/delete/<%= prod.id %>?_method=delete"
-                  method="post"
-               >
-                  <button type="submit">Delete</button>
-               </form>
-               <a href="cards/edit/<%= prod.id %>"
-                  ><button class="manageButton" type="button">Edit</button></a
-               >
+               <div class="product-item">
+                  <p class="title"><%= prod.title %></p>
+                  <div class="product-buttons">
+                     <form action="/cards/delete/<%= prod.id %>?_method=delete"
+                     method="post" ><button class="manageButton" type="submit">Delete</button>
+                     </form>
+                     <a href="cards/edit/<%= prod.id %>" >
+                     <button class="manageButton" type="button">Edit</button>
+                     </a>
+                  </div>
+               </div>
                <% }) %>
             </section>
-            <section>
-               <a href="membership/create">Create membership</a>
+            <section class="product-list">
+               <a class="create-anchor" href="membership/create">Create membership</a>
                <% membership.forEach((prod) => { %>
-               <p class="title">Tier <%= prod.tier %></p>
-               <form
-                  action="/membership/delete/<%= prod.id %>?_method=delete"
-                  method="post"
-               >
-                  <button type="submit">Delete</button>
-               </form>
-               <a href="membership/edit/<%= prod.id %>"
-                  ><button class="manageButton" type="button">Edit</button></a
-               >
+               <div class="product-item">
+                  <p class="title">Tier <%= prod.tier %></p>
+                  <div class="product-buttons">
+                     <form action="/membership/delete/<%= prod.id %>?_method=delete"
+                     method="post">
+                     <button class="manageButton" type="submit">Delete</button>
+                     </form>
+                     <a href="membership/edit/<%= prod.id %>">
+                     <button class="manageButton" type="button">Edit</button>
+                     </a>
+                  </div>
+               </div>
                <% }) %>
             </section>
-            <section>
-               <a href="snacks/create">Create snack</a>
+            <section class="product-list">
+               <a class="create-anchor" href="snacks/create">Create snack</a>
                <% snack.forEach((prod) => { %>
-               <p class="title"><%= prod.description %></p>
-               <form
-                  action="/snacks/delete/<%= prod.id %>?_method=delete"
-                  method="POST"
-                  class="form"
-               >
-                  <button type="submit ">Delete</button>
-               </form>
-               <a href="snacks/edit/<%= prod.id %>"
-                  ><button class="manageButton" type="button">Edit</button></a
-               >
+               <div class="product-item">
+                  <p class="title"><%= prod.description %></p>
+                  <div class="product-buttons">
+                     <form action="/snacks/delete/<%= prod.id %>?_method=delete"
+                     method="POST" class="form">
+                     <button class="manageButton" type="submit ">Delete</button>
+                     </form>
+                     <a href="snacks/edit/<%= prod.id %>">
+                     <button class="manageButton" type="button">Edit</button>
+                     </a>
+                  </div>
+               </div>
                <% }) %>
             </section>
-            <section>
-               <a href="tickets/create">Create ticket</a>
+            <section class="product-list">
+               <a class="create-anchor" href="tickets/create">Create ticket</a>
                <% showtime.forEach((prod) => { %>
-               <p class="title"><%= prod.title %></p>
-               <form
-                  action="/tickets/delete/<%= prod.id %>?_method=delete"
-                  method="POST"
-                  class="form"
-               >
-                  <button type="submit ">Delete</button>
-               </form>
-               <a href="tickets/edit/<%= prod.id %>"
-                  ><button class="manageButton" type="button">Edit</button></a
-               >
+               <div class="product-item">
+                  <p class="title"><%= prod.title %></p>
+                  <div class="product-buttons">
+                     <form action="/tickets/delete/<%= prod.id %>?_method=delete"
+                     method="POST" class="form">
+                     <button class="manageButton" type="submit ">Delete</button>
+                     </form>
+                     <a href="tickets/edit/<%= prod.id %>">
+                     <button class="manageButton" type="button">Edit</button>
+                     </a>
+                  </div>
+               </div>
                <% }) %>
             </section>
          </article>

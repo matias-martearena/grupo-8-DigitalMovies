@@ -2,18 +2,20 @@
 <html lang="en">
    <head>
       <%- include('../partials/head')%>
+      <link rel="stylesheet" href="/styles/showtimes/showtimes-form.css" />
       <title>Tickets Edit Form</title>
    </head>
    <body>
       <%- include('../partials/navbar')%>
-      <main>
+      <main class="form-body">
+         <h1 class="showtime-form-title">Edit ticket</h1>
          <article>
-            <h1>Edit ticket</h1>
             <form
                action="/tickets/edit/<%= ticketToEdit.id %>?_method=put"
                method="post"
                enctype="multipart/form-data"
                id="ticketForm"
+               class="form"
             >
                <section>
                   <label for="price">Price</label>
@@ -117,6 +119,7 @@
             <form
                action="/tickets/delete/<%= ticketToEdit.id %>?_method=delete"
                method="post"
+               class="form"
             >
                <button type="submit">Delete Ticket</button>
             </form>

@@ -2,17 +2,19 @@
 <html lang="en">
    <head>
       <%- include('../partials/head')%>
+      <link rel="stylesheet" href="/styles/detail/cards-form.css" />
    </head>
    <body>
       <%- include('../partials/navbar')%>
-      <main>
+      <main class="form-body">
+         <h1 class="card-form-title">Create a new media card</h1>
          <article>
-            <h2>Create a new media card</h2>
             <form
                action="/cards/create"
                method="post"
                enctype="multipart/form-data"
                id="card-form"
+               class="form"
             >
                <section>
                   <label for="genres">Genres</label>

@@ -2,15 +2,17 @@
 <html lang="en">
    <head>
       <%- include('../partials/head')%>
+      <link rel="stylesheet" href="/styles/membership/membership-form.css" />
    </head>
    <body>
       <%- include('../partials/navbar')%>
-      <main>
+      <main class="form-body">
+         <h1 class="membership-form-title">Create a new membership</h1>
          <article>
-            <h1>Create a new membership</h1>
             <form
                action="/membership/create"
                method="post"
+               class="form"
                id="membership-form"
             >
                <section>
