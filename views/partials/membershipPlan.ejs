@@ -1,8 +1,8 @@
 <% product.forEach((product) => { %>
 <article class="membership-container">
-   <h2 class="membership_tier-title">Plan <%= product.tier %></h2>
-   <p class="membership_tier-description"><%= product.description %></p>
-   <section class="membership_discounts-container">
+   <h2 class="membership-tier-title">Plan <%= product.tier %></h2>
+   <p class="membership-tier-description"><%= product.description %></p>
+   <section class="membership-discounts-container">
       <div class="discounts">
          <i class="fa-solid fa-ticket"></i>
          <p><%= product.discount_one %></p>
@@ -16,7 +16,7 @@
          <p><%= product.discount_three %></p>
       </div>
    </section>
-   <p class="membership_price">$<%= product.price %></p>
-   <button class="membership_btn" type="submit">Subscribe</button>
+   <p class="membership-price">$<%= product.price %></p>
+   <button class="membership-btn" type="submit">Subscribe</button>
 </article>
 <% }) %>

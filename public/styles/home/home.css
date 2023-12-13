@@ -119,10 +119,6 @@
    scale: 1 1;
 }
 
-.home-filters a:active {
-   color: var(--font-variant-color);
-}
-
 /* --------- RESPONSIVE DESIGN --------- */
 @media (768px <= width) {
    .home-layout .layout-mobile-img {
