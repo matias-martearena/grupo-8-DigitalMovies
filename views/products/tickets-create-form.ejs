@@ -2,16 +2,18 @@
 <html lang="en">
    <head>
       <%- include('../partials/head')%>
+      <link rel="stylesheet" href="/styles/showtimes/showtimes-form.css" />
       <title>Ticket Create Form</title>
    </head>
    <body>
       <%- include('../partials/navbar')%>
-      <main>
+      <main class="form-body">
+         <h1 class="showtime-form-title">Create a ticket</h1>
          <article>
-            <h1>Create a ticket</h1>
             <form
                action="/tickets/create"
                method="post"
+               class="form"
                enctype="multipart/form-data"
                id="ticketForm"
             >

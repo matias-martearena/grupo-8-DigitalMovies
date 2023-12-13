@@ -2,15 +2,17 @@
 <html lang="en">
    <head>
       <%- include('../partials/head')%>
+      <link rel="stylesheet" href="/styles/detail/cards-form.css" />
    </head>
    <body>
-      <section%- include('../partials/navbar')%>
-      <main>
+      <%- include('../partials/navbar')%>
+      <main class="form-body">
+         <h1 class="card-form-title">Edit or update media card</h1>
          <article>
-            <h2>Edit or update media card</h2>
             <form
                action="/cards/edit/<%= cardToEdit.id %>?_method=put"
                method="post"
+               class="form"
                enctype="multipart/form-data"
                id="card-form"
             >
@@ -136,6 +138,7 @@
             <form
                action="/cards/delete/<%= cardToEdit.id %>?_method=delete"
                method="post"
+               class="form"
             >
                <button type="submit">Delete card</button>
             </form>

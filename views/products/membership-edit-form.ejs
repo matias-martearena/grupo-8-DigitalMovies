@@ -2,15 +2,17 @@
 <html lang="en">
    <head>
       <%- include('../partials/head')%>
+      <link rel="stylesheet" href="/styles/membership/membership-form.css" />
    </head>
    <body>
-      <section%- include('../partials/navbar')%>
-      <main>
+      <%- include('../partials/navbar')%>
+      <main class="form-body">
+         <h1 class="membership-form-title">Edit a membership</h1>
          <article>
-            <h1>Edit a membership</h1>
             <form
                action="/membership/edit/<%= membershipToEdit.id %>?_method=put"
                method="post"
+               class="form"
                id="membership-form"
             >
                <section>
@@ -112,6 +114,7 @@
             <form
                action="/membership/delete/<%= membershipToEdit.id %>?_method=delete"
                method="post"
+               class="form"
             >
                <button type="submit">Delete card</button>
             </form>
