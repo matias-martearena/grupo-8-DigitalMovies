@@ -211,10 +211,11 @@ li {
    width: 2rem;
    height: 2rem;
    border-radius: 50%;
+   border: 2px solid var(--font-variant-color);
 }
 
 .user-image:hover {
-   border: 2px solid var(--font-variant-color);
+   border: 2px solid var(--palete-2-3);
 }
 
 .user-image:active {

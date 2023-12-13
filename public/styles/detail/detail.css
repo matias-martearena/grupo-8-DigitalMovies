@@ -27,23 +27,19 @@
    font-family: var(--body-font);
 }
 
-body {
-   background-color: var(--background-variant-color);
-}
-
-a {
-   text-decoration: none;
-   font-size: 1rem;
-   color: var(--font-variant-color);
-}
-
 /* MAIN CONTAINER */
+.detail-main-container {
+   background-color: var(--background-variant-color);
+   margin-top: -0.5rem;
+   padding-top: 0.5rem;
+}
 
 .image {
-   width: 90vw;
+   width: 100%;
+   max-width: 250px;
    height: auto;
    display: block;
-   margin: 1rem auto;
+   margin: 0 auto;
    border: 1px solid var(--palete-2-5);
    border-radius: 0.5rem;
 }
